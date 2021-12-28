@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/97c75275-e916-4c24-b75b-4100d636d8d8/deploy-status)](https://app.netlify.com/sites/upbeat-colden-b80abc/deploys)
+
 # zigavukcevic.dev
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
