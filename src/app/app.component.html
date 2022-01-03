@@ -3,6 +3,7 @@
 <app-tab-list>
   <app-tab title="CLI">
     <p>Intro text...</p>
+    <p>See more at <a class="underline" href="https://angular.io/cli/generate#component">generate#component</a></p>
     <pre>
       <code [highlight]="codeSample.cli" [languages]="['shell']"></code>
     </pre>
@@ -13,10 +14,16 @@
       <code [highlight]="codeSample.template" [languages]="['xml']"></code>
     </pre>
   </app-tab>
-  <app-tab title="Script">
+  <app-tab title="Component">
     <p>Intro text...</p>
     <pre>
-      <code [highlight]="codeSample.script" [languages]="['typescript']"></code>
+      <code [highlight]="codeSample.component" [languages]="['typescript']"></code>
+    </pre>
+  </app-tab>
+  <app-tab title="Unit test">
+    <p>Intro text...</p>
+    <pre>
+      <code [highlight]="codeSample.unitTest" [languages]="['typescript']"></code>
     </pre>
   </app-tab>
 </app-tab-list>

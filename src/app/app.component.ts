@@ -8,9 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'zigavukcevic.dev';
   codeSample = {
-    cli: `npx ng generate component stats`,
+    cli:
+`
+npx ng generate component stats --style none
+
+.
+└── src
+    └── app
+        └── stats
+            ├── stats.component.html
+            ├── stats.component.ts
+            └── stats.component.spec.ts
+`,
     template:
-`<div *ngIf="numberOfCups > 0">
+`
+<div *ngIf="numberOfCups > 0">
   <p>{{ numberOfCups }}</p>
   <p *ngIf="numberOfCups === 1">cup</p>
   <p *ngIf="numberOfCups > 1">cups</p>
@@ -20,8 +32,9 @@ export class AppComponent {
 <!--
   TODO: check if Angular has anything for singular, plural
   https://angular.io/api/common/I18nPluralPipe
--->`,
-    script:
+-->
+`,
+    component:
 `calculateCupsDrank() {
   const currentLocalHour = new Date().getHours();
 
@@ -43,5 +56,6 @@ export class AppComponent {
       this.numberOfCups = 0;
   }
 }`,
+unitTest: `code for unit test goes here`,
   }
 }
