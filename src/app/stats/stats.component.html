@@ -1,14 +1,19 @@
-<p>{{ calculateExperiencePeriod('2007-06-01') }}</p>
-<p>years in the web industry</p>
+<div class="mb-3">
+  <p>{{ calculateExperiencePeriod('2007-06-01') }}</p>
+  <p>years in the web industry</p>
 
-<p>{{ calculateExperiencePeriod('2012-01-01') }}</p>
-<p>years of active programming</p>
+  <p>{{ calculateExperiencePeriod('2012-01-01') }}</p>
+  <p>years of active programming</p>
 
-<div *ngIf="numberOfCups > 0">
-  <p>{{ numberOfCups }}</p>
-  <p *ngIf="numberOfCups === 1">cup</p>
-  <p *ngIf="numberOfCups > 1">cups</p>
-  <p>of coffee drank today</p>
+  <div *ngIf="numberOfCups > 0">
+    <p>{{ numberOfCups }}</p>
+    <p *ngIf="numberOfCups === 1">cup</p>
+    <p *ngIf="numberOfCups > 1">cups</p>
+    <p>of coffee drank today</p>
+  </div>
+
+  <!--
+    TODO: check if angular gas anything for singilar, plural
+    https://angular.io/api/common/I18nPluralPipe
+  -->
 </div>
-
-<!-- TODO: check if angular gas anything for singilar, plural -->

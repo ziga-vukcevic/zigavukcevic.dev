@@ -1,28 +1,21 @@
 <app-stats></app-stats>
 
-<hr />
-
 <app-tab-list>
-  <app-tab title="Tab 1 title">
-    Tab 1 content
+  <app-tab title="CLI">
+    <p>CLI content goes here...<br /><br /></p>
+    <code><small>npx ng generate component stats</small></code>
+    <p>...</p>
   </app-tab>
-  <app-tab title="Tab 2 title">
-    Tab 2 content
+  <app-tab title="Template">
+    <p>Template content goes here...<br /><br /></p>
+    <code><small>html code</small></code>
+    <p>...</p>
   </app-tab>
-  <app-tab title="Tab 3 title">
-    Tab 3 content
+  <app-tab title="Script">
+    <p>Script content goes here...<br /><br /></p>
+    <code><small>calculateCupsDrank()</small></code>
+    <p>...</p>
   </app-tab>
 </app-tab-list>
-
-<hr />
-
-<!--
-<h1 class="text-3xl font-bold underline">
-  zigavukcevic.dev
-</h1>
-<button class="btn btn-blue">
-  Say hi!
-</button>
--->
 
 <router-outlet></router-outlet>

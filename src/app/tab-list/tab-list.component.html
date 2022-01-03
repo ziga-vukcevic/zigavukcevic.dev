@@ -1,10 +1,18 @@
-<ul class="nav nav-tabs">
-  <li
-    *ngFor="let tab of tabList"
-    (click)="selectTab(tab)"
-    [class.active]="tab.isActive"
-  >
-    <a href="#">{{tab.title}}</a>
+<ul class="flex">
+  <li *ngFor="let tab of tabList; let index = index;">
+    <button
+      class="px-4 py-2 text-sm bg-yellow-700 text-white active"
+      [ngClass]="{
+        'rounded-tl-lg': index === 0,
+        'rounded-tr-lg': index === tabList.length - 1,
+        'bg-yellow-900': tab.isActive
+      }"
+      (click)="selectTab(tab)"
+    >
+      {{ tab.title }}
+    </button>
   </li>
 </ul>
-<ng-content></ng-content>
+<div class="mb-3 p-3 border-2 border-yellow-900">
+  <ng-content></ng-content>
+</div>
