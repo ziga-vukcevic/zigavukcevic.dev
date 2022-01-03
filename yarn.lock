@@ -1358,6 +1358,13 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.50.tgz#1e0caa9364d3fccd2931c3ed96fdbeaa5d4cca83"
   integrity sha512-C6N5s2ZFtuZRj54k2/zyRhNDjJwwcViAM3Nbm8zjBpbqAdZ00mr0CFxvSKeO8Y/e03WVFLpQMdHYVfUd6SB+Hw==
 
+"@types/highlight.js@^10.1.0":
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-10.1.0.tgz#89bb0c202997d7a90a07bd2ec1f7d00c56bb90b4"
+  integrity sha512-77hF2dGBsOgnvZll1vymYiNUtqJ8cJfXPD6GG/2M0aLRc29PkvB7Au6sIDjIEFcSICBhCh2+Pyq6WSRS7LUm6A==
+  dependencies:
+    highlight.js "*"
+
 "@types/http-proxy@^1.17.5":
   version "1.17.8"
   resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.8.tgz#968c66903e7e42b483608030ee85800f22d03f55"
@@ -3281,6 +3288,16 @@ hdr-histogram-percentiles-obj@^3.0.0:
   resolved "https://registry.yarnpkg.com/hdr-histogram-percentiles-obj/-/hdr-histogram-percentiles-obj-3.0.0.tgz#9409f4de0c2dda78e61de2d9d78b1e9f3cba283c"
   integrity sha512-7kIufnBqdsBGcSZLPJwqHT3yhk1QTsSlFsVD3kx5ixH/AlgBs9yM1q6DPhXZ8f8gtdqgh7N7/5btRLpQsS2gHw==
 
+highlight.js@*, highlight.js@^11.0.0:
+  version "11.3.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.3.1.tgz#813078ef3aa519c61700f84fe9047231c5dc3291"
+  integrity sha512-PUhCRnPjLtiLHZAQ5A/Dt5F8cWZeMyj9KRsACsWT+OD6OP0x6dp5OmT5jdx0JgEyPxPZZIPQpRN2TciUT7occw==
+
+highlightjs-line-numbers.js@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/highlightjs-line-numbers.js/-/highlightjs-line-numbers.js-2.8.0.tgz#479ea8cff0c31fadc1578a66fa03e38b801f9ca6"
+  integrity sha512-TEf1gw0c8mb8nan0QwliqS7obT4cpUd9hzsGzsZLweteNnWea/VIqy5/aQqsa5wnz9lnvmtAkS1ZtDTjB/goYQ==
+
 hosted-git-info@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-4.0.2.tgz#5e425507eede4fea846b7262f0838456c4209961"
@@ -4296,6 +4313,15 @@ neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+ngx-highlightjs@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/ngx-highlightjs/-/ngx-highlightjs-6.1.0.tgz#d34a0f0fba5284b2ae829c6afae966ee779d04d9"
+  integrity sha512-cnnH2eTcqkEhHSX1xIjdgmYKzdLuyGSABeBpKh9DWKTBj6NLcAaABvym1GlHnus1bOPmRQ2zlZdOFj73APgjTA==
+  dependencies:
+    highlight.js "^11.0.0"
+    highlightjs-line-numbers.js "^2.8.0"
+    tslib "^2.0.0"
 
 nice-napi@^1.0.2:
   version "1.0.2"

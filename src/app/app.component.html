@@ -2,19 +2,22 @@
 
 <app-tab-list>
   <app-tab title="CLI">
-    <p>CLI content goes here...<br /><br /></p>
-    <code><small>npx ng generate component stats</small></code>
-    <p>...</p>
+    <p>Intro text...</p>
+    <pre>
+      <code [highlight]="codeSample.cli" [languages]="['shell']"></code>
+    </pre>
   </app-tab>
   <app-tab title="Template">
-    <p>Template content goes here...<br /><br /></p>
-    <code><small>html code</small></code>
-    <p>...</p>
+    <p>Intro text...</p>
+    <pre>
+      <code [highlight]="codeSample.template" [languages]="['xml']"></code>
+    </pre>
   </app-tab>
   <app-tab title="Script">
-    <p>Script content goes here...<br /><br /></p>
-    <code><small>calculateCupsDrank()</small></code>
-    <p>...</p>
+    <p>Intro text...</p>
+    <pre>
+      <code [highlight]="codeSample.script" [languages]="['typescript']"></code>
+    </pre>
   </app-tab>
 </app-tab-list>
 

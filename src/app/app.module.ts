@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+
 import { StatsComponent } from './stats/stats.component';
 import { TabComponent } from './tab/tab.component';
 import { TabListComponent } from './tab-list/tab-list.component';
@@ -17,9 +19,24 @@ import { TabListComponent } from './tab-list/tab-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighlightModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        // lineNumbersLoader: () => import('highlightjs-line-numbers.js'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          shell: () => import('highlight.js/lib/languages/shell'),
+          xml: () => import('highlight.js/lib/languages/xml')
+        },
+        // themePath: 'assets/styles/solarized-dark.css',
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
