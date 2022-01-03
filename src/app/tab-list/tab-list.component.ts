@@ -4,7 +4,7 @@ import { TabComponent } from '../tab/tab.component';
 @Component({
   selector: 'app-tab-list',
   templateUrl: './tab-list.component.html',
-  styleUrls: ['./tab-list.component.scss']
+  styleUrls: ['./tab-list.component.scss'],
 })
 export class TabListComponent implements AfterContentInit {
   @ContentChildren(TabComponent) tabList!: QueryList<TabComponent>;

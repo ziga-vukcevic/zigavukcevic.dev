@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-stats',
   templateUrl: './stats.component.html',
-  styleUrls: ['./stats.component.scss']
 })
 export class StatsComponent implements OnInit {
   numberOfCups: number;
@@ -21,6 +20,11 @@ export class StatsComponent implements OnInit {
       (new Date().valueOf() - new Date(startDate).valueOf())
       / 1000 / 60 / 60 / 24 / 365);
     const suffixSign = '+';
+
+      const test = [
+        'test',
+      ];
+      // eslint add ;
 
     return `${numberOfYears}${suffixSign}`;
   }

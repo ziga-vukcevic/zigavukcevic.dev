@@ -20,7 +20,7 @@ import { TabListComponent } from './tab-list/tab-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HighlightModule
+    HighlightModule,
   ],
   providers: [
     {
@@ -31,12 +31,12 @@ import { TabListComponent } from './tab-list/tab-list.component';
         languages: {
           typescript: () => import('highlight.js/lib/languages/typescript'),
           shell: () => import('highlight.js/lib/languages/shell'),
-          xml: () => import('highlight.js/lib/languages/xml')
+          xml: () => import('highlight.js/lib/languages/xml'),
         },
         // themePath: 'assets/styles/solarized-dark.css',
-      }
-    }
+      },
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ],
 })
-export class AppModule { }
+export class AppModule {}

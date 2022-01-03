@@ -35,7 +35,10 @@
             "style": "kebab-case"
           }
         ],
-        "@angular-eslint/no-empty-lifecycle-method": "off"
+        "@angular-eslint/no-empty-lifecycle-method": "off",
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+        "semi": "error"
       }
     },
     {

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'zigavukcevic.dev';
@@ -57,5 +57,5 @@ npx ng generate component stats --style none
   }
 }`,
 unitTest: `code for unit test goes here`,
-  }
+  };
 }
