@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
-import { StatsComponent } from './stats/stats.component';
+import { StatListComponent } from './stat-list/stat-list.component';
 import { TabComponent } from './tab/tab.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StatsComponent,
+    StatListComponent,
     TabComponent,
     TabListComponent,
   ],

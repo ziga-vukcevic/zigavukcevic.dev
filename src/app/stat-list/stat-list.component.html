@@ -1,0 +1,56 @@
+<div class="mb-3">
+  <div class="p-4 rounded shadow-lg w-64">
+    <p class="font-semibold text-xl text-gray-800">
+      {{ calculateExperiencePeriod('2007-06-01') }}
+    </p>
+    <p class="text-gray-500 uppercase font-bold text-xs">
+      years in the web industry
+    </p>
+  </div>
+  <div class="p-4 rounded shadow-lg w-64">
+    <p class="font-semibold text-xl text-gray-800">
+      {{ calculateExperiencePeriod('2012-01-01') }}
+    </p>
+    <p class="text-gray-500 uppercase font-bold text-xs">
+      years of active programming
+    </p>
+  </div>
+  <div class="p-4 rounded shadow-lg w-64" *ngIf="numberOfCups > 0">
+    <p class="font-semibold text-xl text-gray-800">{{ numberOfCups }}</p>
+    <p class="text-gray-500 uppercase font-bold text-xs">
+      <span *ngIf="numberOfCups === 1">cup</span>
+      <span else>cups</span>
+      of coffee drank today
+    </p>
+  </div>
+
+  <!--
+    TODO: check if Angular has anything for singular, plural
+    https://angular.io/api/common/I18nPluralPipe
+  -->
+</div>
+
+<!-- <ng-template #invoicesTemplate let-paymentInvoices="paymentInvoices">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="tags-group">
+        <div class="tag" *ngFor="let invoice of paymentInvoices">
+          <div class="tag-body">
+            <span>{{invoice.invoiceNo }}</span>
+            <span (click)="removeInvoice(invoice)"><i title="remove" >x</i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template *ngTemplateOutlet="invoicesTemplate"></ng-template> -->
+
+<!-- <ng-container *ngTemplateOutlet="greet"></ng-container>
+<ng-container *ngTemplateOutlet="eng; context: calculateExperiencePeriod('2007-06-01')"></ng-container>
+<ng-container *ngTemplateOutlet="svk; context: calculateExperiencePeriod('2007-06-01')"></ng-container>
+
+<ng-template #greet><span>Hello 1</span></ng-template>
+<ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
+<ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template> -->
