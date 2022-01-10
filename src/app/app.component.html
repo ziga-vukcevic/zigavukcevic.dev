@@ -1,31 +1,86 @@
-<app-stat-list></app-stat-list>
+<div class="ml-5">
+  <h1 class="mt-10">
+    <span class="text-2xl leading-loose block text-gray-500">Hi, my name is</span>
+    <span class="text-5xl leading-tight block">Žiga and I'm a <strong>senior engineer</strong></span>
+    <span class="text-3xl leading-relaxed mb-8 block">mostly focused on <em class="text-gray-500">front-end web development</em>.</span>
+  </h1>
 
-<app-tab-list>
-  <app-tab title="CLI">
-    <p>Intro text...</p>
-    <p>See more at <a class="underline" href="https://angular.io/cli/generate#component">generate#component</a></p>
-    <pre>
-      <code [highlight]="codeSample.cli" [languages]="['shell']"></code>
-    </pre>
-  </app-tab>
-  <app-tab title="Template">
-    <p>Intro text...</p>
-    <pre>
-      <code [highlight]="codeSample.template" [languages]="['xml']"></code>
-    </pre>
-  </app-tab>
-  <app-tab title="Component">
-    <p>Intro text...</p>
-    <pre>
-      <code [highlight]="codeSample.component" [languages]="['typescript']"></code>
-    </pre>
-  </app-tab>
-  <app-tab title="Unit test">
-    <p>Intro text...</p>
-    <pre>
-      <code [highlight]="codeSample.unitTest" [languages]="['typescript']"></code>
-    </pre>
-  </app-tab>
-</app-tab-list>
+  <p class="text-xl mb-16">
+    I am located in
+    <a
+      class="border-b-4 text-gray-500 hover:border-red-600"
+      href="https://www.google.com/maps/place/Slovenia/@46.1437677,13.8719626,8z/data=!3m1!4b1!4m5!3m4!1s0x476524e75e968361:0xe740451e25e2d465!8m2!3d46.151241!4d14.995463"
+      rel="noopener noreferrer"
+      target="_blank"
+    >Slovenia</a>,
+    currently working for international company named
+    <a
+      class="border-b-4 text-gray-500 hover:border-red-600"
+      href="https://www.endava.com/"
+      rel="noopener noreferrer"
+      target="_blank">Endava</a>.
+  </p>
 
-<router-outlet></router-outlet>
+  <!-- TODO
+  - audio</li>
+  - 10k people</li>
+  - stock info</li>
+  - icon for target="_blank" link</li>
+  </ul>
+  -->
+
+  <app-stat-list></app-stat-list>
+
+  <!--
+  <app-tab-list>
+    <app-tab title="CLI">
+      <p>Intro text...</p>
+      <p>See more at <a class="underline" href="https://angular.io/cli/generate#component">generate#component</a></p>
+      <pre>
+        <code [highlight]="codeSample.cli" [languages]="['shell']"></code>
+      </pre>
+    </app-tab>
+    <app-tab title="Template">
+      <p>Intro text...</p>
+      <pre>
+        <code [highlight]="codeSample.template" [languages]="['xml']"></code>
+      </pre>
+    </app-tab>
+    <app-tab title="Component">
+      <p>Intro text...</p>
+      <pre>
+        <code [highlight]="codeSample.component" [languages]="['typescript']"></code>
+      </pre>
+    </app-tab>
+    <app-tab title="Unit test">
+      <p>Intro text...</p>
+      <pre>
+        <code [highlight]="codeSample.unitTest" [languages]="['typescript']"></code>
+      </pre>
+    </app-tab>
+  </app-tab-list>
+  -->
+
+  <router-outlet></router-outlet>
+  <footer class="mt-20">
+    <p>&copy; 2021 &mdash; today | v3.1.0-alpha</p>
+    <small>
+      This site is built with
+      <a
+        class="border-b-2 text-gray-500 hover:border-red-600"
+        href="https://angular.io/"
+        rel="noopener noreferrer"
+        target="_blank">Angular</a> and hosted on
+      <a
+        class="border-b-2 text-gray-500 hover:border-red-600"
+        href="https://www.netlify.com/"
+        rel="noopener noreferrer"
+        target="_blank">Netlify</a>. The source code is hosted on
+      <a
+        class="border-b-2 text-gray-500 hover:border-red-600"
+        href="https://github.com/ziga-vukcevic/zigavukcevic.dev"
+        rel="noopener noreferrer"
+        target="_blank">GitHub</a>.
+    </small>
+  </footer>
+</div>
