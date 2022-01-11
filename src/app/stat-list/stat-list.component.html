@@ -19,7 +19,7 @@
     <p class="font-semibold text-xl text-gray-800">{{ numberOfCups }}</p>
     <p class="text-gray-500 uppercase font-bold text-xs">
       <span *ngIf="numberOfCups === 1">cup</span>
-      <span else>cups</span>
+      <span *ngIf="numberOfCups > 1">cups</span>
       of coffee drank today
     </p>
   </div>
