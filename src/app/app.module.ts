@@ -7,15 +7,15 @@ import { AppComponent } from './app.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { StatListComponent } from './stat-list/stat-list.component';
-import { TabComponent } from './tab/tab.component';
 import { TabListComponent } from './tab-list/tab-list.component';
+import { TabComponent } from './tab/tab.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StatListComponent,
-    TabComponent,
     TabListComponent,
+    TabComponent,
   ],
   imports: [
     BrowserModule,

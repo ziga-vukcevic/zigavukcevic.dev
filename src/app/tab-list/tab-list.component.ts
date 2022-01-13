@@ -9,22 +9,14 @@ import { TabComponent } from '../tab/tab.component';
 export class TabListComponent implements AfterContentInit {
   @ContentChildren(TabComponent) tabList!: QueryList<TabComponent>;
 
-  // contentChildren are set
   ngAfterContentInit() {
-    // get all active tabList
-    let activetabList = this.tabList.filter((tab)=>tab.isActive);
-
-    // if there is no active tab set, activate the first
-    if(activetabList.length === 0) {
+    if (this.tabList.some(tab => !tab.isActive)) {
       this.selectTab(this.tabList.first);
     }
   }
 
-  selectTab(tab: any){
-    // deactivate all tabList
-    this.tabList.toArray().forEach(tab => tab.isActive = false);
-
-    // activate the tab the user has clicked on.
+  selectTab(tab: TabComponent){
+    this.tabList.forEach(tab => tab.isActive = false);
     tab.isActive = true;
   }
 }
