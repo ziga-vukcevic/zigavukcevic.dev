@@ -1,5 +1,7 @@
-name: Lint and tests
-on: [ push ]
+name: zigavukcevic.dev
+on:
+  push:
+    branches: [ main ]
 jobs:
   prebuild:
     runs-on: ubuntu-latest
@@ -8,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v1 # Setup node
         with:
           node-version: '12'
-      - name: Run Lint and tests
+      - name: Run linter and tests
         run: |
           npm install yarn -g
           yarn install
