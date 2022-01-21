@@ -1,0 +1,16 @@
+name: zigavukcevic.dev CI
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  # Job called "test"
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Karma tests
+        run: yarn test
