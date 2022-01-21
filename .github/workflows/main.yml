@@ -1,15 +1,17 @@
 name: zigavukcevic.dev CI
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+on: [push]
 jobs:
-  # Job called "test"
-  test:
+  build:
+    name: Test
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run Karma tests
-        run: |
-          yarn install
-          yarn test
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build # will run `yarn build` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: test # will run `yarn test` command
