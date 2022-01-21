@@ -36,6 +36,13 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
+    browsers: ['ChromeHeadless', 'ChromeHeadlessCI'],
+    customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
     autoWatch: true,
     singleRun: true,
     restartOnFileChange: true
