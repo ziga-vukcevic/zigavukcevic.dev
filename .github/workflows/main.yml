@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Run Karma tests
         run: |
-        yarn install
-        yarn test
+          yarn install
+          yarn test
