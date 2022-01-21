@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --browsers ChromeHeadless",
     "testWithBrowser": "ng test  --browsers Chrome --watch=true",
     "lint": "ng lint"
   },
@@ -49,6 +49,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "postcss": "^8.4.5",
+    "puppeteer": "^13.1.1",
     "tailwindcss": "^3.0.7",
     "typescript": "~4.5.2"
   }
