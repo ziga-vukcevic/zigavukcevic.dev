@@ -1,11 +1,8 @@
 name: zigavukcevic.dev CI
-
 on:
   push:
     branches: [ main ]
-
   workflow_dispatch:
-
 jobs:
   # Job called "test"
   test:
@@ -13,4 +10,6 @@ jobs:
 
     steps:
       - name: Run Karma tests
-        run: yarn test
+        run: |
+        yarn install
+        yarn test

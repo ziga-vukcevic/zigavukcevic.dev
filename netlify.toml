@@ -1,3 +1,4 @@
 [build]
   publish = "dist/zigavukcevic.dev"
+  command = "yarn test"
   command = "yarn build"
