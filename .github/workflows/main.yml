@@ -1,4 +1,4 @@
-name: Karma tests
+name: Lint and tests
 
 # Run on every push
 on: [ push ]
@@ -12,8 +12,9 @@ jobs:
       - uses: actions/setup-node@v1 # Setup node
         with:
           node-version: '12'
-      - name: Run Karma tests
+      - name: Run Lint and tests
         run: |
           npm install yarn -g
           yarn install
+          yarn lint
           yarn test
