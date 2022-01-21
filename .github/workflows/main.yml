@@ -1,11 +1,7 @@
 name: Lint and tests
-
-# Run on every push
 on: [ push ]
-
-# Job setup
 jobs:
-  build:
+  prebuild:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 # Checkout repository
