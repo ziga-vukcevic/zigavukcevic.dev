@@ -12,10 +12,11 @@ export class StatListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.calculateCupsDrank();
+    const currentLocalHour = new Date().getHours();
+    this.calculateCupsDrank(currentLocalHour);
   }
 
-  calculateExperiencePeriod(startDate: string) {
+  calculateExperiencePeriod(startDate: string): string {
     const numberOfYears = Math.round(
       (new Date().valueOf() - new Date(startDate).valueOf())
       / 1000 / 60 / 60 / 24 / 365);
@@ -24,9 +25,7 @@ export class StatListComponent implements OnInit {
     return `${numberOfYears}${suffixSign}`;
   }
 
-  calculateCupsDrank() {
-    const currentLocalHour = new Date().getHours();
-
+  calculateCupsDrank(currentLocalHour: number): void {
     switch(true) {
       // From 8:00 to 10:59
       case (currentLocalHour >= 8 && currentLocalHour <= 10): // TODO: any cleaner way to write this?

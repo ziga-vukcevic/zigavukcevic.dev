@@ -22,7 +22,7 @@ describe('TabComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should be hidden by default", () => {
+  it('should be hidden by default', () => {
     const { nativeElement } = fixture.debugElement;
     expect(nativeElement.querySelector('.js-unit-test')
       .hasAttribute('hidden')).toBe(true);
