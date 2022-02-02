@@ -23,28 +23,26 @@ describe('StatsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain 1 cup of coffee if current local hour is 8', () => {
-    component.calculateCupsDrank(8);
-    fixture.detectChanges();
-    const { nativeElement } = fixture.debugElement;
-    expect(nativeElement.querySelector('.js-unit-test').innerText).toBe(String(1));
-  });
+  const occurrenceList = [
+    // TODO: { numberOfCups: 0, currentLocalHourList: [0, 1, 2, 3, 4, 5, 6, 7] },
+    { numberOfCups: 1, currentLocalHourList: [8, 10] },
+    { numberOfCups: 2, currentLocalHourList: [11, 12, 13, 14, 15] },
+    { numberOfCups: 3, currentLocalHourList: [16, 17, 18, 19, 20, 21, 22, 23] },
+  ];
 
-  it('should contain 2 cups of coffee if current local hour is 11', () => {
-    component.calculateCupsDrank(11);
-    fixture.detectChanges();
-    const { nativeElement } = fixture.debugElement;
-    expect(nativeElement.querySelector('.js-unit-test').innerText).toBe(String(2));
+  occurrenceList.forEach((occurrence) => {
+    occurrence.currentLocalHourList.forEach((currentLocalHour) => {
+      it(`
+        should contain ${occurrence.numberOfCups}
+        ${occurrence.numberOfCups > 1 ? 'cups' : 'cup'}
+        of coffee if current local hour is ${currentLocalHour}
+      `, () => {
+        component.calculateCupsDrank(currentLocalHour);
+        fixture.detectChanges();
+        const { nativeElement } = fixture.debugElement;
+        expect(nativeElement.querySelector('.js-unit-test').innerText)
+          .toBe(String(occurrence.numberOfCups));
+      });
+    });
   });
-
-  it('should contain 3 cups of coffee if current local hour is 16', () => {
-    component.calculateCupsDrank(16);
-    fixture.detectChanges();
-    const { nativeElement } = fixture.debugElement;
-    expect(nativeElement.querySelector('.js-unit-test').innerText).toBe(String(3));
-  });
-
-  // TODO
-  //  - not showing stats
-  //  - cover more cases
 });
