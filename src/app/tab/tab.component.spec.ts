@@ -24,15 +24,15 @@ describe('TabComponent', () => {
 
   it('should be hidden by default', () => {
     const { nativeElement } = fixture.debugElement;
-    expect(nativeElement.querySelector('.js-unit-test')
-      .hasAttribute('hidden')).toBe(true);
+    expect(nativeElement.querySelector('.js-unit-test-container')
+      .hasAttribute('hidden')).toBeTrue();
   });
 
   it('should be visible if set to active', () => {
     component.isActive = true;
     fixture.detectChanges();
     const { nativeElement } = fixture.debugElement;
-    expect(nativeElement.querySelector('.js-unit-test')
-      .hasAttribute('hidden')).toBe(false);
+    expect(nativeElement.querySelector('.js-unit-test-container')
+      .hasAttribute('hidden')).toBeFalse();
   });
 });

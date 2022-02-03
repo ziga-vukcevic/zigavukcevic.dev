@@ -23,26 +23,43 @@ describe('StatsComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // TODO: singular, plural test
+
   const occurrenceList = [
-    // TODO: { numberOfCups: 0, currentLocalHourList: [0, 1, 2, 3, 4, 5, 6, 7] },
-    { numberOfCups: 1, currentLocalHourList: [8, 10] },
-    { numberOfCups: 2, currentLocalHourList: [11, 12, 13, 14, 15] },
-    { numberOfCups: 3, currentLocalHourList: [16, 17, 18, 19, 20, 21, 22, 23] },
+    { numberOfCups: 0, localHourList: [0, 1, 2, 3, 4, 5, 6, 7] },
+    { numberOfCups: 1, localHourList: [8, 9, 10] },
+    { numberOfCups: 2, localHourList: [11, 12, 13, 14, 15] },
+    { numberOfCups: 3, localHourList: [16, 17, 18, 19, 20, 21, 22, 23] },
   ];
 
-  occurrenceList.forEach((occurrence) => {
-    occurrence.currentLocalHourList.forEach((currentLocalHour) => {
-      it(`
-        should contain ${occurrence.numberOfCups}
-        ${occurrence.numberOfCups > 1 ? 'cups' : 'cup'}
-        of coffee if current local hour is ${currentLocalHour}
-      `, () => {
-        component.calculateCupsDrank(currentLocalHour);
-        fixture.detectChanges();
-        const { nativeElement } = fixture.debugElement;
-        expect(nativeElement.querySelector('.js-unit-test').innerText)
-          .toBe(String(occurrence.numberOfCups));
-      });
+  occurrenceList.forEach((occurrence, occurrenceIndex) => {
+    occurrence.localHourList.forEach((localHour) => {
+      // Occurrence with number of cups of 0
+      if (occurrenceIndex === 0) {
+        it(`should be hidden if current local hour is ${localHour}`, () => {
+          component.calculateCupsDrank(localHour);
+          fixture.detectChanges();
+          const { nativeElement } = fixture.debugElement;
+
+          expect(
+            nativeElement.querySelector('.js-unit-test-container').hasAttribute('hidden'),
+          ).toBeTrue();
+        });
+      // Occurrences with number of cups of 1, 2 or 3
+      } else {
+        it(`should contain ${occurrence.numberOfCups}
+          ${occurrence.numberOfCups > 1 ? 'cups' : 'cup'}
+          of coffee if current local hour is ${localHour}`,
+        () => {
+          component.calculateCupsDrank(localHour);
+          fixture.detectChanges();
+          const { nativeElement } = fixture.debugElement;
+
+          expect(
+            nativeElement.querySelector('.js-unit-test-container .js-unit-test-number-of-cups').innerText,
+          ).toBe(String(occurrence.numberOfCups));
+        });
+      }
     });
   });
 });

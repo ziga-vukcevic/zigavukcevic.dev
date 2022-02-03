@@ -15,13 +15,30 @@
       years of active programming
     </p>
   </div>
-  <div class="p-4 rounded shadow-lg w-64" *ngIf="numberOfCups > 0">
-    <p class="font-semibold text-xl text-gray-800 js-unit-test">{{ numberOfCups }}</p>
+  <div class="p-4 rounded shadow-lg w-64 relative js-unit-test-container" [hidden]="!numberOfCups">
+    <p class="font-semibold text-xl text-gray-800 js-unit-test-number-of-cups">{{ numberOfCups }}</p>
     <p class="text-gray-500 uppercase font-bold text-xs">
       <span *ngIf="numberOfCups === 1">cup</span>
       <span *ngIf="numberOfCups > 1">cups</span>
       of coffee drank today
     </p>
+    <button class="absolute right-1 bottom-0" (click)="toggleUnitTestList()">
+      <hero-icon
+        name="code"
+        type="outline" class="w-4 h-4 text-gray-400 hover:text-gray-900"
+      ></hero-icon>
+    </button>
+  </div>
+
+  <div class="mt-10 text-sm" [hidden]="!isUnitTestListVisible">
+    <p class="mb-3">List of passed unit tests</p>
+    <ul class="list-disc ml-6">
+      <!-- <li>should create component</li> -->
+      <li>should be hidden if current local hour is in range from 0 to 7</li>
+      <li>should contain 1 cup of coffee if current local hour is in range from 8 to 10</li>
+      <li>should contain 2 cups of coffee if current local hour is in range from 11 to 15</li>
+      <li>should contain 3 cups of coffee if current local hour is in range from 16 to 23</li>
+    </ul>
   </div>
 
   <!--

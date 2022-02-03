@@ -4829,6 +4829,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ng-heroicon@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ng-heroicon/-/ng-heroicon-1.0.5.tgz#71a9f48373a235d8f5a9657fb8e531fc7226b252"
+  integrity sha512-U6UwS8zcM8WuV+cqxq4C2isbMMFlCoIAH5oxI+9E3xvr2sW9r3tbT7o5k6XHIdJz3s9nXFG9FjYI5gNMZ15wWQ==
+  dependencies:
+    tslib "^2.0.0"
+
 ngx-highlightjs@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/ngx-highlightjs/-/ngx-highlightjs-6.1.0.tgz#d34a0f0fba5284b2ae829c6afae966ee779d04d9"

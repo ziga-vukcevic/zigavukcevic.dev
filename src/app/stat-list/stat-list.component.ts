@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatListComponent implements OnInit {
   numberOfCups: number;
+  isUnitTestListVisible: boolean;
 
   constructor() {
     this.numberOfCups = 0;
+    this.isUnitTestListVisible = false;
   }
 
   ngOnInit(): void {
@@ -43,5 +45,9 @@ export class StatListComponent implements OnInit {
       default:
         this.numberOfCups = 0;
     }
+  }
+
+  toggleUnitTestList() {
+    this.isUnitTestListVisible = !this.isUnitTestListVisible;
   }
 }
