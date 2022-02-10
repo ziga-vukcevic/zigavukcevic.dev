@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface IsUnitTestListVisibleInterface {
-  periodWeb: string;
-  periodProgramming: string;
-  numberOfCups: string;
-};
+import { IsUnitTestListVisibleInterface } from './is-unit-test-list-visible.interface';
 
 @Component({
   selector: 'app-stat-list',
@@ -42,6 +37,7 @@ export class StatListComponent implements OnInit {
   }
 
   calculatePeriod(startDate: string, endDate: string): string {
+    // TODO: fix NaN on iPhone Chrome - perhaps just use dayjs lib
     const numberOfYears = Math.round(
       (new Date(endDate).valueOf() - new Date(startDate).valueOf())
       / 1000 / 60 / 60 / 24 / 365);
