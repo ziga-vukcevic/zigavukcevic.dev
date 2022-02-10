@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { code, HeroIconModule } from 'ng-heroicon';
 
 import { StatListComponent } from './stat-list.component';
 
@@ -9,6 +10,16 @@ describe('StatsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ StatListComponent ],
+      imports: [
+        // TODO: still failing
+        // HeroIconModule.forRoot(
+        //   { code },
+        //   {
+        //     defaultHostDisplay: 'inlineBlock',
+        //     attachDefaultDimensionsIfNoneFound: true,
+        //   },
+        // ),
+       ],
     })
     .compileComponents();
   });
@@ -21,6 +32,30 @@ describe('StatsComponent', () => {
 
   it('should create component', () => {
     expect(component).toBeTruthy();
+  });
+
+  const endFutureDate = '2032-02-05';
+
+  it(`should contain 25+ years in the web industry if today's date would be 2032-02-05`, () => {
+    component.periodWeb = component
+      .calculatePeriod('2007-06-01', endFutureDate);
+    fixture.detectChanges();
+    const { nativeElement } = fixture.debugElement;
+
+    expect(
+      nativeElement.querySelector('.js-unit-test-period-web').innerText,
+    ).toBe('25+');
+  });
+
+  it(`should contain 20+ years of active programming if today's date would be 2032-02-05`, () => {
+    component.periodProgramming = component
+      .calculatePeriod('2012-01-01', endFutureDate);
+    fixture.detectChanges();
+    const { nativeElement } = fixture.debugElement;
+
+    expect(
+      nativeElement.querySelector('.js-unit-test-period-programming').innerText,
+    ).toBe('20+');
   });
 
   // TODO: singular, plural test

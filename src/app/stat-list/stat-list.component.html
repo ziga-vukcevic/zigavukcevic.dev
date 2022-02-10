@@ -1,20 +1,49 @@
 <div class="mb-16">
-  <div class="p-4 rounded shadow-lg w-64">
-    <p class="font-semibold text-xl text-gray-800">
-      {{ calculateExperiencePeriod('2007-06-01') }}
+  <!-- Period web -->
+  <div class="p-4 rounded shadow-lg w-64 relative">
+    <p class="font-semibold text-xl text-gray-800 js-unit-test-period-web">
+      {{ periodWeb }}
     </p>
     <p class="text-gray-500 uppercase font-bold text-xs">
       years in the web industry
     </p>
+    <button class="absolute right-1 bottom-0" (click)="showUnitTestList('periodWeb')">
+      <hero-icon
+        name="code"
+        type="outline" class="w-4 h-4 text-gray-400 hover:text-gray-900"
+      ></hero-icon>
+    </button>
   </div>
-  <div class="p-4 rounded shadow-lg w-64">
-    <p class="font-semibold text-xl text-gray-800">
-      {{ calculateExperiencePeriod('2012-01-01') }}
+  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodWeb">
+    <p class="mb-3">Passed unit test</p>
+    <ul class="list-disc ml-6">
+      <li>should contain 25+ years in the web industry if today's date would be 2032-02-05</li>
+    </ul>
+  </div>
+  <!-- / Period web -->
+  <!-- Period programming -->
+  <div class="p-4 rounded shadow-lg w-64 relative">
+    <p class="font-semibold text-xl text-gray-800 js-unit-test-period-programming">
+      {{ periodProgramming }}
     </p>
     <p class="text-gray-500 uppercase font-bold text-xs">
       years of active programming
     </p>
+    <button class="absolute right-1 bottom-0" (click)="showUnitTestList('periodProgramming')">
+      <hero-icon
+        name="code"
+        type="outline" class="w-4 h-4 text-gray-400 hover:text-gray-900"
+      ></hero-icon>
+    </button>
   </div>
+  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodProgramming">
+    <p class="mb-3">Passed unit test</p>
+    <ul class="list-disc ml-6">
+      <li>should contain 20+ years of active programming if today's date would be 2032-02-05</li>
+    </ul>
+  </div>
+  <!-- / Period programming -->
+  <!-- Number of cups -->
   <div class="p-4 rounded shadow-lg w-64 relative js-unit-test-container" [hidden]="!numberOfCups">
     <p class="font-semibold text-xl text-gray-800 js-unit-test-number-of-cups">{{ numberOfCups }}</p>
     <p class="text-gray-500 uppercase font-bold text-xs">
@@ -22,52 +51,26 @@
       <span *ngIf="numberOfCups > 1">cups</span>
       of coffee drank today
     </p>
-    <button class="absolute right-1 bottom-0" (click)="toggleUnitTestList()">
+    <button class="absolute right-1 bottom-0" (click)="showUnitTestList('numberOfCups')">
       <hero-icon
         name="code"
         type="outline" class="w-4 h-4 text-gray-400 hover:text-gray-900"
       ></hero-icon>
     </button>
   </div>
-
-  <div class="mt-10 text-sm" [hidden]="!isUnitTestListVisible">
+  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.numberOfCups">
     <p class="mb-3">List of passed unit tests</p>
     <ul class="list-disc ml-6">
-      <!-- <li>should create component</li> -->
       <li>should be hidden if current local hour is in range from 0 to 7</li>
       <li>should contain 1 cup of coffee if current local hour is in range from 8 to 10</li>
       <li>should contain 2 cups of coffee if current local hour is in range from 11 to 15</li>
       <li>should contain 3 cups of coffee if current local hour is in range from 16 to 23</li>
     </ul>
   </div>
+  <!-- / Number of cups -->
 
   <!--
     TODO: check if Angular has anything for singular, plural
     https://angular.io/api/common/I18nPluralPipe
   -->
 </div>
-
-<!-- <ng-template #invoicesTemplate let-paymentInvoices="paymentInvoices">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="tags-group">
-        <div class="tag" *ngFor="let invoice of paymentInvoices">
-          <div class="tag-body">
-            <span>{{invoice.invoiceNo }}</span>
-            <span (click)="removeInvoice(invoice)"><i title="remove" >x</i></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</ng-template>
-
-<ng-template *ngTemplateOutlet="invoicesTemplate"></ng-template> -->
-
-<!-- <ng-container *ngTemplateOutlet="greet"></ng-container>
-<ng-container *ngTemplateOutlet="eng; context: calculateExperiencePeriod('2007-06-01')"></ng-container>
-<ng-container *ngTemplateOutlet="svk; context: calculateExperiencePeriod('2007-06-01')"></ng-container>
-
-<ng-template #greet><span>Hello 1</span></ng-template>
-<ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
-<ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template> -->

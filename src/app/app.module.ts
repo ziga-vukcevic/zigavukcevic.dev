@@ -10,6 +10,7 @@ import { code, HeroIconModule } from 'ng-heroicon';
 import { StatListComponent } from './stat-list/stat-list.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { TabComponent } from './tab/tab.component';
+import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TabComponent } from './tab/tab.component';
     StatListComponent,
     TabListComponent,
     TabComponent,
+    RoadmapItemComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<a
+  class="roadmap-item underline px-5 py-3 level-{{ level }}"
+  [ngClass]="{
+    'bg-gray-200 text-gray-500': status === 'knowledgeAbsorbed',
+    'bg-gray-50 text-gray-400': status === 'needToLearn'
+  }"
+  [href]="href"
+  [title]="title"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  {{ title }}
+</a>

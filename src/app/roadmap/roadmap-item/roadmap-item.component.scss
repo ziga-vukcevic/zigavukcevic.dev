@@ -1,0 +1,19 @@
+.roadmap-item {
+  display: inline-block;
+  position: relative;
+
+  &.level-2 {
+    margin-left: 50px;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 50px;
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      border-top: 1px solid black;
+    }
+  }
+}

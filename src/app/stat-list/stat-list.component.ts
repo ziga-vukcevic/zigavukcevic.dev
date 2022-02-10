@@ -1,26 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 
+interface IsUnitTestListVisibleInterface {
+  periodWeb: string;
+  periodProgramming: string;
+  numberOfCups: string;
+};
+
 @Component({
   selector: 'app-stat-list',
   templateUrl: './stat-list.component.html',
 })
 export class StatListComponent implements OnInit {
+  periodWeb: string;
+  periodProgramming: string;
   numberOfCups: number;
-  isUnitTestListVisible: boolean;
+  isUnitTestListVisible: {
+    periodWeb: boolean,
+    periodProgramming: boolean,
+    numberOfCups: boolean,
+  };
 
   constructor() {
+    const today: Date = new Date();
+    // TODO: rather format? dayjs, or? not having leading zeros, a mess
+    const todayParsed: string = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+    this.periodWeb = this.calculatePeriod('2007-06-01', todayParsed);
+    this.periodProgramming = this.calculatePeriod('2012-01-01', todayParsed);
+
     this.numberOfCups = 0;
-    this.isUnitTestListVisible = false;
+    this.isUnitTestListVisible = {
+      periodWeb: false,
+      periodProgramming: false,
+      numberOfCups: false,
+    };
   }
 
   ngOnInit(): void {
+    // TODO: here? or in constructor? or move things from constructor to here?
     const currentLocalHour = new Date().getHours();
     this.calculateCupsDrank(currentLocalHour);
   }
 
-  calculateExperiencePeriod(startDate: string): string {
+  calculatePeriod(startDate: string, endDate: string): string {
     const numberOfYears = Math.round(
-      (new Date().valueOf() - new Date(startDate).valueOf())
+      (new Date(endDate).valueOf() - new Date(startDate).valueOf())
       / 1000 / 60 / 60 / 24 / 365);
     const suffixSign = '+';
 
@@ -47,8 +70,8 @@ export class StatListComponent implements OnInit {
     }
   }
 
-  toggleUnitTestList(): void {
-    this.isUnitTestListVisible = !this.isUnitTestListVisible;
+  showUnitTestList(name: string): void {
+    this.isUnitTestListVisible[name as keyof IsUnitTestListVisibleInterface] = true;
   }
 
   private isValueInRange(value: number, min: number, max: number): boolean {
