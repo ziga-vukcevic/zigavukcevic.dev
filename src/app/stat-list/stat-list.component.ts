@@ -47,7 +47,7 @@ export class StatListComponent implements OnInit {
       / 1000 / 60 / 60 / 24 / 365);
     const suffixSign = '+';
 
-    return `${numberOfYears}${suffixSign}`;
+    return `${String(numberOfYears)}${suffixSign}`;
   }
 
   calculateCupsDrank(currentLocalHour: number): void {
