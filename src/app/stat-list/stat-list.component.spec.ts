@@ -1,6 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { code, HeroIconModule } from 'ng-heroicon';
-
 import { StatListComponent } from './stat-list.component';
 
 describe('StatsComponent', () => {
@@ -10,16 +8,6 @@ describe('StatsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ StatListComponent ],
-      imports: [
-        // TODO: still failing
-        // HeroIconModule.forRoot(
-        //   { code },
-        //   {
-        //     defaultHostDisplay: 'inlineBlock',
-        //     attachDefaultDimensionsIfNoneFound: true,
-        //   },
-        // ),
-       ],
     })
     .compileComponents();
   });

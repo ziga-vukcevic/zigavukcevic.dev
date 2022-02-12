@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { code, HeroIconModule } from 'ng-heroicon';
 
 import { StatListComponent } from './stat-list/stat-list.component';
 import { TabListComponent } from './tab-list/tab-list.component';
@@ -24,13 +23,6 @@ import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.compon
     BrowserModule,
     AppRoutingModule,
     HighlightModule,
-    HeroIconModule.forRoot(
-      { code },
-      {
-        defaultHostDisplay: 'inlineBlock',
-        attachDefaultDimensionsIfNoneFound: true,
-      },
-    ),
   ],
   providers: [
     {

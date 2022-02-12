@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IsUnitTestListVisibleInterface } from './is-unit-test-list-visible.interface';
+import { IsUnitTestListVisibleInterface } from './interface/is-unit-test-list-visible.interface';
 
 @Component({
   selector: 'app-stat-list',
@@ -66,8 +66,8 @@ export class StatListComponent implements OnInit {
     }
   }
 
-  showUnitTestList(name: string): void {
-    this.isUnitTestListVisible[name as keyof IsUnitTestListVisibleInterface] = true;
+  showUnitTestList(listName: string): void {
+    this.isUnitTestListVisible[listName as keyof IsUnitTestListVisibleInterface] = true;
   }
 
   private isValueInRange(value: number, min: number, max: number): boolean {

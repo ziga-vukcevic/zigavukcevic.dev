@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css",
               "src/styles.scss"
             ],
             "scripts": []

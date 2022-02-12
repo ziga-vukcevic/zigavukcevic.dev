@@ -7,11 +7,8 @@
     <p class="text-gray-500 uppercase font-bold text-xs">
       years in the web industry
     </p>
-    <button class="absolute right-1 bottom-0" (click)="showUnitTestList('periodWeb')">
-      <hero-icon
-        name="code"
-        type="outline" class="w-4 h-4 text-gray-400 hover:text-gray-900"
-      ></hero-icon>
+    <button class="absolute right-2 bottom-1" (click)="showUnitTestList('periodWeb')">
+      <i class="las la-code text-gray-400 hover:text-red-600"></i>
     </button>
   </div>
   <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodWeb">
@@ -29,11 +26,8 @@
     <p class="text-gray-500 uppercase font-bold text-xs">
       years of active programming
     </p>
-    <button class="absolute right-1 bottom-0" (click)="showUnitTestList('periodProgramming')">
-      <hero-icon
-        name="code"
-        type="outline" class="w-4 h-4 text-gray-400 hover:text-gray-900"
-      ></hero-icon>
+    <button class="absolute right-2 bottom-1" (click)="showUnitTestList('periodProgramming')">
+      <i class="las la-code text-gray-400 hover:text-red-600"></i>
     </button>
   </div>
   <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodProgramming">
@@ -51,11 +45,8 @@
       <span *ngIf="numberOfCups > 1">cups</span>
       of coffee drank today
     </p>
-    <button class="absolute right-1 bottom-0" (click)="showUnitTestList('numberOfCups')">
-      <hero-icon
-        name="code"
-        type="outline" class="w-4 h-4 text-gray-400 hover:text-gray-900"
-      ></hero-icon>
+    <button class="absolute right-2 bottom-1" (click)="showUnitTestList('numberOfCups')">
+      <i class="las la-code text-gray-400 hover:text-red-600"></i>
     </button>
   </div>
   <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.numberOfCups">
