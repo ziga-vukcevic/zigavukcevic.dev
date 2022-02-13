@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IsUnitTestListVisibleInterface } from './interface/is-unit-test-list-visible.interface';
+import * as dayjs from 'dayjs';
 
 @Component({
   selector: 'app-stat-list',
@@ -16,11 +17,9 @@ export class StatListComponent implements OnInit {
   };
 
   constructor() {
-    const today: Date = new Date();
-    // TODO: rather format? dayjs, or? not having leading zeros, a mess
-    const todayParsed: string = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
-    this.periodWeb = this.calculatePeriod('2007-06-01', todayParsed);
-    this.periodProgramming = this.calculatePeriod('2012-01-01', todayParsed);
+    const today: string = dayjs().format();
+    this.periodWeb = this.calculatePeriod('2007-06-01', today);
+    this.periodProgramming = this.calculatePeriod('2012-01-01', today);
 
     this.numberOfCups = 0;
     this.isUnitTestListVisible = {
@@ -37,10 +36,7 @@ export class StatListComponent implements OnInit {
   }
 
   calculatePeriod(startDate: string, endDate: string): string {
-    // TODO: fix NaN on iPhone Chrome - perhaps just use dayjs lib
-    const numberOfYears = Math.round(
-      (new Date(endDate).valueOf() - new Date(startDate).valueOf())
-      / 1000 / 60 / 60 / 24 / 365);
+    const numberOfYears = dayjs(endDate).diff(startDate, 'year');
     const suffixSign = '+';
 
     return `${String(numberOfYears)}${suffixSign}`;
