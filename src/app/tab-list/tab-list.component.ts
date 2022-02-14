@@ -9,6 +9,8 @@ import { TabComponent } from '../tab/tab.component';
 export class TabListComponent implements AfterContentInit {
   @ContentChildren(TabComponent) tabList!: QueryList<TabComponent>;
 
+  constructor() {}
+
   ngAfterContentInit(): void {
     if (this.tabList.some(tab => !tab.isActive)) {
       this.selectTab(this.tabList.first);

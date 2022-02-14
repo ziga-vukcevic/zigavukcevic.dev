@@ -7,31 +7,29 @@ import * as dayjs from 'dayjs';
   templateUrl: './stat-list.component.html',
 })
 export class StatListComponent implements OnInit {
-  periodWeb: string;
-  periodProgramming: string;
-  numberOfCups: number;
-  isUnitTestListVisible: {
+  periodWeb!: string;
+  periodProgramming!: string;
+  numberOfCups!: number;
+  isUnitTestListVisible!: {
     periodWeb: boolean,
     periodProgramming: boolean,
     numberOfCups: boolean,
   };
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     const today: string = dayjs().format();
     this.periodWeb = this.calculatePeriod('2007-06-01', today);
     this.periodProgramming = this.calculatePeriod('2012-01-01', today);
-
     this.numberOfCups = 0;
     this.isUnitTestListVisible = {
       periodWeb: false,
       periodProgramming: false,
       numberOfCups: false,
     };
-  }
 
-  ngOnInit(): void {
-    // TODO: here? or in constructor? or move things from constructor to here?
-    const currentLocalHour = new Date().getHours();
+    const currentLocalHour = dayjs().hour();
     this.calculateCupsDrank(currentLocalHour);
   }
 

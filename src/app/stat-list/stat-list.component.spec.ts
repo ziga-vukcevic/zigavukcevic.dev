@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StatListComponent } from './stat-list.component';
+import * as dayjs from 'dayjs';
 
 describe('StatsComponent', () => {
   let component: StatListComponent;
@@ -22,9 +23,10 @@ describe('StatsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  const endFutureDate = '2032-02-05';
+  const endFutureDate = '2032-07-01';
+  const endFutureDateParsed = dayjs(endFutureDate).format('D MMMM YYYY');
 
-  it(`should contain 25+ years in the web industry if today's date would be 2032-02-05`, () => {
+  it(`should contain 25+ years in the web industry if today's date would be ${endFutureDateParsed}`, () => {
     component.periodWeb = component
       .calculatePeriod('2007-06-01', endFutureDate);
     fixture.detectChanges();
@@ -35,7 +37,7 @@ describe('StatsComponent', () => {
     ).toBe('25+');
   });
 
-  it(`should contain 20+ years of active programming if today's date would be 2032-02-05`, () => {
+  it(`should contain 20+ years of active programming if today's date would be ${endFutureDateParsed}`, () => {
     component.periodProgramming = component
       .calculatePeriod('2012-01-01', endFutureDate);
     fixture.detectChanges();

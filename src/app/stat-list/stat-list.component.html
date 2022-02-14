@@ -12,9 +12,9 @@
     </button>
   </div>
   <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodWeb">
-    <p class="mb-3">Passed unit test</p>
+    <p class="mb-3">Passed unit test: </p>
     <ul class="list-disc ml-6">
-      <li>should contain 25+ years in the web industry if today's date would be 2032-02-05</li>
+      <li>should contain 25+ years in the web industry if today's date would be 1 July 2032</li>
     </ul>
   </div>
   <!-- / Period web -->
@@ -33,16 +33,16 @@
   <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodProgramming">
     <p class="mb-3">Passed unit test</p>
     <ul class="list-disc ml-6">
-      <li>should contain 20+ years of active programming if today's date would be 2032-02-05</li>
+      <li>should contain 20+ years of active programming if today's date would be 1 July 2032</li>
     </ul>
   </div>
   <!-- / Period programming -->
   <!-- Number of cups -->
   <div class="p-4 rounded shadow-lg w-64 relative js-unit-test-container" [hidden]="!numberOfCups">
     <p class="font-semibold text-xl text-gray-800 js-unit-test-number-of-cups">{{ numberOfCups }}</p>
-    <p class="text-gray-500 uppercase font-bold text-xs">
-      <span *ngIf="numberOfCups === 1">cup</span>
-      <span *ngIf="numberOfCups > 1">cups</span>
+    <p class="text-gray-500 uppercase font-bold text-xs" [ngPlural]="numberOfCups">
+      <ng-template ngPluralCase="=1">cup</ng-template>
+      <ng-template ngPluralCase="other">cups</ng-template>
       of coffee drank today
     </p>
     <button class="absolute right-2 bottom-1" (click)="showUnitTestList('numberOfCups')">
@@ -59,9 +59,4 @@
     </ul>
   </div>
   <!-- / Number of cups -->
-
-  <!--
-    TODO: check if Angular has anything for singular, plural
-    https://angular.io/api/common/I18nPluralPipe
-  -->
 </div>

@@ -7,17 +7,17 @@ import { RoadmapItemStatusEnum } from './roadmap-item-status.enum';
   styleUrls: ['./roadmap-item.component.scss'],
 })
 export class RoadmapItemComponent implements OnInit {
-  @Input() title: string | null;
-  @Input() href: string | null;
-  @Input() status: RoadmapItemStatusEnum | null;
-  @Input() level: number;
+  @Input() title!: string | null;
+  @Input() href!: string | null;
+  @Input() status!: RoadmapItemStatusEnum | null;
+  @Input() level!: number;
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.title = null;
     this.href = null;
     this.status = null;
     this.level = 1;
   }
-
-  ngOnInit(): void {}
 }

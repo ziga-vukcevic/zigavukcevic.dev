@@ -6,13 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./tab.component.scss'],
 })
 export class TabComponent implements OnInit {
-  @Input() title: string | null;
-  @Input() isActive: boolean;
+  @Input() title!: string | null;
+  @Input() isActive!: boolean;
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.title = null;
     this.isActive = false;
   }
-
-  ngOnInit(): void {}
 }
