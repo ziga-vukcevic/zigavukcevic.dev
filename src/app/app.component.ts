@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RoadmapItemStatusEnum } from './roadmap/roadmap-item/roadmap-item-status.enum';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,6 @@ import { RoadmapItemStatusEnum } from './roadmap/roadmap-item/roadmap-item-statu
 })
 export class AppComponent {
   title = 'zigavukcevic.dev';
-  roadmapItemStatus = RoadmapItemStatusEnum;
   codeSample = {
     cli:
 `

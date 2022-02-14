@@ -79,17 +79,25 @@
     </app-tab>
   </app-tab-list> -->
 
-  <!-- <h2 class="text-3xl mb-4">My knowledge roadmap</h2>
+  <h2 class="text-3xl mb-4">My knowledge roadmap</h2>
 
-  <app-roadmap-item
-    title="Angular" href="https://angular.io/" [status]="roadmapItemStatus.KnowledgeAbsorbed" [level]="1"
-  ></app-roadmap-item>
-  <app-roadmap-item
-    title="RxJS" href="https://rxjs.dev/" [status]="roadmapItemStatus.KnowledgeAbsorbed" [level]="2"
-  ></app-roadmap-item>
-  <app-roadmap-item
-    title="NgRx" href="https://ngrx.io/" [status]="roadmapItemStatus.NeedToLearn" [level]="2"
-  ></app-roadmap-item> -->
+  <app-roadmap-item status="absorbed" [level]="1"
+  >Frameworks / UI libraries</app-roadmap-item>
+  <div>
+    <app-roadmap-item title="Angular" href="https://angular.io/" status="absorbed" [level]="2"
+    >Angular</app-roadmap-item>
+    <app-roadmap-item title="React" href="https://reactjs.org/" status="absorbed" [level]="2"
+    >React</app-roadmap-item>
+    <app-roadmap-item title="Vue.js" href="https://vuejs.org/" status="absorbed" [level]="2"
+    >Vue.js</app-roadmap-item>
+    <app-roadmap-item title="Svelte" href="https://svelte.dev/" status="needToLearn" [level]="2"
+    >Svelte</app-roadmap-item>
+  </div>
+
+  <!--
+    <app-roadmap-item title="RxJS" href="https://rxjs.dev/" status="absorbed" [level]="2"></app-roadmap-item>
+    <app-roadmap-item title="NgRx" href="https://ngrx.io/" status="absorbed" [level]="2"></app-roadmap-item>
+  -->
 
   <footer class="mt-20 mb-10">
     <p>&copy; 2015 &ndash; today | zigavukcevic.dev | v3.1.0</p>

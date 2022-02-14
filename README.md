@@ -1,6 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/97c75275-e916-4c24-b75b-4100d636d8d8/deploy-status)](https://app.netlify.com/sites/upbeat-colden-b80abc/deploys)
 [![Coverage Status](https://coveralls.io/repos/github/ziga-vukcevic/zigavukcevic.dev/badge.svg)](https://coveralls.io/github/ziga-vukcevic/zigavukcevic.dev)
-<!-- TODO: connect with Travis? -->
 
 # zigavukcevic.dev
 

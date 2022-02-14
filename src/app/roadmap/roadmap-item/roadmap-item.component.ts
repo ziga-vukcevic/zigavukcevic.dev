@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RoadmapItemStatusEnum } from './roadmap-item-status.enum';
 
 @Component({
   selector: 'app-roadmap-item',
@@ -7,17 +6,16 @@ import { RoadmapItemStatusEnum } from './roadmap-item-status.enum';
   styleUrls: ['./roadmap-item.component.scss'],
 })
 export class RoadmapItemComponent implements OnInit {
-  @Input() title!: string | null;
-  @Input() href!: string | null;
-  @Input() status!: RoadmapItemStatusEnum | null;
+  @Input() title?: string | null;
+  @Input() href?: string | null;
+  @Input() status?: 'absorbed' | 'needToLearn';
   @Input() level!: number;
 
   constructor() {}
 
   ngOnInit(): void {
-    this.title = null;
-    this.href = null;
-    this.status = null;
-    this.level = 1;
+    // this.href = null;
+    // this.status = null;
+    // this.level = 1;
   }
 }
