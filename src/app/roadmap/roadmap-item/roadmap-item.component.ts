@@ -6,16 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./roadmap-item.component.scss'],
 })
 export class RoadmapItemComponent implements OnInit {
+  @Input() status!: 'absorbed' | 'needToLearn';
+  @Input() level!: number;
   @Input() title?: string | null;
   @Input() href?: string | null;
-  @Input() status?: 'absorbed' | 'needToLearn';
-  @Input() level!: number;
 
   constructor() {}
 
-  ngOnInit(): void {
-    // this.href = null;
-    // this.status = null;
-    // this.level = 1;
-  }
+  ngOnInit(): void {}
 }

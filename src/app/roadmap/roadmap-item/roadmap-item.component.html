@@ -2,31 +2,35 @@
 <div
   class="roadmap-item px-5 py-2 max-w-lg level-{{ level }}"
   [ngClass]="{
-    'bg-gray-300 text-gray-500': level === 1 && !href,
     'bg-gray-200 text-gray-500': status === 'absorbed',
-    'bg-gray-50 text-gray-400': status === 'needToLearn'
+    'bg-gray-50 text-gray-400': status === 'needToLearn',
+    'uppercase font-bold': level === 1
   }"
 >
   <!-- Text -->
-  <span *ngIf="!href">
+  <span *ngIf="!href; else elseBlock">
     <ng-container *ngTemplateOutlet="content"></ng-container>
   </span>
   <!-- / Text -->
   <!-- Link -->
-  <a *ngIf="href"
-    class="underline"
-    [href]="href"
-    [title]="title"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <ng-container *ngTemplateOutlet="content"></ng-container>
-  </a>
+  <ng-template #elseBlock>
+    <a
+      class="underline"
+      [href]="href"
+      [title]="title"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </a>
+  </ng-template>
   <!-- / Link -->
 </div>
 <!-- / Container -->
 <!-- Template for output of content -->
 <ng-template #content>
-  <ng-content></ng-content>
+  <small>
+    <ng-content></ng-content>
+  </small>
 </ng-template>
 <!-- / Template for output of content -->

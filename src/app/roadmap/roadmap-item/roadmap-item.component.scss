@@ -1,31 +1,35 @@
+%commonForBeforeAndAfter {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -25px;
+}
+
 .roadmap-item {
   display: block;
   position: relative;
+  margin-bottom: 5px;
 
-  &.level-2 {
-    margin-left: 50px;
+  &:not(.level-1) {
     width: 150px;
 
     &::before {
-      content: '';
-      position: absolute;
+      @extend %commonForBeforeAndAfter;
       top: 50%;
-      left: -25px;
-      display: block;
       height: 1px;
-      width: 25px;
+      width: 22px;
       border-top: 1px solid black;
     }
 
     &::after {
-      content: '';
-      position: absolute;
+      @extend %commonForBeforeAndAfter;
       top: 0;
-      left: -25px;
-      display: block;
       height: 50%;
       width: 1px;
       border-left: 1px solid black;
     }
   }
+
+  &.level-2 { margin-left: 50px; }
+  &.level-3 { margin-left: 100px; }
 }
