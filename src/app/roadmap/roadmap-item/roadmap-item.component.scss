@@ -11,7 +11,7 @@
   margin-bottom: 5px;
 
   &:not(.level-1) {
-    width: 150px;
+    width: 175px;
 
     &::before {
       @extend %commonForBeforeAndAfter;
