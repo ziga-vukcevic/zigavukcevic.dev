@@ -81,33 +81,15 @@
 
   <h2 class="text-3xl mb-4">My knowledge roadmap</h2>
 
-  <!-- TODO: create a loop of items -->
-
-  <app-roadmap-item [level]="1" status="absorbed">Version control systems</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed" title="Git" href="https://git-scm.com/">Git</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed">Code hosting platforms</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="absorbed" title="GitHub" href="https://github.com/">GitHub</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="absorbed" title="GitLab" href="https://about.gitlab.com/">GitLab</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="absorbed" title="Bitbucket" href="https://bitbucket.org/">Bitbucket</app-roadmap-item>
-  <app-roadmap-item [level]="1" status="absorbed">Package managers</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed" title="npm" href="https://www.npmjs.com/">npm</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed" title="yarn" href="https://yarnpkg.com/">yarn</app-roadmap-item>
-  <app-roadmap-item [level]="1" status="absorbed">JavaScript frameworks / UI libraries</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed" title="Angular" href="https://angular.io/">Angular</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="absorbed" title="RxJS" href="https://rxjs.dev/">RxJS</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="needToLearn" title="NgRx" href="https://ngrx.io/">NgRx</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed" title="React" href="https://reactjs.org/">React</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed" title="Vue.js" href="https://vuejs.org/">Vue.js</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="needToLearn" title="Svelte" href="https://svelte.dev/">Svelte</app-roadmap-item>
-  <app-roadmap-item [level]="1" status="absorbed">CSS frameworks</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed">CSS first</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="absorbed" title="Foundation" href="https://get.foundation/">Foundation</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="absorbed" title="Bootstrap" href="https://getbootstrap.com/">Bootstrap</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="needToLearn" title="Tailwind" href="https://tailwindcss.com/">Tailwind</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="absorbed">JavaScript based</app-roadmap-item>
-  <app-roadmap-item [level]="3" status="absorbed" title="Chakra UI" href="https://chakra-ui.com/">Chakra UI (React)</app-roadmap-item>
-  <app-roadmap-item [level]="1" status="absorbed">And I keep learning</app-roadmap-item>
-  <app-roadmap-item [level]="2" status="needToLearn">...</app-roadmap-item>
+  <app-roadmap-item
+    *ngFor="let roadmapItem of roadmapItemList"
+    [level]="roadmapItem.level"
+    [status]="roadmapItem.status"
+    [hrefTitle]="roadmapItem.hrefTitle"
+    [href]="roadmapItem.href"
+  >
+    {{ roadmapItem.text }}
+  </app-roadmap-item>
 
   <footer class="mt-20 mb-10">
     <p>&copy; 2015 &ndash; today | zigavukcevic.dev | v3.2.0</p>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { RoadmapItemInterface } from '../roadmap-item.interface';
 
 @Component({
   selector: 'app-roadmap-item',
@@ -6,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./roadmap-item.component.scss'],
 })
 export class RoadmapItemComponent implements OnInit {
-  @Input() status!: 'absorbed' | 'needToLearn';
-  @Input() level!: number;
-  @Input() title?: string | null;
-  @Input() href?: string | null;
+  @Input() level!: RoadmapItemInterface['level'];
+  @Input() status!: RoadmapItemInterface['status'];
+  @Input() hrefTitle?: RoadmapItemInterface['hrefTitle'];
+  @Input() href?: RoadmapItemInterface['href'];
 
   constructor() {}
 

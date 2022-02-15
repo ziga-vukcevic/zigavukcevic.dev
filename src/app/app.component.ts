@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import roadmapItemList from './roadmap/roadmap-item-list';
+import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'zigavukcevic.dev';
+  roadmapItemList: RoadmapItemInterface[];
   codeSample = {
     cli:
 `
@@ -58,4 +61,25 @@ npx ng generate component stats --style none
 }`,
 unitTest: `code for unit test goes here`,
   };
+
+  constructor() {
+    this.roadmapItemList = [];
+
+    // TODO: refactor to recursive function
+    roadmapItemList.forEach((roadmapItem) => {
+      this.roadmapItemList.push(roadmapItem);
+
+      if (roadmapItem.childList) {
+        roadmapItem.childList.forEach((roadmapItem) => {
+          this.roadmapItemList.push(roadmapItem);
+
+          if (roadmapItem.childList) {
+            roadmapItem.childList.forEach((roadmapItem) => {
+              this.roadmapItemList.push(roadmapItem);
+            });
+          }
+        });
+      }
+    });
+  }
 }
