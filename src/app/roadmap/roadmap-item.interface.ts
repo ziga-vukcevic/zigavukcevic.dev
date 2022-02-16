@@ -1,6 +1,6 @@
 export interface RoadmapItemInterface {
   level: number;
-  status: 'absorbed' | 'needToLearn';
+  status: 'knowledgeAbsorbed' | 'needToLearn';
   text: string;
   hrefTitle?: string | null;
   href?: string | null;
