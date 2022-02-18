@@ -109,7 +109,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           },
           {
             level: 3,
-            status: 'needToLearn',
+            status: 'knowledgeNeedToGain',
             hrefTitle: 'NgRx',
             href: 'https://ngrx.io/',
             text: 'NgRx',
@@ -132,7 +132,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
       },
       {
         level: 2,
-        status: 'needToLearn',
+        status: 'knowledgeNeedToGain',
         hrefTitle: 'Svelte',
         href: 'https://svelte.dev/',
         text: 'Svelte',
@@ -216,14 +216,14 @@ const roadmapItemList: RoadmapItemInterface[] = [
       },
       {
         level: 2,
-        status: 'needToLearn',
+        status: 'knowledgeNeedToGain',
         hrefTitle: 'Hugo',
         href: 'https://gohugo.io/',
         text: 'Hugo',
       },
       {
         level: 2,
-        status: 'needToLearn',
+        status: 'knowledgeNeedToGain',
         hrefTitle: 'Eleventy',
         href: 'https://www.11ty.dev/',
         text: 'Eleventy',
@@ -232,12 +232,12 @@ const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
-    status: 'needToLearn',
+    status: 'knowledgeNeedToGain',
     text: 'And I keep learning',
     childList: [
       {
         level: 2,
-        status: 'needToLearn',
+        status: 'knowledgeNeedToGain',
         text: '...',
       },
     ],
