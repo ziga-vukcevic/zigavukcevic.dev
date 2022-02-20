@@ -1,13 +1,23 @@
-<div class="container mx-auto px-4">
+<div class="container mx-auto px-4" [ngClass]="{
+  'theme-sky-neutral': currentTheme === 'sky-neutral',
+  'theme-post-office': currentTheme === 'post-office'
+}">
+  <div class="text-right pt-3 pr-3">
+    <p><small>Change theme</small></p>
+    <div class="flex flex-row justify-end">
+      <button class="block w-5 h-5 bg-gray-300 mr-1" (click)="setTheme('sky-neutral')"></button>
+      <button class="block w-5 h-5 bg-yellow-400" (click)="setTheme('post-office')"></button>
+    </div>
+  </div>
   <h1 class="mt-10">
     <span class="text-2xl leading-loose block text-gray-500">
       Hi, my name is
     </span>
-    <span class="text-5xl leading-tight block">
+    <span class="text-5xl leading-tight block text-black">
       Žiga and I'm a <strong
-        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-gray-200 relative inline-block"
+        class="sky-neutral:before:bg-gray-200 post-office:before:bg-yellow-400 before:block before:absolute before:-inset-1 before:-skew-y-3 relative inline-block"
       >
-        <span class="relative text-gray-500">senior engineer</span>
+        <span class="sky-neutral:text-gray-500 post-office:text-black relative" >senior engineer</span>
       </strong>
     </span>
     <span class="text-3xl leading-relaxed mb-8 block">
@@ -16,12 +26,12 @@
   </h1>
   <p class="text-xl mb-10">
     I am located in <a
-      class="border-b-4 text-gray-500 hover:border-red-600"
+      class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-500 post-office:hover:border-red-600 border-b-4"
       href="https://www.google.com/maps/place/Slovenia/@46.1437677,13.8719626,8z/data=!3m1!4b1!4m5!3m4!1s0x476524e75e968361:0xe740451e25e2d465!8m2!3d46.151241!4d14.995463"
       rel="noopener noreferrer"
       target="_blank"
     >Slovenia</a><i class="las la-external-link-alt text-gray-400"></i>, currently working at international company named <a
-      class="border-b-4 text-gray-500 hover:border-red-600"
+      class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-500 post-office:hover:border-red-600 border-b-4"
       href="https://www.endava.com/"
       rel="noopener noreferrer"
       target="_blank"

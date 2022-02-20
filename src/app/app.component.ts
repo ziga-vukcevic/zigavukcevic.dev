@@ -9,6 +9,7 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
 })
 export class AppComponent {
   title = 'zigavukcevic.dev';
+  currentTheme: string;
   roadmapItemList: RoadmapItemInterface[];
   codeSample = {
     cli:
@@ -63,6 +64,7 @@ unitTest: `code for unit test goes here`,
   };
 
   constructor() {
+    this.currentTheme = 'sky-neutral'; // 'post-office';
     this.roadmapItemList = [];
 
     // TODO: refactor to recursive function
@@ -81,5 +83,9 @@ unitTest: `code for unit test goes here`,
         });
       }
     });
+  }
+
+  setTheme(name: string) {
+    this.currentTheme = name;
   }
 }

@@ -1,5 +1,7 @@
 import { RoadmapItemInterface } from './roadmap-item.interface';
 
+// TODO: add Storybook
+
 const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,

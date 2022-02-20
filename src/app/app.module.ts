@@ -39,6 +39,6 @@ import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.compon
       },
     },
   ],
-  bootstrap: [ AppComponent ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
