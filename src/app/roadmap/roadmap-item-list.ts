@@ -8,7 +8,20 @@ const roadmapItemList: RoadmapItemInterface[] = [
     status: 'knowledgeAbsorbed',
     text: 'HTML',
     childList: [
-      // TODO
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Semantic markup',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element',
+        text: 'Semantic markup',
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'SEO',
+        href: 'https://developer.mozilla.org/en-US/docs/Glossary/SEO',
+        text: 'SEO',
+      },
     ],
   },
   {
