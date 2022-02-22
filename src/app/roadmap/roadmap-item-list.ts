@@ -25,6 +25,13 @@ const roadmapItemList: RoadmapItemInterface[] = [
       {
         level: 2,
         status: 'knowledgeAbsorbed',
+        hrefTitle: 'Conventions and best practices',
+        href: 'https://github.com/hail2u/html-best-practices',
+        text: 'Conventions and best practices',
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
         hrefTitle: 'SEO',
         href: 'https://developers.google.com/search/docs',
         text: 'SEO',
@@ -35,13 +42,6 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Accessibility',
         href: 'https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/',
         text: 'Accessibility',
-      },
-      {
-        level: 2,
-        status: 'knowledgeAbsorbed',
-        hrefTitle: 'Conventions and best practices',
-        href: 'https://github.com/hail2u/html-best-practices',
-        text: 'Conventions and best practices',
       },
     ],
   },
