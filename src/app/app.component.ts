@@ -78,6 +78,12 @@ unitTest: `code for unit test goes here`,
           if (roadmapItem.childList) {
             roadmapItem.childList.forEach((roadmapItem) => {
               this.roadmapItemList.push(roadmapItem);
+
+              if (roadmapItem.childList) {
+                roadmapItem.childList.forEach((roadmapItem) => {
+                  this.roadmapItemList.push(roadmapItem);
+                });
+              }
             });
           }
         });
