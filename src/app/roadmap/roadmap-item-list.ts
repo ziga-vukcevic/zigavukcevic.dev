@@ -171,6 +171,34 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
+    text: 'Web security',
+    childList: [
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Hypertext transfer protocol secure (HTTPS)',
+        href: 'https://www.cloudflare.com/en-gb/learning/ssl/why-is-http-not-secure/',
+        text: 'Hypertext transfer protocol secure (HTTPS)',
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Cross-origin resource sharing (CORS)',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS',
+        text: 'Cross-origin resource sharing (CORS)',
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Content security policy (CSP)',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP',
+        text: 'Content security policy (CSP)',
+      },
+    ],
+  },
+  {
+    level: 1,
+    status: 'knowledgeAbsorbed',
     text: 'Version control systems',
     childList: [
       {
