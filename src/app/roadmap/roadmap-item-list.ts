@@ -6,7 +6,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'HTML',
+    text: 'HTML (version 5)',
     childList: [
       {
         level: 2,
@@ -48,17 +48,17 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'CSS',
+    text: 'CSS (version 3)',
     childList: [
       {
         level: 2,
         status: 'knowledgeAbsorbed',
-        text: 'CSS frameworks',
+        text: 'Frameworks',
         childList: [
           {
             level: 3,
             status: 'knowledgeAbsorbed',
-            text: 'CSS first',
+            text: 'Based on CSS first',
             childList: [
               {
                 level: 4,
@@ -104,8 +104,22 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'JavaScript',
+    text: 'JavaScript (version ES6+)',
     childList: [
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'DOM manipulation',
+        href: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents',
+        text: 'DOM manipulation',
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Modules',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules',
+        text: 'Modules',
+      },
       {
         level: 2,
         status: 'knowledgeAbsorbed',
