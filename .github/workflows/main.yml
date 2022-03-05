@@ -6,13 +6,22 @@ jobs:
   prebuild:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 # Checkout repository
-      - uses: actions/setup-node@v1 # Setup node
+      - name: Checkout repository
+      - uses: actions/checkout@v2
+      - name: Setup node
+      - uses: actions/setup-node@v1
         with:
-          node-version: '12'
-      - name: Run linter and tests
+          node-version: 12
+      - name: Install yarn & dependencies, run linter and tests
         run: |
           npm install yarn -g
           yarn install
           yarn lint
           yarn test
+  deploy:
+    name: 'Deploy to Netlify'
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
+          NETLIFY_DEPLOY_TO_PROD: true

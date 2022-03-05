@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import roadmapItemList from './roadmap/roadmap-item-list';
 import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
 
@@ -63,9 +64,15 @@ npx ng generate component stats --style none
 unitTest: `code for unit test goes here`,
   };
 
-  constructor() {
+  constructor(
+    protected googleAnalyticsService: GoogleAnalyticsService,
+  ) {
     this.currentTheme = 'sky-neutral'; // 'post-office';
     this.roadmapItemList = [];
+  }
+
+  ngOnInit() {
+    this.googleAnalyticsService.pageView('/', 'Home');
 
     // TODO: refactor to recursive function
     roadmapItemList.forEach((roadmapItem) => {

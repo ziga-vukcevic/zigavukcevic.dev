@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { StatListComponent } from './stat-list/stat-list.component';
@@ -22,6 +23,8 @@ import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxGoogleAnalyticsModule.forRoot('G-Y934WGEX9C'),
+    NgxGoogleAnalyticsRouterModule,
     HighlightModule,
   ],
   providers: [
