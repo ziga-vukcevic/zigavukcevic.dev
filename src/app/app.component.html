@@ -46,7 +46,13 @@
 
   <app-stat-list></app-stat-list>
 
-  <h2 class="text-3xl mb-4">My main skills</h2>
+  <h2 class="
+    sky-neutral:before:bg-gray-200 sky-neutral:after:bg-gray-200
+    post-office:before:bg-yellow-400 post-office:after:bg-yellow-400
+    text-black text-3xl mb-6 pt-3 pl-4 relative block
+    before:content-[''] before:absolute before:left-0 before:top-0 before:block before:h-1 before:w-10
+    after:content-[''] after:absolute after:left-0 after:top-0 after:block after:h-6 after:w-1
+  ">My main skills</h2>
   <ul class="list-disc ml-6 mb-16">
     <li>understanding of developing for the web and a <strong>careful eye for design</strong>,</li>
     <li>the ability to <strong>translate designs</strong> into semantic, accessible front-end code,</li>
@@ -89,7 +95,13 @@
     </app-tab>
   </app-tab-list> -->
 
-  <h2 class="text-3xl mb-4">My knowledge roadmap</h2>
+  <h2 class="
+    sky-neutral:before:bg-gray-200 sky-neutral:after:bg-gray-200
+    post-office:before:bg-yellow-400 post-office:after:bg-yellow-400
+    text-black text-3xl mb-6 pt-3 pl-4 relative block
+    before:content-[''] before:absolute before:left-0 before:top-0 before:block before:h-1 before:w-10
+    after:content-[''] after:absolute after:left-0 after:top-0 after:block after:h-6 after:w-1
+" >My knowledge roadmap</h2>
 
   <app-roadmap-item
     *ngFor="let roadmapItem of roadmapItemList"
