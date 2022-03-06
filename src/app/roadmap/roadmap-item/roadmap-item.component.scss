@@ -1,20 +1,15 @@
-%commonForBeforeAndAfter {
-  content: '';
-  position: absolute;
-  display: block;
-  left: -25px;
-}
+/*
+Breakpoint prefix	Minimum width	CSS
+sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+*/
 
 .roadmap-item {
-  display: block;
-  position: relative;
-  margin-bottom: 5px;
-
   &:not(.level-1) {
-    width: 175px;
-
     &::before {
-      @extend %commonForBeforeAndAfter;
       top: 50%;
       height: 1px;
       width: 22px;
@@ -22,7 +17,6 @@
     }
 
     &::after {
-      @extend %commonForBeforeAndAfter;
       top: 0;
       height: 50%;
       width: 1px;

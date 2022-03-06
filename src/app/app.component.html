@@ -98,7 +98,7 @@
     [hrefTitle]="roadmapItem.hrefTitle"
     [href]="roadmapItem.href"
   >
-    {{ roadmapItem.text }}
+    {{ roadmapItem.text }} <small *ngIf="roadmapItem.version">version {{ roadmapItem.version }}</small>
   </app-roadmap-item>
 
   <footer class="mt-20 mb-10">

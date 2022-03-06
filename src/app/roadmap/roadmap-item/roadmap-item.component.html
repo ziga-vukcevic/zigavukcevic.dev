@@ -5,7 +5,11 @@
 
 <!-- Container -->
 <div
-  class="roadmap-item max-w-lg level-{{ level }}"
+  class="roadmap-item block relative mb-2
+  before:content-[''] before:absolute before:block before:left-[-25px]
+  after:content-[''] after:absolute after:block after:left-[-25px]
+  max-w-[190px]
+  level-{{ level }}"
   [ngClass]="{
     'bg-gray-200 text-gray-500': status === 'knowledgeAbsorbed',
     'bg-gray-50 text-gray-400': status === 'knowledgeNeedToGain',

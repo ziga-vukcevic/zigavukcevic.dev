@@ -6,7 +6,8 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'HTML (version 5)',
+    text: 'HTML',
+    version: 5,
     childList: [
       {
         level: 2,
@@ -48,7 +49,8 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'CSS (version 3)',
+    text: 'CSS',
+    version: 3,
     childList: [
       {
         level: 2,
@@ -104,7 +106,8 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'JavaScript (version ES6+)',
+    text: 'JavaScript',
+    version: 'ES6+',
     childList: [
       {
         level: 2,
@@ -284,7 +287,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'Testing application',
+    text: 'Testing',
     childList: [
       {
         level: 2,
