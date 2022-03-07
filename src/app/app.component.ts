@@ -9,8 +9,9 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'zigavukcevic.dev';
-  currentTheme: string;
+  title: string;
+  themeList: { name: string, background: string }[];
+  currentTheme: { name: string, background: string };
   roadmapItemList: RoadmapItemInterface[];
   codeSample = {
     cli:
@@ -67,7 +68,12 @@ unitTest: `code for unit test goes here`,
   constructor(
     protected googleAnalyticsService: GoogleAnalyticsService,
   ) {
-    this.currentTheme = 'sky-neutral'; // 'post-office';
+    this.title = 'zigavukcevic.dev';
+    this.themeList = [
+      { name: 'sky-neutral', background: 'bg-gray-300' },
+      { name: 'post-office', background: 'bg-yellow-400' },
+    ];
+    this.currentTheme = this.themeList[0];
     this.roadmapItemList = [];
   }
 
@@ -98,7 +104,9 @@ unitTest: `code for unit test goes here`,
     });
   }
 
-  setTheme(name: string) {
-    this.currentTheme = name;
+  setTheme(theme: { name: string, background: string }) {
+    this.currentTheme = theme;
   }
+
+  getTheme = () => (this.currentTheme);
 }

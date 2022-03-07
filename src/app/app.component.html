@@ -1,12 +1,12 @@
-<div class="container mx-auto px-4" [ngClass]="{
-  'theme-sky-neutral': currentTheme === 'sky-neutral',
-  'theme-post-office': currentTheme === 'post-office'
-}">
+<div class="container mx-auto px-4 theme-{{ currentTheme.name }}">
   <div class="text-right pt-3 pr-3">
-    <p><small>Change theme</small></p>
+    <p class="text-sm">Change theme</p>
     <div class="flex flex-row justify-end">
-      <button class="block w-5 h-5 bg-gray-300 mr-1" (click)="setTheme('sky-neutral')"></button>
-      <button class="block w-5 h-5 bg-yellow-400" (click)="setTheme('post-office')"></button>
+      <button *ngFor="let theme of themeList"
+        class="block w-5 h-5 mr-1 {{ theme.background }}"
+        [ngClass]="{ 'border-2 border-gray-500': theme.name === currentTheme.name }"
+        (click)="setTheme(theme)"
+      ></button>
     </div>
   </div>
   <h1 class="mt-10">
@@ -38,12 +38,6 @@
     >Endava</a><i class="las la-external-link-alt text-gray-400"></i>.
   </p>
 
-  <!-- TODO ideas:
-    - audio
-    - 10k people
-    - stock info
-  -->
-
   <app-stat-list></app-stat-list>
 
   <h2 class="
@@ -53,18 +47,32 @@
     before:content-[''] before:absolute before:left-0 before:top-0 before:block before:h-1 before:w-10
     after:content-[''] after:absolute after:left-0 after:top-0 after:block after:h-6 after:w-1
   ">My main skills</h2>
-  <ul class="list-disc ml-6 mb-16">
-    <li>understanding of developing for the web and a <strong>careful eye for design</strong>,</li>
-    <li>the ability to <strong>translate designs</strong> into semantic, accessible front-end code,</li>
-    <li>understanding of <strong>modern web technologies and workflows</strong>,</li>
-    <li>fully aware of <strong>mobile and responsive design</strong> and <strong>development practices</strong>,</li>
-    <li>capable of <strong>designing in a browser</strong>,</li>
-    <li>understanding of <strong>integration or modification of front-end code</strong> with CMSs,</li>
-    <li>knowing of <strong>SEO</strong>,</li>
-    <li>understanding and <strong>appreciation of color and typography</strong>,</li>
-    <li>the ability to work directly with UX/UI and designers to implement designs and provide feedback on a design if needed,</li>
-    <li>excellent <strong>communication skills</strong> and</li>
-    <li>the ability to dive in and <strong>learn new things</strong> to find solutions for technical problems.</li>
+  <ul class="list-disc ml-9 mb-16">
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">understanding of developing for the web and a <strong>careful eye for design</strong></span>,
+    </li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">the ability to <strong>translate designs</strong> into semantic, accessible front-end code,</span>
+    </li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">understanding of <strong>modern web technologies and workflows</strong>,</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">fully aware of <strong>mobile and responsive design</strong> and <strong>development practices</strong>,</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">capable of <strong>designing in a browser</strong>,</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">understanding of <strong>integration or modification of front-end code</strong> with CMSs,</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">knowing of <strong>SEO</strong>,</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">understanding and <strong>appreciation of color and typography</strong>,</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">the ability to work directly with UX/UI and designers to implement designs and provide feedback on a design if needed,</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">excellent <strong>communication skills</strong> and</span></li>
+    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400">
+      <span class="text-black">the ability to dive in and <strong>learn new things</strong> to find solutions for technical problems.</span>
+    </li>
   </ul>
 
   <!-- <app-tab-list>
@@ -116,7 +124,7 @@
   <footer class="mt-20 mb-10">
     <p>&copy; 2015 &ndash; today | zigavukcevic.dev | v3.3.0</p>
     <small>
-      This site is built with
+      This site has been built with
       <a
         class="border-b-2 text-gray-500 hover:border-red-600"
         href="https://angular.io/"

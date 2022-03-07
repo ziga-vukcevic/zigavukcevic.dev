@@ -5,7 +5,7 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    themeVariants: ['sky-neutral', 'post-office']
+    themeVariants: ['post-office', 'sky-neutral']
   },
   variants: {
     // TODO: add or remove
