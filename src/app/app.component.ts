@@ -78,7 +78,9 @@ unitTest: `code for unit test goes here`,
   }
 
   ngOnInit() {
-    this.googleAnalyticsService.pageView('/', 'Home');
+    if (location.hostname !== 'localhost') {
+      this.googleAnalyticsService.pageView('/', 'Home');
+    };
 
     // TODO: refactor to recursive function
     // roadmapItemList.forEach((roadmapItem) => {
