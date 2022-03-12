@@ -287,7 +287,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'Testing',
+    text: 'Application testing',
     childList: [
       {
         level: 2,
@@ -372,6 +372,20 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Eleventy',
         href: 'https://www.11ty.dev/',
         text: 'Eleventy',
+      },
+    ],
+  },
+  {
+    level: 1,
+    status: 'knowledgeAbsorbed',
+    text: 'Application versioning',
+    childList: [
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Semantic versioning',
+        href: 'https://semver.org/',
+        text: 'Semantic versioning',
       },
     ],
   },

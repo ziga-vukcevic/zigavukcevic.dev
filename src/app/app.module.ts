@@ -11,6 +11,7 @@ import { StatListComponent } from './stat-list/stat-list.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { TabComponent } from './tab/tab.component';
 import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.component';
+import { RoadmapItemListComponent } from './roadmap/roadmap-item-list/roadmap-item-list.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.compon
     TabListComponent,
     TabComponent,
     RoadmapItemComponent,
+    RoadmapItemListComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,50 @@
+/*
+Breakpoint prefix	Minimum width	CSS
+sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+*/
+
+.roadmap-item-list {
+  // margin-bottom: 20px;
+  display: block;
+
+  &.list-level-3,
+  &.list-level-4 {
+    // display: none;
+  }
+
+  // @media (min-width: 640px) {
+  //   &.list-level-1 {
+  //     position: relative;
+  //     text-align: center;
+  //     // background-color: red;
+
+  //     li { position: relative; }
+  //   }
+
+  //   &.list-level-2 {
+  //     // background-color: yellow;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     margin-bottom: 30px;
+
+  //     &::before,
+  //     &::after {
+  //       content: '';
+  //       position: absolute;
+  //       display: block;
+  //     }
+
+  //     &::before {
+  //       top: 55px;
+  //       left: calc(130px / 2);
+  //       width: calc(100% - 130px);
+  //       height: 1px;
+  //       border-top: 1px solid black;
+  //     }
+  //   }
+  // }
+}

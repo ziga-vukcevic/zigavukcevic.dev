@@ -1,0 +1,56 @@
+<!-- Level 1 -->
+<ul class="roadmap-item-list list-level-1">
+  <li *ngFor="let item of itemList">
+    <app-roadmap-item
+      [level]="item.level"
+      [status]="item.status"
+      [hrefTitle]="item.hrefTitle"
+      [href]="item.href"
+    >
+      {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
+    </app-roadmap-item>
+    <!-- Level 2 -->
+    <ul class="roadmap-item-list list-level-2">
+      <li *ngFor="let item of item.childList">
+        <app-roadmap-item
+          [level]="item.level"
+          [status]="item.status"
+          [hrefTitle]="item.hrefTitle"
+          [href]="item.href"
+        >
+          {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
+        </app-roadmap-item>
+        <!-- Level 3 -->
+        <ul class="roadmap-item-list list-level-3">
+          <li *ngFor="let item of item.childList">
+            <app-roadmap-item
+              [level]="item.level"
+              [status]="item.status"
+              [hrefTitle]="item.hrefTitle"
+              [href]="item.href"
+            >
+              {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
+            </app-roadmap-item>
+            <!-- Level 4 -->
+            <ul class="roadmap-item-list list-level-4">
+              <li *ngFor="let item of item.childList">
+                <app-roadmap-item
+                  [level]="item.level"
+                  [status]="item.status"
+                  [hrefTitle]="item.hrefTitle"
+                  [href]="item.href"
+                >
+                  {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
+                </app-roadmap-item>
+              </li>
+            </ul>
+            <!-- / Level 4 -->
+          </li>
+        </ul>
+        <!-- / Level 3 -->
+      </li>
+    </ul>
+    <!-- / Level 2 -->
+  </li>
+</ul>
+<!-- / Level 1 -->

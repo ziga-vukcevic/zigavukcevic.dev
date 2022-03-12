@@ -74,34 +74,34 @@ unitTest: `code for unit test goes here`,
       { name: 'post-office', background: 'bg-yellow-400' },
     ];
     this.currentTheme = this.themeList[0];
-    this.roadmapItemList = [];
+    this.roadmapItemList = roadmapItemList;
   }
 
   ngOnInit() {
     this.googleAnalyticsService.pageView('/', 'Home');
 
     // TODO: refactor to recursive function
-    roadmapItemList.forEach((roadmapItem) => {
-      this.roadmapItemList.push(roadmapItem);
+    // roadmapItemList.forEach((roadmapItem) => {
+    //   this.roadmapItemList.push(roadmapItem);
 
-      if (roadmapItem.childList) {
-        roadmapItem.childList.forEach((roadmapItem) => {
-          this.roadmapItemList.push(roadmapItem);
+    //   if (roadmapItem.childList) {
+    //     roadmapItem.childList.forEach((roadmapItem) => {
+    //       this.roadmapItemList.push(roadmapItem);
 
-          if (roadmapItem.childList) {
-            roadmapItem.childList.forEach((roadmapItem) => {
-              this.roadmapItemList.push(roadmapItem);
+    //       if (roadmapItem.childList) {
+    //         roadmapItem.childList.forEach((roadmapItem) => {
+    //           this.roadmapItemList.push(roadmapItem);
 
-              if (roadmapItem.childList) {
-                roadmapItem.childList.forEach((roadmapItem) => {
-                  this.roadmapItemList.push(roadmapItem);
-                });
-              }
-            });
-          }
-        });
-      }
-    });
+    //           if (roadmapItem.childList) {
+    //             roadmapItem.childList.forEach((roadmapItem) => {
+    //               this.roadmapItemList.push(roadmapItem);
+    //             });
+    //           }
+    //         });
+    //       }
+    //     });
+    //   }
+    // });
   }
 
   setTheme(theme: { name: string, background: string }) {
