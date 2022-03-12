@@ -12,6 +12,7 @@ import { TabListComponent } from './tab-list/tab-list.component';
 import { TabComponent } from './tab/tab.component';
 import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.component';
 import { RoadmapItemListComponent } from './roadmap/roadmap-item-list/roadmap-item-list.component';
+import { HighlightSkillComponent } from './highlight-skill/highlight-skill.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RoadmapItemListComponent } from './roadmap/roadmap-item-list/roadmap-it
     TabComponent,
     RoadmapItemComponent,
     RoadmapItemListComponent,
+    HighlightSkillComponent,
   ],
   imports: [
     BrowserModule,

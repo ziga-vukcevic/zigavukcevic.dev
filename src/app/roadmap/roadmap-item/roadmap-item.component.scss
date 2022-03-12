@@ -1,7 +1,6 @@
 .roadmap-item {
   display: inline-block;
   position: relative;
-  max-width: 190px;
 
   &::before,
   &::after {
@@ -13,10 +12,12 @@
 
   &.level-1 {
     @apply bg-gray-500 text-white;
-    width: 100%;
+    width: 75%;
   }
 
   &:not(.level-1) {
+    width: 190px;
+
     &::before {
       top: 50%;
       height: 1px;
