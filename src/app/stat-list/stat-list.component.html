@@ -7,11 +7,18 @@
     <p class="font-semibold text-xl text-gray-800 js-unit-test-period-web">
       {{ periodWeb }}
     </p>
-    <p class="text-gray-500 uppercase font-bold text-xs">
+    <p class="
+    sky-neutral:text-gray-500 post-office:text-black
+      uppercase font-bold text-xs
+    ">
       years in the web industry
     </p>
     <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('periodWeb')">
-      <i class="las la-code text-gray-400 hover:text-red-600"></i>
+      <i class="
+      sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
+      post-office:text-orange-500 post-office:hover:text-black
+        las la-code
+      "></i>
     </button>
   </div>
   <!-- / Period web -->
@@ -23,11 +30,18 @@
     <p class="font-semibold text-xl text-gray-800 js-unit-test-period-programming">
       {{ periodProgramming }}
     </p>
-    <p class="text-gray-500 uppercase font-bold text-xs">
+    <p class="
+      sky-neutral:text-gray-500 post-office:text-black
+      uppercase font-bold text-xs
+    ">
       years of active programming
     </p>
     <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('periodProgramming')">
-      <i class="las la-code text-gray-400 hover:text-red-600"></i>
+      <i class="
+      sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
+      post-office:text-orange-500 post-office:hover:text-black
+        las la-code
+      "></i>
     </button>
   </div>
   <!-- / Period programming -->
@@ -37,13 +51,20 @@
     mb-5 p-4 inline-block rounded shadow-lg w-64 relative js-unit-test-container
   " [hidden]="!numberOfCups">
     <p class="font-semibold text-xl text-gray-800 js-unit-test-number-of-cups">{{ numberOfCups }}</p>
-    <p class="text-gray-500 uppercase font-bold text-xs" [ngPlural]="numberOfCups">
+    <p class="
+    sky-neutral:text-gray-500 post-office:text-black
+      uppercase font-bold text-xs
+    " [ngPlural]="numberOfCups">
       <ng-template ngPluralCase="=1">cup</ng-template>
       <ng-template ngPluralCase="other">cups</ng-template>
       of coffee drank today
     </p>
     <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('numberOfCups')">
-      <i class="las la-code text-gray-400 hover:text-red-600"></i>
+      <i class="
+      sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
+      post-office:text-orange-500 post-office:hover:text-black
+        las la-code
+      "></i>
     </button>
   </div>
   <!-- / Number of cups -->
