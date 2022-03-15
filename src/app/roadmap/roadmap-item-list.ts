@@ -287,6 +287,12 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
+    text: 'Application authentication and authorization',
+    // TODO: childList: [] e.g. openId, keycloak
+  },
+  {
+    level: 1,
+    status: 'knowledgeAbsorbed',
     text: 'Application testing',
     childList: [
       {
