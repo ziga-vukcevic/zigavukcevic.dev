@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IsUnitTestListVisibleInterface } from './interface/is-unit-test-list-visible.interface';
+import { IsUnitTestDescriptionVisibleInterface } from './interface/is-unit-test-description-visible.interface';
 import * as dayjs from 'dayjs';
 
 @Component({
@@ -10,11 +10,7 @@ export class StatListComponent implements OnInit {
   periodWeb!: string;
   periodProgramming!: string;
   numberOfCups!: number;
-  isUnitTestListVisible!: {
-    periodWeb: boolean,
-    periodProgramming: boolean,
-    numberOfCups: boolean,
-  };
+  isUnitTestDescriptionVisible!: IsUnitTestDescriptionVisibleInterface;
 
   constructor() {}
 
@@ -23,7 +19,7 @@ export class StatListComponent implements OnInit {
     this.periodWeb = this.calculatePeriod('2007-06-01', today);
     this.periodProgramming = this.calculatePeriod('2012-01-01', today);
     this.numberOfCups = 0;
-    this.isUnitTestListVisible = {
+    this.isUnitTestDescriptionVisible = {
       periodWeb: false,
       periodProgramming: false,
       numberOfCups: false,
@@ -60,8 +56,15 @@ export class StatListComponent implements OnInit {
     }
   }
 
-  showUnitTestList(listName: string): void {
-    this.isUnitTestListVisible[listName as keyof IsUnitTestListVisibleInterface] = true;
+  showUnitTestDescription(name: string): void {
+    this.hideAllUnitTestDescription();
+    this.isUnitTestDescriptionVisible[name as keyof IsUnitTestDescriptionVisibleInterface] = true;
+  }
+
+  hideAllUnitTestDescription(): void {
+    Object.keys(this.isUnitTestDescriptionVisible).forEach((name) => {
+      this.isUnitTestDescriptionVisible[name as keyof IsUnitTestDescriptionVisibleInterface] = false;
+    });
   }
 
   private isValueInRange(value: number, min: number, max: number): boolean {

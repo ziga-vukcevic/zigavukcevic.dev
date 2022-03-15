@@ -1,55 +1,66 @@
-<div class="mb-16">
+<div class="mb-10">
   <!-- Period web -->
-  <div class="sky-neutral:bg-white post-office:bg-yellow-400 p-4 rounded shadow-lg w-64 relative">
+  <div class="
+    post-office:bg-yellow-400
+    mr-10 mb-5 p-4 inline-block rounded shadow-lg w-64 relative
+  ">
     <p class="font-semibold text-xl text-gray-800 js-unit-test-period-web">
       {{ periodWeb }}
     </p>
     <p class="text-gray-500 uppercase font-bold text-xs">
       years in the web industry
     </p>
-    <button class="absolute right-2 bottom-1" (click)="showUnitTestList('periodWeb')">
+    <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('periodWeb')">
       <i class="las la-code text-gray-400 hover:text-red-600"></i>
     </button>
   </div>
-  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodWeb">
-    <p class="mb-3">Passed unit test</p>
-    <ul class="list-disc ml-6">
-      <li>should contain 25+ years in the web industry if today's date would be 1 July 2032</li>
-    </ul>
-  </div>
   <!-- / Period web -->
   <!-- Period programming -->
-  <div class="p-4 rounded shadow-lg w-64 relative">
+  <div class="
+    post-office:bg-yellow-400
+    mr-10 mb-5 p-4 inline-block rounded shadow-lg w-64 relative
+  ">
     <p class="font-semibold text-xl text-gray-800 js-unit-test-period-programming">
       {{ periodProgramming }}
     </p>
     <p class="text-gray-500 uppercase font-bold text-xs">
       years of active programming
     </p>
-    <button class="absolute right-2 bottom-1" (click)="showUnitTestList('periodProgramming')">
+    <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('periodProgramming')">
       <i class="las la-code text-gray-400 hover:text-red-600"></i>
     </button>
   </div>
-  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.periodProgramming">
-    <p class="mb-3">Passed unit test</p>
-    <ul class="list-disc ml-6">
-      <li>should contain 20+ years of active programming if today's date would be 1 July 2032</li>
-    </ul>
-  </div>
   <!-- / Period programming -->
   <!-- Number of cups -->
-  <div class="p-4 rounded shadow-lg w-64 relative js-unit-test-container" [hidden]="!numberOfCups">
+  <div class="
+    post-office:bg-yellow-400
+    mb-5 p-4 inline-block rounded shadow-lg w-64 relative js-unit-test-container
+  " [hidden]="!numberOfCups">
     <p class="font-semibold text-xl text-gray-800 js-unit-test-number-of-cups">{{ numberOfCups }}</p>
     <p class="text-gray-500 uppercase font-bold text-xs" [ngPlural]="numberOfCups">
       <ng-template ngPluralCase="=1">cup</ng-template>
       <ng-template ngPluralCase="other">cups</ng-template>
       of coffee drank today
     </p>
-    <button class="absolute right-2 bottom-1" (click)="showUnitTestList('numberOfCups')">
+    <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('numberOfCups')">
       <i class="las la-code text-gray-400 hover:text-red-600"></i>
     </button>
   </div>
-  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestListVisible.numberOfCups">
+  <!-- / Number of cups -->
+  <!-- Unit test descriptions -->
+  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestDescriptionVisible.periodWeb">
+    <p class="mb-3">Passed unit test</p>
+    <ul class="list-disc ml-6">
+      <li>should contain 25+ years in the web industry if today's date would be 1 July 2032</li>
+    </ul>
+  </div>
+  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestDescriptionVisible.periodProgramming">
+    <p class="mb-3">Passed unit test</p>
+    <ul class="list-disc ml-6">
+      <li>should contain 20+ years of active programming if today's date would be 1 July 2032</li>
+    </ul>
+  </div>
+  <div class="mt-5 mb-8 ml-5 text-sm" [hidden]="!isUnitTestDescriptionVisible.numberOfCups">
     <p class="mb-3">List of passed unit tests</p>
     <ul class="list-disc ml-6">
       <li>should be hidden if current local hour is in range from 0 to 7</li>
@@ -58,5 +69,5 @@
       <li>should contain 3 cups of coffee if current local hour is in range from 16 to 23</li>
     </ul>
   </div>
-  <!-- / Number of cups -->
+  <!-- / Unit test descriptions -->
 </div>
