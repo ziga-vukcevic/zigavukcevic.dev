@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import roadmapItemList from './roadmap/roadmap-item-list';
 import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
@@ -9,6 +10,7 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  origin: string;
   title: string;
   themeList: { name: string, background: string }[];
   currentTheme: { name: string, background: string };
@@ -66,8 +68,10 @@ unitTest: `code for unit test goes here`,
   };
 
   constructor(
+    private route: ActivatedRoute,
     protected googleAnalyticsService: GoogleAnalyticsService,
   ) {
+    this.origin = '';
     this.title = 'zigavukcevic.dev';
     this.themeList = [
       { name: 'sky-neutral', background: 'bg-gray-300' },
@@ -78,8 +82,16 @@ unitTest: `code for unit test goes here`,
   }
 
   ngOnInit() {
-    if (location.hostname !== 'localhost') {
+    if (location.hostname !== 'localhost' && !this.origin) {
       this.googleAnalyticsService.pageView('/', 'Home');
+    } else {
+      this.route.queryParams
+      .subscribe(params => {
+        this.origin = params['origin'];
+        if (this.origin === 'my-iphone') {
+          this.googleAnalyticsService.pageView('/', 'Home, origin: my-iphone');
+        }
+      });
     };
 
     // TODO: refactor to recursive function
