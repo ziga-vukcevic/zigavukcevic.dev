@@ -10,7 +10,7 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  origin: string;
+  origin: string | null;
   title: string;
   themeList: { name: string, background: string }[];
   currentTheme: { name: string, background: string };
@@ -71,7 +71,7 @@ unitTest: `code for unit test goes here`,
     private route: ActivatedRoute,
     protected googleAnalyticsService: GoogleAnalyticsService,
   ) {
-    this.origin = '';
+    this.origin = null;
     this.title = 'zigavukcevic.dev';
     this.themeList = [
       { name: 'sky-neutral', background: 'bg-gray-300' },
