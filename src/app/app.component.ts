@@ -87,6 +87,7 @@ unitTest: `code for unit test goes here`,
     } else {
       this.route.queryParams.subscribe(params => {
         this.origin = params['origin'];
+        console.log(this.origin);
         if (this.origin === 'my-iphone') {
           this.googleAnalyticsService.pageView('/', 'Home, origin: my-iphone');
         }
