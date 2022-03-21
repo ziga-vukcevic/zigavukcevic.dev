@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { first, last, pluck, skip, take, takeLast, takeWhile, tap } from 'rxjs';
 import roadmapItemList from './roadmap/roadmap-item-list';
 import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
 
@@ -9,11 +10,12 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   origin: string | null;
   title: string;
   themeList: { name: string, background: string }[];
   currentTheme: { name: string, background: string };
+  audioNamePronunciation: HTMLAudioElement;
   roadmapItemList: RoadmapItemInterface[];
   codeSample = {
     cli:
@@ -68,7 +70,7 @@ unitTest: `code for unit test goes here`,
   };
 
   constructor(
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     protected googleAnalyticsService: GoogleAnalyticsService,
   ) {
     this.origin = null;
@@ -78,49 +80,53 @@ unitTest: `code for unit test goes here`,
       { name: 'post-office', background: 'bg-yellow-400' },
     ];
     this.currentTheme = this.themeList[0];
+    this.audioNamePronunciation = new Audio('assets/audio/name-pronunciation.mp3');
     this.roadmapItemList = roadmapItemList;
   }
 
   ngOnInit() {
-    if (location.hostname !== 'localhost' && !this.origin) {
-      this.googleAnalyticsService.pageView('/', 'Home');
-    } else {
-      this.route.queryParams.subscribe(params => {
-        this.origin = params['origin'];
-        console.log(this.origin);
-        if (this.origin === 'my-iphone') {
-          this.googleAnalyticsService.pageView('/', 'Home, origin: my-iphone');
-        }
-      });
-    };
+    // if (location.hostname === 'localhost') {
+    //   const queryParams = this.activatedRoute.snapshot.queryParamMap;
+    //   const routeParams = this.activatedRoute.snapshot.params;
+    //   console.log(queryParams, routeParams);
 
-    // TODO: refactor to recursive function
-    // roadmapItemList.forEach((roadmapItem) => {
-    //   this.roadmapItemList.push(roadmapItem);
+      // const origin = this.route.snapshot.queryParamMap.get('origin');
+      // console.log(origin);
 
-    //   if (roadmapItem.childList) {
-    //     roadmapItem.childList.forEach((roadmapItem) => {
-    //       this.roadmapItemList.push(roadmapItem);
+      // let emitCount = 0;
 
-    //       if (roadmapItem.childList) {
-    //         roadmapItem.childList.forEach((roadmapItem) => {
-    //           this.roadmapItemList.push(roadmapItem);
+      // this.route.queryParams
+      // .pipe(
+      //   takeWhile(val => val === undefined, true), // or maybe !Boolean(val)
+      //   takeLast(1),
+      // )
+      // .subscribe(params => {
+      //   const origin = params['origin'];
+      //   console.log('origin', origin);
 
-    //           if (roadmapItem.childList) {
-    //             roadmapItem.childList.forEach((roadmapItem) => {
-    //               this.roadmapItemList.push(roadmapItem);
-    //             });
-    //           }
-    //         });
-    //       }
-    //     });
-    //   }
-    // });
+      //   if (origin === 'my-iphone') {
+      //     console.log('GA origin');
+      //     this.googleAnalyticsService.pageView('/', 'Home, origin: my-iphone');
+      //   } else {
+      //     console.log('GA normal');
+      //     this.googleAnalyticsService.pageView('/', 'Home');
+      //   }
+      // });
+    // }
   }
+
+  // ngAfterViewChecked() {
+  //   console.log('>>>');
+  //   console.log(this.activatedRoute.snapshot.queryParamMap.get('origin'));
+  // }
 
   setTheme(theme: { name: string, background: string }) {
     this.currentTheme = theme;
   }
 
   getTheme = () => (this.currentTheme);
+
+  playAudio = () => {
+    this.audioNamePronunciation.play();
+  }
 }
