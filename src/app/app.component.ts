@@ -126,8 +126,7 @@ unitTest: `code for unit test goes here`,
 
   getTheme = () => (this.currentTheme);
 
-  playAudio = () => {
+  playNamePronunciation = () => {
     this.audioNamePronunciation.play();
-    // this.googleAnalyticsService.event('audioNamePronunciationPlayed');
   };
 }
