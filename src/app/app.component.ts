@@ -128,6 +128,6 @@ unitTest: `code for unit test goes here`,
 
   playAudio = () => {
     this.audioNamePronunciation.play();
-    this.googleAnalyticsService.event('audioNamePronunciationPlayed');
+    // this.googleAnalyticsService.event('audioNamePronunciationPlayed');
   };
 }
