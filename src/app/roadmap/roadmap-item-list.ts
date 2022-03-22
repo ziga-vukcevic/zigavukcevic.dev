@@ -15,6 +15,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Semantic markup',
         href: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element',
         text: 'Semantic markup',
+        gaEvent: 'htmlSemanticMarkup',
       },
       {
         level: 2,
@@ -22,6 +23,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Responsive images',
         href: 'https://developers.google.com/web/fundamentals/design-and-ux/responsive/images',
         text: 'Responsive images',
+        gaEvent: 'htmlResponsiveImages',
       },
       {
         level: 2,
@@ -29,6 +31,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Conventions and best practices',
         href: 'https://github.com/hail2u/html-best-practices',
         text: 'Conventions and best practices',
+        gaEvent: 'htmlConventionsAndBestPractices',
       },
       {
         level: 2,
@@ -36,6 +39,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'SEO',
         href: 'https://developers.google.com/search/docs',
         text: 'SEO',
+        gaEvent: 'htmlSEO',
       },
       {
         level: 2,
@@ -43,6 +47,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Accessibility',
         href: 'https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/',
         text: 'Accessibility',
+        gaEvent: 'htmlAccessibility',
       },
     ],
   },
@@ -58,6 +63,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Specificity',
         href: 'https://specifishity.com/',
         text: 'Specificity',
+        gaEvent: 'cssSpecificity',
       },
       {
         level: 2,
@@ -75,6 +81,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Foundation',
                 href: 'https://get.foundation/',
                 text: 'Foundation',
+                gaEvent: 'cssFrameworksFoundation',
               },
               {
                 level: 4,
@@ -82,6 +89,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Bootstrap',
                 href: 'https://getbootstrap.com/',
                 text: 'Bootstrap',
+                gaEvent: 'cssFrameworksBootstrap',
               },
               {
                 level: 4,
@@ -89,6 +97,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Tailwind',
                 href: 'https://tailwindcss.com/',
                 text: 'Tailwind',
+                gaEvent: 'cssFrameworksTailwind',
               },
             ],
           },
@@ -103,6 +112,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Chakra UI',
                 href: 'https://chakra-ui.com/',
                 text: 'Chakra UI',
+                gaEvent: 'cssFrameworksChakraUI',
               },
             ],
           },
@@ -122,6 +132,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'DOM manipulation',
         href: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents',
         text: 'DOM manipulation',
+        gaEvent: 'javaScriptDOMmanipulation',
       },
       {
         level: 2,
@@ -129,6 +140,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Modules',
         href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules',
         text: 'Modules',
+        gaEvent: 'javaScriptModules',
       },
       {
         level: 2,
@@ -141,6 +153,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Angular',
             href: 'https://angular.io/',
             text: 'Angular',
+            gaEvent: 'javaScriptFrameworksAndLibrariesAngular',
             childList: [
               {
                 level: 4,
@@ -148,6 +161,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'RxJS',
                 href: 'https://rxjs.dev/',
                 text: 'RxJS',
+                gaEvent: 'javaScriptFrameworksAndLibrariesRxJS',
               },
               {
                 level: 4,
@@ -155,6 +169,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'NgRx',
                 href: 'https://ngrx.io/',
                 text: 'NgRx',
+                gaEvent: 'javaScriptFrameworksAndLibrariesNgRx',
               },
             ],
           },
@@ -164,6 +179,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'React',
             href: 'https://reactjs.org/',
             text: 'React',
+            gaEvent: 'javaScriptFrameworksAndLibrariesReact',
           },
           {
             level: 3,
@@ -171,6 +187,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Vue.js',
             href: 'https://vuejs.org/',
             text: 'Vue.js',
+            gaEvent: 'javaScriptFrameworksAndLibrariesVueJs',
             childList: [
               {
                 level: 4,
@@ -178,6 +195,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Vuex',
                 href: 'https://vuex.vuejs.org/',
                 text: 'Vuex',
+                gaEvent: 'javaScriptFrameworksAndLibrariesVuex',
               },
             ],
           },
@@ -187,6 +205,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Svelte',
             href: 'https://svelte.dev/',
             text: 'Svelte',
+            gaEvent: 'javaScriptFrameworksAndLibrariesSvelte',
           },
         ],
       },
@@ -203,6 +222,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Hypertext transfer protocol secure (HTTPS)',
         href: 'https://www.cloudflare.com/en-gb/learning/ssl/why-is-http-not-secure/',
         text: 'Hypertext transfer protocol secure (HTTPS)',
+        gaEvent: 'webSecurityHTTPS',
       },
       {
         level: 2,
@@ -210,6 +230,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Cross-origin resource sharing (CORS)',
         href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS',
         text: 'Cross-origin resource sharing (CORS)',
+        gaEvent: 'webSecurityCORS',
       },
       // TODO: figure out
       // {
@@ -218,6 +239,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
       //   hrefTitle: 'Content security policy (CSP)',
       //   href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP',
       //   text: 'Content security policy (CSP)',
+      //   gaEvent: 'webSecurityCSP',
       // },
       {
         level: 2,
@@ -225,6 +247,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Top 10 OWASP security risks',
         href: 'https://owasp.org/www-project-top-ten/',
         text: 'Top 10 OWASP security risks',
+        gaEvent: 'webSecurityTop10OWASPsecurityRisks',
       },
     ],
   },
@@ -239,6 +262,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Git',
         href: 'https://git-scm.com/',
         text: 'Git',
+        gaEvent: 'versionControlSystemsGit',
       },
       {
         level: 2,
@@ -251,6 +275,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'GitHub',
             href: 'https://github.com/',
             text: 'GitHub',
+            gaEvent: 'versionControlSystemsGitHub',
           },
           {
             level: 3,
@@ -258,6 +283,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'GitLab',
             href: 'https://about.gitlab.com/',
             text: 'GitLab',
+            gaEvent: 'versionControlSystemsGitLab',
           },
           {
             level: 3,
@@ -265,6 +291,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Bitbucket',
             href: 'https://bitbucket.org/',
             text: 'Bitbucket',
+            gaEvent: 'versionControlSystemsBitbucket',
           },
         ],
       },
@@ -281,6 +308,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'yarn',
         href: 'https://yarnpkg.com/',
         text: 'yarn',
+        gaEvent: 'packageManagersYarn',
       },
       {
         level: 2,
@@ -288,6 +316,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'npm',
         href: 'https://www.npmjs.com/',
         text: 'npm',
+        gaEvent: 'packageManagersNpm',
       },
     ],
   },
@@ -313,6 +342,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Unit test',
             href: 'https://www.guru99.com/unit-testing-guide.html',
             text: 'Unit test',
+            gaEvent: 'ApplicationTestingUnitTest',
           },
           {
             level: 3,
@@ -320,6 +350,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Integration test',
             href: 'https://www.guru99.com/integration-testing.html',
             text: 'Integration test',
+            gaEvent: 'ApplicationTestingIntegrationTest',
           },
         ],
       },
@@ -334,6 +365,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Jasmine',
             href: 'https://jasmine.github.io/',
             text: 'Jasmine',
+            gaEvent: 'ApplicationTestingFrameworksJasmine',
           },
           {
             level: 3,
@@ -341,6 +373,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
             hrefTitle: 'Karma',
             href: 'https://karma-runner.github.io/latest/index.html',
             text: 'Karma',
+            gaEvent: 'ApplicationTestingFrameworksKarma',
           },
         ],
       },
@@ -357,6 +390,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'NuxtJS',
         href: 'https://nuxtjs.org/',
         text: 'NuxtJS',
+        gaEvent: 'staticSiteGeneratorsNuxtJS',
       },
       {
         level: 2,
@@ -364,6 +398,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Jekyll',
         href: 'https://jekyllrb.com/',
         text: 'Jekyll',
+        gaEvent: 'staticSiteGeneratorsJekyll',
       },
       {
         level: 2,
@@ -371,6 +406,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'VuePress',
         href: 'https://vuepress.vuejs.org/',
         text: 'VuePress',
+        gaEvent: 'staticSiteGeneratorsVuePress',
       },
       {
         level: 2,
@@ -378,6 +414,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Hugo',
         href: 'https://gohugo.io/',
         text: 'Hugo',
+        gaEvent: 'staticSiteGeneratorsHugo',
       },
       {
         level: 2,
@@ -385,6 +422,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Eleventy',
         href: 'https://www.11ty.dev/',
         text: 'Eleventy',
+        gaEvent: 'staticSiteGeneratorsEleventy',
       },
     ],
   },
@@ -399,6 +437,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
         hrefTitle: 'Semantic versioning',
         href: 'https://semver.org/',
         text: 'Semantic versioning',
+        gaEvent: 'applicationVersioningSemanticVersioning',
       },
     ],
   },
