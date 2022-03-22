@@ -12,6 +12,7 @@ export class RoadmapItemComponent implements OnInit {
   @Input() hrefTitle?: RoadmapItemInterface['hrefTitle'];
   @Input() href?: RoadmapItemInterface['href'];
   @Input() gaEvent?: RoadmapItemInterface['gaEvent'];
+  @Input() gaCategory?: RoadmapItemInterface['gaCategory'];
 
   constructor() {}
 

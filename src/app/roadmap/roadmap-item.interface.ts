@@ -3,6 +3,7 @@ export interface RoadmapItemInterface {
   status: 'knowledgeAbsorbed' | 'knowledgeNeedToGain';
   text: string;
   gaEvent?: string;
+  gaCategory?: string;
   hrefTitle?: string | null;
   href?: string | null;
   version?: string | number;

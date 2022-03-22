@@ -6,6 +6,8 @@
       [status]="item.status"
       [hrefTitle]="item.hrefTitle"
       [href]="item.href"
+      [attr.gaEvent]="item.gaEvent ? item.gaEvent : null"
+      [attr.gaCategory]="item.gaEvent ? 'roadmap' : null"
     >
       {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
     </app-roadmap-item>
@@ -17,6 +19,8 @@
           [status]="item.status"
           [hrefTitle]="item.hrefTitle"
           [href]="item.href"
+          [attr.gaEvent]="item.gaEvent ? item.gaEvent : null"
+          [attr.gaCategory]="item.gaEvent ? 'roadmap' : null"
         >
           {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
         </app-roadmap-item>
@@ -28,6 +32,8 @@
               [status]="item.status"
               [hrefTitle]="item.hrefTitle"
               [href]="item.href"
+              [attr.gaEvent]="item.gaEvent ? item.gaEvent : null"
+              [attr.gaCategory]="item.gaEvent ? 'roadmap' : null"
             >
               {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
             </app-roadmap-item>
@@ -39,6 +45,8 @@
                   [status]="item.status"
                   [hrefTitle]="item.hrefTitle"
                   [href]="item.href"
+                  [attr.gaEvent]="item.gaEvent ? item.gaEvent : null"
+                  [attr.gaCategory]="item.gaEvent ? 'roadmap' : null"
                 >
                   {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
                 </app-roadmap-item>

@@ -29,7 +29,7 @@
       rel="noopener noreferrer"
       target="_blank"
       [attr.gaEvent]="gaEvent ? gaEvent : null"
-      gaCategory="roadmap"
+      [attr.gaCategory]="gaCategory ? gaCategory : null"
     >
       <ng-container *ngTemplateOutlet="content"></ng-container>
     </a>
