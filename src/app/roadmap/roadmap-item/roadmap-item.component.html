@@ -28,7 +28,7 @@
       [title]="hrefTitle"
       rel="noopener noreferrer"
       target="_blank"
-      gaEvent="{{ gaEvent }}"
+      [attr.gaEvent]="gaEvent ? gaEvent : null"
       gaCategory="roadmap"
     >
       <ng-container *ngTemplateOutlet="content"></ng-container>
