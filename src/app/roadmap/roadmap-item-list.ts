@@ -443,6 +443,21 @@ const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    status: 'knowledgeAbsorbed',
+    text: 'Virtualization',
+    childList: [
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Docker',
+        href: 'https://www.docker.com/',
+        text: 'Docker',
+        gaEvent: 'virtualizationDocker',
+      },
+    ],
+  },
+  {
+    level: 1,
     status: 'knowledgeNeedToGain',
     text: 'And I keep learning',
     childList: [
