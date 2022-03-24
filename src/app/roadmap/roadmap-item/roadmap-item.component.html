@@ -28,8 +28,8 @@
       [title]="hrefTitle"
       rel="noopener noreferrer"
       target="_blank"
-      [attr.gaEvent]="gaEvent ? gaEvent : null"
-      [attr.gaCategory]="gaCategory ? gaCategory : null"
+      [attr.gaEvent]="ga ? ga : null"
+      [attr.gaCategory]="ga ? 'roadmap' : null"
     >
       <ng-container *ngTemplateOutlet="content"></ng-container>
     </a>
