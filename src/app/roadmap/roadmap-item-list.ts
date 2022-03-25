@@ -36,9 +36,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
       {
         level: 2,
         status: 'knowledgeAbsorbed',
-        hrefTitle: 'SEO',
+        hrefTitle: 'SEO - Search engine optimization',
         href: 'https://developers.google.com/search/docs',
-        text: 'SEO',
+        text: 'SEO - Search engine optimization',
         gaEvent: 'htmlSEO',
       },
       {
@@ -64,6 +64,36 @@ const roadmapItemList: RoadmapItemInterface[] = [
         href: 'https://specifishity.com/',
         text: 'Specificity',
         gaEvent: 'cssSpecificity',
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        text: 'Methodologies',
+        childList: [
+          {
+            level: 3,
+            status: 'knowledgeAbsorbed',
+            hrefTitle: 'BEM - Block, element and modifier',
+            href: 'http://getbem.com/introduction/',
+            text: 'BEM - Block, element and modifier',
+            gaEvent: 'cssMethodologiesBEM',
+          },
+        ],
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        text: 'Preprocessors',
+        childList: [
+          {
+            level: 3,
+            status: 'knowledgeAbsorbed',
+            hrefTitle: 'Sass - Syntactically awesome style sheets',
+            href: 'https://sass-lang.com/',
+            text: 'Sass - Syntactically awesome style sheets',
+            gaEvent: 'cssPreprocessorsSass',
+          },
+        ],
       },
       {
         level: 2,
@@ -129,9 +159,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
       {
         level: 2,
         status: 'knowledgeAbsorbed',
-        hrefTitle: 'DOM manipulation',
+        hrefTitle: 'DOM - document object model - manipulation',
         href: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents',
-        text: 'DOM manipulation',
+        text: 'DOM - document object model - manipulation',
         gaEvent: 'javaScriptDOMmanipulation',
       },
       {
@@ -214,54 +244,14 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
-    text: 'Web security',
-    childList: [
-      {
-        level: 2,
-        status: 'knowledgeAbsorbed',
-        hrefTitle: 'Hypertext transfer protocol secure (HTTPS)',
-        href: 'https://www.cloudflare.com/en-gb/learning/ssl/why-is-http-not-secure/',
-        text: 'Hypertext transfer protocol secure (HTTPS)',
-        gaEvent: 'webSecurityHTTPS',
-      },
-      {
-        level: 2,
-        status: 'knowledgeAbsorbed',
-        hrefTitle: 'Cross-origin resource sharing (CORS)',
-        href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS',
-        text: 'Cross-origin resource sharing (CORS)',
-        gaEvent: 'webSecurityCORS',
-      },
-      // TODO: figure out
-      // {
-      //   level: 2,
-      //   status: 'knowledgeAbsorbed',
-      //   hrefTitle: 'Content security policy (CSP)',
-      //   href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP',
-      //   text: 'Content security policy (CSP)',
-      //   gaEvent: 'webSecurityCSP',
-      // },
-      {
-        level: 2,
-        status: 'knowledgeAbsorbed',
-        hrefTitle: 'Top 10 OWASP security risks',
-        href: 'https://owasp.org/www-project-top-ten/',
-        text: 'Top 10 OWASP security risks',
-        gaEvent: 'webSecurityTop10OWASPsecurityRisks',
-      },
-    ],
-  },
-  {
-    level: 1,
-    status: 'knowledgeAbsorbed',
     text: 'Version control systems',
     childList: [
       {
         level: 2,
         status: 'knowledgeAbsorbed',
-        hrefTitle: 'Git',
+        hrefTitle: 'Git - Global Information Tracker',
         href: 'https://git-scm.com/',
-        text: 'Git',
+        text: 'Git - Global Information Tracker',
         gaEvent: 'versionControlSystemsGit',
       },
       {
@@ -317,6 +307,46 @@ const roadmapItemList: RoadmapItemInterface[] = [
         href: 'https://www.npmjs.com/',
         text: 'npm',
         gaEvent: 'packageManagersNpm',
+      },
+    ],
+  },
+  {
+    level: 1,
+    status: 'knowledgeAbsorbed',
+    text: 'Web security',
+    childList: [
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'HTTPS - Hypertext transfer protocol secure',
+        href: 'https://www.cloudflare.com/en-gb/learning/ssl/why-is-http-not-secure/',
+        text: 'HTTPS - Hypertext transfer protocol secure',
+        gaEvent: 'webSecurityHTTPS',
+      },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'CORS - Cross-origin resource sharing',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS',
+        text: 'CORS - Cross-origin resource sharing',
+        gaEvent: 'webSecurityCORS',
+      },
+      // TODO: figure out
+      // {
+      //   level: 2,
+      //   status: 'knowledgeAbsorbed',
+      //   hrefTitle: 'CSP - Content security policy',
+      //   href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP',
+      //   text: 'CSP - Content security policy',
+      //   gaEvent: 'webSecurityCSP',
+      // },
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Top 10 OWASP security risks',
+        href: 'https://owasp.org/www-project-top-ten/',
+        text: 'Top 10 OWASP security risks',
+        gaEvent: 'webSecurityTop10OWASPsecurityRisks',
       },
     ],
   },
@@ -382,6 +412,52 @@ const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
+    text: 'Application versioning',
+    childList: [
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Semantic versioning',
+        href: 'https://semver.org/',
+        text: 'Semantic versioning',
+        gaEvent: 'applicationVersioningSemanticVersioning',
+      },
+    ],
+  },
+  {
+    level: 1,
+    status: 'knowledgeAbsorbed',
+    text: 'E-commerce platforms',
+    childList: [
+      {
+        level: 2,
+        status: 'knowledgeAbsorbed',
+        hrefTitle: 'Shopware',
+        href: 'https://www.shopware.com/en/',
+        text: 'Shopware',
+        gaEvent: 'eCommerceShopware',
+      },
+      {
+        level: 2,
+        status: 'knowledgeNeedToGain',
+        hrefTitle: 'commercetools',
+        href: 'https://commercetools.com/',
+        text: 'commercetools',
+        gaEvent: 'eCommerceCommercetools',
+      },
+      {
+        level: 2,
+        status: 'knowledgeNeedToGain',
+        hrefTitle: 'Pimcore',
+        href: 'https://pimcore.com/en',
+        text: 'Pimcore',
+        gaEvent: 'eCommercePimcore',
+      },
+    ],
+  },
+  {
+    level: 1,
+    status: 'knowledgeAbsorbed',
     text: 'Static site generators',
     childList: [
       {
@@ -423,21 +499,6 @@ const roadmapItemList: RoadmapItemInterface[] = [
         href: 'https://www.11ty.dev/',
         text: 'Eleventy',
         gaEvent: 'staticSiteGeneratorsEleventy',
-      },
-    ],
-  },
-  {
-    level: 1,
-    status: 'knowledgeAbsorbed',
-    text: 'Application versioning',
-    childList: [
-      {
-        level: 2,
-        status: 'knowledgeAbsorbed',
-        hrefTitle: 'Semantic versioning',
-        href: 'https://semver.org/',
-        text: 'Semantic versioning',
-        gaEvent: 'applicationVersioningSemanticVersioning',
       },
     ],
   },
