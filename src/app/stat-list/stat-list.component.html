@@ -13,12 +13,26 @@
     ">
       years in the web industry
     </p>
-    <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('periodWeb')">
-      <i class="
-      sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
-      post-office:text-orange-500 post-office:hover:text-black
-        las la-code
-      "></i>
+    <button
+      class="absolute right-2 bottom-1"
+      (click)="
+        isUnitTestDescriptionVisible.periodWeb
+        ? hideAllUnitTestDescription()
+        : showUnitTestDescription('periodWeb')
+      "
+      gaEvent="unitTestDescriptionPeriodWebShown" gaCategory="defaultCategory"
+    >
+      <i
+        class="
+        sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
+        post-office:text-orange-500 post-office:hover:text-black
+          las
+        "
+        [ngClass]="{
+          'la-code': !isUnitTestDescriptionVisible.periodWeb,
+          'la-times': isUnitTestDescriptionVisible.periodWeb
+        }"
+      ></i>
     </button>
   </div>
   <!-- / Period web -->
@@ -36,12 +50,26 @@
     ">
       years of active programming
     </p>
-    <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('periodProgramming')">
-      <i class="
-      sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
-      post-office:text-orange-500 post-office:hover:text-black
-        las la-code
-      "></i>
+    <button
+      class="absolute right-2 bottom-1"
+      (click)="
+        isUnitTestDescriptionVisible.periodProgramming
+        ? hideAllUnitTestDescription()
+        : showUnitTestDescription('periodProgramming')
+      "
+      gaEvent="unitTestDescriptionPeriodProgrammingShown" gaCategory="defaultCategory"
+    >
+      <i
+        class="
+        sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
+        post-office:text-orange-500 post-office:hover:text-black
+          las
+        "
+        [ngClass]="{
+          'la-code': !isUnitTestDescriptionVisible.periodProgramming,
+          'la-times': isUnitTestDescriptionVisible.periodProgramming
+        }"
+      ></i>
     </button>
   </div>
   <!-- / Period programming -->
@@ -59,12 +87,26 @@
       <ng-template ngPluralCase="other">cups</ng-template>
       of coffee drank today
     </p>
-    <button class="absolute right-2 bottom-1" (click)="showUnitTestDescription('numberOfCups')">
-      <i class="
-      sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
-      post-office:text-orange-500 post-office:hover:text-black
-        las la-code
-      "></i>
+    <button
+      class="absolute right-2 bottom-1"
+      (click)="
+        isUnitTestDescriptionVisible.numberOfCups
+        ? hideAllUnitTestDescription()
+        : showUnitTestDescription('numberOfCups')
+      "
+      gaEvent="unitTestDescriptionNumberOfCupsShown" gaCategory="defaultCategory"
+    >
+      <i
+        class="
+        sky-neutral:text-gray-400 sky-neutral:hover:text-red-600
+        post-office:text-orange-500 post-office:hover:text-black
+          las
+        "
+        [ngClass]="{
+          'la-code': !isUnitTestDescriptionVisible.numberOfCups,
+          'la-times': isUnitTestDescriptionVisible.numberOfCups
+        }"
+      ></i>
     </button>
   </div>
   <!-- / Number of cups -->
