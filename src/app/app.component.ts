@@ -76,8 +76,8 @@ unitTest: `code for unit test goes here`,
     this.origin = null;
     this.title = 'zigavukcevic.dev';
     this.themeList = [
-      { name: 'sky-neutral', background: 'bg-gray-300' },
-      { name: 'post-office', background: 'bg-yellow-400' },
+      { name: 'skyNeutral', background: 'bg-gray-300' },
+      { name: 'postOffice', background: 'bg-yellow-400' },
     ];
     this.currentTheme = this.themeList[0];
     this.audioNamePronunciation = new Audio('assets/audio/name-pronunciation.mp3');
@@ -129,4 +129,12 @@ unitTest: `code for unit test goes here`,
   playNamePronunciation = () => {
     this.audioNamePronunciation.play();
   };
+
+  convertFromCamelToKebabCase = (string: string) => {
+    return string.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
+  };
+
+  capitalizeFirstLetter(string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 }

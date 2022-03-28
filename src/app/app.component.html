@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 theme-{{ currentTheme.name }}">
+<div class="container mx-auto px-4 theme-{{ convertFromCamelToKebabCase(currentTheme.name) }}">
   <div class="text-right pt-3 pr-3">
     <div class="flex flex-row justify-end">
       <small class="mr-2">Change theme</small>
@@ -6,7 +6,7 @@
         class="block w-5 h-5 mr-1 {{ theme.background }}"
         [ngClass]="{ 'border-2 border-gray-300': theme.name === currentTheme.name }"
         (click)="setTheme(theme)"
-        gaEvent="themeSwitched" gaCategory="defaultCategory"
+        gaEvent="themeSwitchedTo{{ capitalizeFirstLetter(theme.name) }}" gaCategory="default"
       ></button>
     </div>
   </div>
@@ -23,7 +23,7 @@
           rounded-xl relative
         "
         (click)="playNamePronunciation()"
-        gaEvent="audioNamePronunciationPlayed" gaCategory="defaultCategory"
+        gaEvent="audioNamePronunciationPlayed" gaCategory="default"
       >
         <i class="las la-volume-up"></i>
       </button> I'm a <strong
