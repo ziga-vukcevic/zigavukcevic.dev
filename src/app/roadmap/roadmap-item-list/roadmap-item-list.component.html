@@ -46,6 +46,21 @@
                 >
                   {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
                 </app-roadmap-item>
+                <!-- Level 5 -->
+                <ul class="roadmap-item-list list-level-5">
+                  <li *ngFor="let item of item.childList">
+                    <app-roadmap-item
+                      [level]="item.level"
+                      [status]="item.status"
+                      [hrefTitle]="item.hrefTitle"
+                      [href]="item.href"
+                      [ga]="item.gaEvent"
+                    >
+                      {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
+                    </app-roadmap-item>
+                  </li>
+                </ul>
+                <!-- / Level 5 -->
               </li>
             </ul>
             <!-- / Level 4 -->
