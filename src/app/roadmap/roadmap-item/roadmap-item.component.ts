@@ -9,11 +9,12 @@ import { RoadmapItemInterface } from '../roadmap-item.interface';
 export class RoadmapItemComponent implements OnInit {
   @Input() level!: RoadmapItemInterface['level'];
   @Input() status!: RoadmapItemInterface['status'];
+  @Input() ga?: RoadmapItemInterface['ga'];
+  @Input() gaEvent?: RoadmapItemInterface['gaEvent'];
   @Input() hrefTitle?: RoadmapItemInterface['hrefTitle'];
   @Input() href?: RoadmapItemInterface['href'];
-  @Input() ga?: RoadmapItemInterface['ga'];
-  // @Input() gaEvent?: RoadmapItemInterface['gaEvent'];
-  // @Input() gaCategory?: RoadmapItemInterface['gaCategory'];
+  @Input() version?: RoadmapItemInterface['version'];
+  @Input() childList?: RoadmapItemInterface['childList'];
 
   constructor() {}
 

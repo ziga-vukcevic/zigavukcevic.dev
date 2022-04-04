@@ -10,6 +10,7 @@ xl	1280px	@media (min-width: 1280px) { ... }
 .roadmap-item-list {
   // margin-bottom: 20px;
   display: block;
+  position: relative;
 
   &.list-level-3,
   &.list-level-4,
