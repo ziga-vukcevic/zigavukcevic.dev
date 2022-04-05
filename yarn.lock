@@ -4846,10 +4846,10 @@ ngx-google-analytics@^13.0.1:
   dependencies:
     tslib "^2.0.0"
 
-ngx-highlightjs@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ngx-highlightjs/-/ngx-highlightjs-6.1.0.tgz#d34a0f0fba5284b2ae829c6afae966ee779d04d9"
-  integrity sha512-cnnH2eTcqkEhHSX1xIjdgmYKzdLuyGSABeBpKh9DWKTBj6NLcAaABvym1GlHnus1bOPmRQ2zlZdOFj73APgjTA==
+ngx-highlightjs@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/ngx-highlightjs/-/ngx-highlightjs-6.1.2.tgz#9224e55ac33bc8dc0c1a7e18f80ea9c8f8f8e7a1"
+  integrity sha512-8ANcBBT1Iq2F8kVEhu2O9mOo0au2UTmPkVTMrj/9OY1VwIq3GoJPR0WNdGMD52oWYm1BFKVJCxVl1l1foC2tng==
   dependencies:
     highlight.js "^11.0.0"
     highlightjs-line-numbers.js "^2.8.0"
