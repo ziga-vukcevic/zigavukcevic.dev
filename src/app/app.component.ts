@@ -77,7 +77,7 @@ unitTest: `code for unit test goes here`,
     this.title = 'zigavukcevic.dev';
     this.themeList = [
       { name: 'skyNeutral', background: 'bg-gray-300' },
-      { name: 'postOffice', background: 'bg-yellow-400' },
+      { name: 'postOffice', background: 'bg-yellow-300' },
     ];
     this.currentTheme = this.themeList[0];
     this.audioNamePronunciation = new Audio('assets/audio/name-pronunciation.mp3');
