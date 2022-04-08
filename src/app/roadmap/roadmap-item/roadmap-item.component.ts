@@ -14,9 +14,15 @@ export class RoadmapItemComponent implements OnInit {
   @Input() hrefTitle?: RoadmapItemInterface['hrefTitle'];
   @Input() href?: RoadmapItemInterface['href'];
   @Input() version?: RoadmapItemInterface['version'];
-  @Input() childList?: RoadmapItemInterface['childList'];
+  @Input() child?: RoadmapItemInterface['child'] | null;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleChild() {
+    if (this.child) {
+      this.child.isVisible = !this.child.isVisible;
+    }
+  }
 }

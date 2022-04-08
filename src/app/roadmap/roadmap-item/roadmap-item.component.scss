@@ -1,6 +1,8 @@
 .roadmap-item {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   position: relative;
+  padding-right: 30px;
 
   &::before,
   &::after {
@@ -83,5 +85,25 @@
     left: 0;
     right: 0;
     color: red;
+  }
+
+  .toggle {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    padding-right: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
   }
 }

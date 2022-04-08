@@ -6,59 +6,59 @@
       [status]="item.status"
       [hrefTitle]="item.hrefTitle"
       [href]="item.href"
-      [childList]="item.childList"
+      [child]="item.child"
       [ga]="item.gaEvent"
     >
       {{ item.text }} <small *ngIf="item.version">version {{ item.version }}</small>
     </app-roadmap-item>
     <!-- Level 2 -->
-    <ul class="roadmap-item-list list-level-2">
-      <li *ngFor="let item of item.childList">
+    <ul class="roadmap-item-list list-level-2" *ngIf="item.child && item.child.isVisible">
+      <li *ngFor="let item of item.child && item.child.itemList">
         <app-roadmap-item
           [level]="item.level"
           [status]="item.status"
           [hrefTitle]="item.hrefTitle"
           [href]="item.href"
-          [childList]="item.childList"
+          [child]="item.child"
           [ga]="item.gaEvent"
         >
           {{ item.text }}
         </app-roadmap-item>
         <!-- Level 3 -->
-        <ul class="roadmap-item-list list-level-3">
-          <li *ngFor="let item of item.childList">
+        <ul class="roadmap-item-list list-level-3" *ngIf="item.child && item.child.isVisible">
+          <li *ngFor="let item of item.child && item.child.itemList">
             <app-roadmap-item
               [level]="item.level"
               [status]="item.status"
               [hrefTitle]="item.hrefTitle"
               [href]="item.href"
-              [childList]="item.childList"
+              [child]="item.child"
               [ga]="item.gaEvent"
             >
               {{ item.text }}
             </app-roadmap-item>
             <!-- Level 4 -->
-            <ul class="roadmap-item-list list-level-4">
-              <li *ngFor="let item of item.childList">
+            <ul class="roadmap-item-list list-level-4" *ngIf="item.child && item.child.isVisible">
+              <li *ngFor="let item of item.child && item.child.itemList">
                 <app-roadmap-item
                   [level]="item.level"
                   [status]="item.status"
                   [hrefTitle]="item.hrefTitle"
                   [href]="item.href"
-                  [childList]="item.childList"
+                  [child]="item.child"
                   [ga]="item.gaEvent"
                 >
                   {{ item.text }}
                 </app-roadmap-item>
                 <!-- Level 5 -->
-                <ul class="roadmap-item-list list-level-5">
-                  <li *ngFor="let item of item.childList">
+                <ul class="roadmap-item-list list-level-5" *ngIf="item.child && item.child.isVisible">
+                  <li *ngFor="let item of item.child && item.child.itemList">
                     <app-roadmap-item
                       [level]="item.level"
                       [status]="item.status"
                       [hrefTitle]="item.hrefTitle"
                       [href]="item.href"
-                      [childList]="item.childList"
+                      [child]="item.child"
                       [ga]="item.gaEvent"
                     >
                       {{ item.text }}

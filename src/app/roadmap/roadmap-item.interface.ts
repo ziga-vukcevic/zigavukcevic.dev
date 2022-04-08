@@ -7,5 +7,8 @@ export interface RoadmapItemInterface {
   hrefTitle?: string | null;
   href?: string | null;
   version?: string | number;
-  childList?: RoadmapItemInterface[];
+  child?: {
+    isVisible: boolean;
+    itemList: RoadmapItemInterface[];
+  } | null
 }
