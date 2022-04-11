@@ -35,16 +35,18 @@
     </a>
   </ng-template>
   <!-- / Link -->
+  <!-- Toggle button -->
   <button
     *ngIf="child && child.itemList.length > 0"
     class="toggle"
-    (click)="toggleChild()"
+    (click)="toggleChildVisibility()"
   >
     <i class="las" [ngClass]="{
       'la-caret-up': child?.isVisible,
       'la-caret-down': !child?.isVisible
     }"></i>
   </button>
+  <!-- / Toggle button -->
 </div>
 <!-- / Container -->
 
@@ -53,6 +55,11 @@
   <small class="px-3 py-2 block">
     <ng-content></ng-content>
   </small>
-  <span class="deepness-indicator">{{ child?.itemList?.length }}</span>
+  <span
+    class="depth-meter"
+    [ngStyle]="{ width: calculateDepth() }"
+  >
+    123{{ child?.itemList?.length }}
+  </span>
 </ng-template>
 <!-- / Template for output of content -->

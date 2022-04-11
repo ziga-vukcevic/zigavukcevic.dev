@@ -13,7 +13,7 @@
     </app-roadmap-item>
     <!-- Level 2 -->
     <ul class="roadmap-item-list list-level-2" *ngIf="item.child && item.child.isVisible">
-      <li *ngFor="let item of item.child && item.child.itemList">
+      <li *ngFor="let item of item.child.itemList">
         <app-roadmap-item
           [level]="item.level"
           [status]="item.status"
@@ -26,7 +26,7 @@
         </app-roadmap-item>
         <!-- Level 3 -->
         <ul class="roadmap-item-list list-level-3" *ngIf="item.child && item.child.isVisible">
-          <li *ngFor="let item of item.child && item.child.itemList">
+          <li *ngFor="let item of item.child.itemList">
             <app-roadmap-item
               [level]="item.level"
               [status]="item.status"
@@ -39,7 +39,7 @@
             </app-roadmap-item>
             <!-- Level 4 -->
             <ul class="roadmap-item-list list-level-4" *ngIf="item.child && item.child.isVisible">
-              <li *ngFor="let item of item.child && item.child.itemList">
+              <li *ngFor="let item of item.child.itemList">
                 <app-roadmap-item
                   [level]="item.level"
                   [status]="item.status"
@@ -52,7 +52,7 @@
                 </app-roadmap-item>
                 <!-- Level 5 -->
                 <ul class="roadmap-item-list list-level-5" *ngIf="item.child && item.child.isVisible">
-                  <li *ngFor="let item of item.child && item.child.itemList">
+                  <li *ngFor="let item of item.child.itemList">
                     <app-roadmap-item
                       [level]="item.level"
                       [status]="item.status"

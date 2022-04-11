@@ -76,14 +76,13 @@
   //   }
   // }
 
-  .deepness-indicator {
-    display: none;
+  .depth-meter {
+    // display: none;
     position: absolute;
     bottom: 0;
     height: 5px;
     background-color: cyan;
     left: 0;
-    right: 0;
     color: red;
   }
 
