@@ -37,17 +37,17 @@ export class StatListComponent implements OnInit {
   }
 
   calculateCupsDrank(currentLocalHour: number): void {
-    switch(true) {
+    switch (true) {
       // From 8:00 to 10:59
-      case (this.isValueInRange(currentLocalHour, 8, 10)):
+      case this.isValueInRange(currentLocalHour, 8, 10):
         this.numberOfCups = 1;
         break;
       // From 11:00 to 15:59
-      case (this.isValueInRange(currentLocalHour, 11, 15)):
+      case this.isValueInRange(currentLocalHour, 11, 15):
         this.numberOfCups = 2;
         break;
       // From 16:00 to 23:59
-      case (this.isValueInRange(currentLocalHour, 16, 23)):
+      case this.isValueInRange(currentLocalHour, 16, 23):
         this.numberOfCups = 3;
         break;
       // Any other time (covers cases from 0:00 to 7:59)
@@ -58,12 +58,16 @@ export class StatListComponent implements OnInit {
 
   showUnitTestDescription(name: string): void {
     this.hideAllUnitTestDescription();
-    this.isUnitTestDescriptionVisible[name as keyof IsUnitTestDescriptionVisibleInterface] = true;
+    this.isUnitTestDescriptionVisible[
+      name as keyof IsUnitTestDescriptionVisibleInterface
+    ] = true;
   }
 
   hideAllUnitTestDescription(): void {
-    Object.keys(this.isUnitTestDescriptionVisible).forEach((name) => {
-      this.isUnitTestDescriptionVisible[name as keyof IsUnitTestDescriptionVisibleInterface] = false;
+    Object.keys(this.isUnitTestDescriptionVisible).forEach(name => {
+      this.isUnitTestDescriptionVisible[
+        name as keyof IsUnitTestDescriptionVisibleInterface
+      ] = false;
     });
   }
 

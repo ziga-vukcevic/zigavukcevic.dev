@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { roadmapItemList} from 'src/app/roadmap/roadmap-item-list';
+import { roadmapItemList } from 'src/app/roadmap/roadmap-item-list';
 import { RoadmapItemInterface } from './roadmap-item.interface';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { RoadmapItemInterface } from './roadmap-item.interface';
 })
 export class RoadmapService {
   private itemListBehaviorSubject: BehaviorSubject<RoadmapItemInterface[]>;
-  private itemListCount: { all: number, visible: number };
+  private itemListCount: { all: number; visible: number };
 
   constructor() {
     this.itemListBehaviorSubject = new BehaviorSubject(roadmapItemList);
@@ -72,7 +72,8 @@ export class RoadmapService {
           this.itemListCount.visible = this.itemListCount.visible + 1;
 
           if (item.child && item.child.isVisible) {
-            this.itemListCount.visible = this.itemListCount.visible + item.child.itemList.length;
+            this.itemListCount.visible =
+              this.itemListCount.visible + item.child.itemList.length;
             // Recursively go deeper
             this.countVisibleItems(item.child.itemList);
           }

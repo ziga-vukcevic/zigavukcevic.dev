@@ -9,7 +9,7 @@
     "test": "ng test --browsers ChromeHeadless",
     "testWithBrowser": "ng test  --browsers Chrome --watch=true",
     "lint": "ng lint",
-    "prettier": "prettier --write ."
+    "lintFix": "ng lint --fix"
   },
   "private": true,
   "dependencies": {

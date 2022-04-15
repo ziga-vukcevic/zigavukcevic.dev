@@ -8,9 +8,8 @@ describe('StatsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatListComponent ],
-    })
-    .compileComponents();
+      declarations: [StatListComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -27,8 +26,10 @@ describe('StatsComponent', () => {
   const endFutureDateParsed = dayjs(endFutureDate).format('D MMMM YYYY');
 
   it(`should contain 25+ years in the web industry if today's date would be ${endFutureDateParsed}`, () => {
-    component.periodWeb = component
-      .calculatePeriod('2007-06-01', endFutureDate);
+    component.periodWeb = component.calculatePeriod(
+      '2007-06-01',
+      endFutureDate,
+    );
     fixture.detectChanges();
     const { nativeElement } = fixture.debugElement;
 
@@ -38,8 +39,10 @@ describe('StatsComponent', () => {
   });
 
   it(`should contain 20+ years of active programming if today's date would be ${endFutureDateParsed}`, () => {
-    component.periodProgramming = component
-      .calculatePeriod('2012-01-01', endFutureDate);
+    component.periodProgramming = component.calculatePeriod(
+      '2012-01-01',
+      endFutureDate,
+    );
     fixture.detectChanges();
     const { nativeElement } = fixture.debugElement;
 
@@ -58,7 +61,7 @@ describe('StatsComponent', () => {
   ];
 
   occurrenceList.forEach((occurrence, occurrenceIndex) => {
-    occurrence.localHourList.forEach((localHour) => {
+    occurrence.localHourList.forEach(localHour => {
       // Occurrence with number of cups of 0
       if (occurrenceIndex === 0) {
         it(`should be hidden if current local hour is ${localHour}`, () => {
@@ -67,21 +70,24 @@ describe('StatsComponent', () => {
           const { nativeElement } = fixture.debugElement;
 
           expect(
-            nativeElement.querySelector('.js-unit-test-container').hasAttribute('hidden'),
+            nativeElement
+              .querySelector('.js-unit-test-container')
+              .hasAttribute('hidden'),
           ).toBeTrue();
         });
-      // Occurrences with number of cups of 1, 2 or 3
+        // Occurrences with number of cups of 1, 2 or 3
       } else {
         it(`should contain ${occurrence.numberOfCups}
           ${occurrence.numberOfCups > 1 ? 'cups' : 'cup'}
-          of coffee if current local hour is ${localHour}`,
-        () => {
+          of coffee if current local hour is ${localHour}`, () => {
           component.calculateCupsDrank(localHour);
           fixture.detectChanges();
           const { nativeElement } = fixture.debugElement;
 
           expect(
-            nativeElement.querySelector('.js-unit-test-container .js-unit-test-number-of-cups').innerText,
+            nativeElement.querySelector(
+              '.js-unit-test-container .js-unit-test-number-of-cups',
+            ).innerText,
           ).toBe(String(occurrence.numberOfCups));
         });
       }

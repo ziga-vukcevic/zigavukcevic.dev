@@ -9,8 +9,7 @@ describe('HighlightSkillComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HighlightSkillComponent],
-    })
-    .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {

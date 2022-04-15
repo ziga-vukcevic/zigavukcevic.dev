@@ -12,5 +12,5 @@ export interface RoadmapItemInterface {
     id: string;
     isVisible: boolean;
     itemList: RoadmapItemInterface[];
-  } | null
+  } | null;
 }

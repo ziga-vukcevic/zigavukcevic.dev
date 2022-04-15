@@ -7,14 +7,13 @@ describe('TabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TabComponent ],
-    })
-    .compileComponents();
+      declarations: [TabComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TabComponent);
-    component = fixture.componentInstance ;
+    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
@@ -24,15 +23,21 @@ describe('TabComponent', () => {
 
   it('should be hidden by default', () => {
     const { nativeElement } = fixture.debugElement;
-    expect(nativeElement.querySelector('.js-unit-test-container')
-      .hasAttribute('hidden')).toBeTrue();
+    expect(
+      nativeElement
+        .querySelector('.js-unit-test-container')
+        .hasAttribute('hidden'),
+    ).toBeTrue();
   });
 
   it('should be visible if set to active', () => {
     component.isActive = true;
     fixture.detectChanges();
     const { nativeElement } = fixture.debugElement;
-    expect(nativeElement.querySelector('.js-unit-test-container')
-      .hasAttribute('hidden')).toBeFalse();
+    expect(
+      nativeElement
+        .querySelector('.js-unit-test-container')
+        .hasAttribute('hidden'),
+    ).toBeFalse();
   });
 });
