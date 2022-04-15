@@ -1,52 +1,46 @@
-/*
-Breakpoint prefix	Minimum width	CSS
-sm	640px	@media (min-width: 640px) { ... }
-md	768px	@media (min-width: 768px) { ... }
-lg	1024px	@media (min-width: 1024px) { ... }
-xl	1280px	@media (min-width: 1280px) { ... }
-2xl	1536px	@media (min-width: 1536px) { ... }
-*/
-
-.roadmap-item-list {
-  // margin-bottom: 20px;
+:host ::ng-deep .roadmap-item-list {
   display: block;
   position: relative;
 
-  &.list-level-3,
-  &.list-level-4,
-  &.list-level-5 {
-    // display: none;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 62px;
+    left: 22px;
+    bottom: 25px;
+    width: 3px;
+    background-color: green;
   }
 
-  // @media (min-width: 640px) {
-  //   &.list-level-1 {
-  //     position: relative;
-  //     text-align: center;
-  //     // background-color: red;
+  // TODO: Add class .last into loop
 
-  //     li { position: relative; }
-  //   }
+  &.last::before {
+    background-color: white;
+  }
 
-  //   &.list-level-2 {
-  //     // background-color: yellow;
-  //     display: flex;
-  //     justify-content: space-between;
-  //     margin-bottom: 30px;
+  &.list-level-3::before {
+    top: 0;
+    left: 72px;
+  }
 
-  //     &::before,
-  //     &::after {
-  //       content: '';
-  //       position: absolute;
-  //       display: block;
-  //     }
+  &.list-level-4::before {
+    top: 0;
+    left: 100px;
+  }
 
-  //     &::before {
-  //       top: 55px;
-  //       left: calc(130px / 2);
-  //       width: calc(100% - 130px);
-  //       height: 1px;
-  //       border-top: 1px solid black;
-  //     }
-  //   }
-  // }
+  /*
+    NOTE: Component roadmap-item (only instance(s) in each last li element) can't
+    be selected within component itself so modifying styles are written in here.
+  */
+
+  ul li:last-child {
+    .roadmap-item:not(.level-1)::after {
+      height: 100%;
+      top: 30px;
+      bottom: 0;
+      background-color: yellow;
+      width: 10px;
+    }
+  }
 }

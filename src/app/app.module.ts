@@ -12,6 +12,7 @@ import { TabListComponent } from './tab-list/tab-list.component';
 import { TabComponent } from './tab/tab.component';
 import { RoadmapItemComponent } from './roadmap/roadmap-item/roadmap-item.component';
 import { RoadmapItemListComponent } from './roadmap/roadmap-item-list/roadmap-item-list.component';
+import { RoadmapService } from './roadmap/roadmap.service';
 import { HighlightSkillComponent } from './highlight-skill/highlight-skill.component';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { HighlightSkillComponent } from './highlight-skill/highlight-skill.compo
         // themePath: 'assets/styles/solarized-dark.css',
       },
     },
+    RoadmapService,
   ],
   bootstrap: [AppComponent],
 })

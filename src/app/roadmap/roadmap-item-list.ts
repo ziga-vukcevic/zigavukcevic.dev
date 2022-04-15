@@ -1,14 +1,14 @@
 import { RoadmapItemInterface } from './roadmap-item.interface';
 
-// TODO: add Storybook
-
-const roadmapItemList: RoadmapItemInterface[] = [
+export const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'HTML',
     version: 5,
+    depthMeter: 52,
     child: {
+      id: '3a526d02e84c480f9716a037e380ade4',
       isVisible: true,
       itemList: [
         {
@@ -17,6 +17,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Semantic markup',
           href: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element',
           text: 'Semantic markup',
+          depthMeter: 0,
           gaEvent: 'htmlSemanticMarkup',
         },
         {
@@ -25,6 +26,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Responsive images',
           href: 'https://developers.google.com/web/fundamentals/design-and-ux/responsive/images',
           text: 'Responsive images',
+          depthMeter: 0,
           gaEvent: 'htmlResponsiveImages',
         },
         {
@@ -33,6 +35,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Conventions and best practices',
           href: 'https://github.com/hail2u/html-best-practices',
           text: 'Conventions and best practices',
+          depthMeter: 0,
           gaEvent: 'htmlConventionsAndBestPractices',
         },
         {
@@ -41,6 +44,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'SEO - Search engine optimization',
           href: 'https://developers.google.com/search/docs',
           text: 'SEO - Search engine optimization',
+          depthMeter: 0,
           gaEvent: 'htmlSEO',
         },
         {
@@ -49,6 +53,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Accessibility',
           href: 'https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/',
           text: 'Accessibility',
+          depthMeter: 0,
           gaEvent: 'htmlAccessibility',
         },
       ],
@@ -59,7 +64,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     status: 'knowledgeAbsorbed',
     text: 'CSS',
     version: 3,
+    depthMeter: 52,
     child: {
+      id: '098ea49e775646a2bb8323c7131da1ec',
       isVisible: false,
       itemList: [
         {
@@ -68,6 +75,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Box model',
           href: 'https://www.geeksforgeeks.org/css-box-model/',
           text: 'Box model',
+          depthMeter: 52,
           gaEvent: 'cssBoxModel',
         },
         {
@@ -76,6 +84,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Specificity',
           href: 'https://specifishity.com/',
           text: 'Specificity',
+          depthMeter: 52,
           gaEvent: 'cssSpecificity',
         },
         {
@@ -84,14 +93,17 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Responsive web design based on media queries',
           href: 'https://torquemag.io/2021/08/media-queries-guide/',
           text: 'Responsive web design based on media queries',
+          depthMeter: 52,
           gaEvent: 'cssResponsiveWebDesign',
         },
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Layouts',
+          depthMeter: 52,
           gaEvent: 'cssLayouts',
           child: {
+            id: 'd42cd4cca3264aa79a3de12b5d27c67b',
             isVisible: false,
             itemList: [
               {
@@ -100,6 +112,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Flexbox',
                 href: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/',
                 text: 'Flexbox',
+                depthMeter: 52,
                 gaEvent: 'cssLayoutsFlexbox',
               },
               {
@@ -108,6 +121,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Grid',
                 href: 'https://css-tricks.com/snippets/css/complete-guide-grid/',
                 text: 'Grid',
+                depthMeter: 52,
                 gaEvent: 'cssLayoutsGrid',
               },
             ],
@@ -119,13 +133,16 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Transitions and animations',
           href: 'https://blog.hubspot.com/website/css-transition-vs-animation',
           text: 'Transitions and animations',
+          depthMeter: 52,
           gaEvent: 'cssTransitionsAndAnimations',
         },
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Methodologies',
+          depthMeter: 52,
           child: {
+            id: '29d35565a12b4e70b210b21c8d435ef7',
             isVisible: false,
             itemList: [
               {
@@ -134,6 +151,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'BEM - Block, element and modifier',
                 href: 'http://getbem.com/introduction/',
                 text: 'BEM - Block, element and modifier',
+                depthMeter: 52,
                 gaEvent: 'cssMethodologiesBEM',
               },
             ],
@@ -143,7 +161,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Preprocessors',
+          depthMeter: 52,
           child: {
+            id: '2076ff5a6ea04117a01c63c08539b800',
             isVisible: false,
             itemList: [
               {
@@ -152,6 +172,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Sass - Syntactically awesome style sheets',
                 href: 'https://sass-lang.com/',
                 text: 'Sass - Syntactically awesome style sheets',
+                depthMeter: 52,
                 gaEvent: 'cssPreprocessorsSass',
               },
             ],
@@ -161,14 +182,18 @@ const roadmapItemList: RoadmapItemInterface[] = [
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Frameworks',
+          depthMeter: 52,
           child: {
+            id: '7cc086a4837246d0af77f9f8f333f9f8',
             isVisible: false,
             itemList: [
               {
                 level: 3,
                 status: 'knowledgeAbsorbed',
                 text: 'Based on CSS first',
+                depthMeter: 52,
                 child: {
+                  id: 'c11aae5a09824883a9604295185e9d2b',
                   isVisible: false,
                   itemList: [
                     {
@@ -177,6 +202,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Foundation',
                       href: 'https://get.foundation/',
                       text: 'Foundation',
+                      depthMeter: 52,
                       gaEvent: 'cssFrameworksFoundation',
                     },
                     {
@@ -185,6 +211,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Bootstrap',
                       href: 'https://getbootstrap.com/',
                       text: 'Bootstrap',
+                      depthMeter: 52,
                       gaEvent: 'cssFrameworksBootstrap',
                     },
                     {
@@ -193,6 +220,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Tailwind',
                       href: 'https://tailwindcss.com/',
                       text: 'Tailwind',
+                      depthMeter: 52,
                       gaEvent: 'cssFrameworksTailwind',
                     },
                   ],
@@ -202,7 +230,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 level: 3,
                 status: 'knowledgeAbsorbed',
                 text: 'JavaScript based',
+                depthMeter: 52,
                 child: {
+                  id: 'd33732acad18448cb1ad327b067e34d3',
                   isVisible: false,
                   itemList: [
                     {
@@ -211,6 +241,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Chakra UI',
                       href: 'https://chakra-ui.com/',
                       text: 'Chakra UI',
+                      depthMeter: 52,
                       gaEvent: 'cssFrameworksChakraUI',
                     },
                   ],
@@ -227,7 +258,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     status: 'knowledgeAbsorbed',
     text: 'JavaScript',
     version: 'ES6+',
+    depthMeter: 0,
     child: {
+      id: '936a6bfeb58b42e99aa32a89a543a9ca',
       isVisible: false,
       itemList: [
         {
@@ -236,6 +269,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'DOM - document object model - manipulation',
           href: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents',
           text: 'DOM - document object model - manipulation',
+          depthMeter: 0,
           gaEvent: 'javaScriptDOMmanipulation',
         },
         {
@@ -244,23 +278,26 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Modules',
           href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules',
           text: 'Modules',
+          depthMeter: 0,
           gaEvent: 'javaScriptModules',
         },
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Frameworks and libraries',
+          depthMeter: 0,
           child: {
+            id: 'd70aa63e75a3470a8cf4869897545b9a',
             isVisible: false,
             itemList: [
               {
                 level: 3,
                 status: 'knowledgeAbsorbed',
-                hrefTitle: 'Angular',
-                href: 'https://angular.io/',
                 text: 'Angular',
+                depthMeter: 0,
                 gaEvent: 'javaScriptFrameworksAndLibrariesAngular',
                 child: {
+                  id: '146f1643da98499a88c5de53fcbbbf9e',
                   isVisible: false,
                   itemList: [
                     {
@@ -269,6 +306,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Modules',
                       href: 'https://angular.io/guide/architecture-modules',
                       text: 'Modules',
+                      depthMeter: 0,
                       gaEvent: 'angularModules',
                     },
                     {
@@ -277,6 +315,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Components',
                       href: 'https://angular.io/guide/architecture-components',
                       text: 'Components',
+                      depthMeter: 0,
                       gaEvent: 'angularComponents',
                     },
                     {
@@ -285,6 +324,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Templates',
                       href: 'https://angular.io/guide/template-syntax',
                       text: 'Templates',
+                      depthMeter: 0,
                       gaEvent: 'angularTemplates',
                     },
                     {
@@ -293,6 +333,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Directives',
                       href: 'https://angular.io/guide/built-in-directives',
                       text: 'Directives',
+                      depthMeter: 0,
                       gaEvent: 'angularDirectives',
                     },
                     {
@@ -301,6 +342,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Services',
                       href: 'https://angular.io/guide/architecture-services',
                       text: 'Services',
+                      depthMeter: 0,
                       gaEvent: 'angularServices',
                     },
                     {
@@ -309,6 +351,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Dependency injection',
                       href: 'https://angular.io/guide/dependency-injection',
                       text: 'Dependency injection',
+                      depthMeter: 0,
                       gaEvent: 'angularDependencyInjection',
                     },
                     {
@@ -317,6 +360,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Routing',
                       href: 'https://angular.io/guide/routing-overview',
                       text: 'Routing',
+                      depthMeter: 0,
                       gaEvent: 'angularRouting',
                     },
                     {
@@ -325,6 +369,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Reactive forms',
                       href: 'https://angular.io/guide/reactive-forms',
                       text: 'Reactive forms',
+                      depthMeter: 0,
                       gaEvent: 'angularReactiveForms',
                     },
                     {
@@ -333,6 +378,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'HTTP client',
                       href: 'https://angular.io/guide/http',
                       text: 'HTTP client',
+                      depthMeter: 0,
                       gaEvent: 'angularHTTPclient',
                     },
                     {
@@ -341,6 +387,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Testing',
                       href: 'https://angular.io/guide/testing',
                       text: 'Testing',
+                      depthMeter: 0,
                       gaEvent: 'angularTesting',
                     },
                     {
@@ -349,6 +396,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Internationalization',
                       href: 'https://angular.io/guide/i18n-overview',
                       text: 'Internationalization',
+                      depthMeter: 0,
                       gaEvent: 'angularInternationalization',
                     },
                     {
@@ -357,6 +405,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Service workers and PWA',
                       href: 'https://angular.io/guide/service-worker-intro',
                       text: 'Service workers and PWA',
+                      depthMeter: 0,
                       gaEvent: 'angularServiceWorkersAndPWA',
                     },
                     {
@@ -365,6 +414,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Web workers',
                       href: 'https://angular.io/guide/web-worker',
                       text: 'Web workers',
+                      depthMeter: 0,
                       gaEvent: 'angularWebWorkers',
                     },
                     {
@@ -373,6 +423,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'SSR - Server-side rendering',
                       href: 'https://angular.io/guide/universal',
                       text: 'SSR - Server-side rendering',
+                      depthMeter: 0,
                       gaEvent: 'angularSSR',
                     },
                     {
@@ -381,6 +432,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Prerendering',
                       href: 'https://angular.io/guide/prerendering',
                       text: 'Prerendering',
+                      depthMeter: 0,
                       gaEvent: 'angularPrerendering',
                     },
                     {
@@ -389,13 +441,16 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'CLI - Command-line interface',
                       href: 'https://angular.io/cli',
                       text: 'CLI - Command-line interface',
+                      depthMeter: 0,
                       gaEvent: 'angularCLI',
                     },
                     {
                       level: 4,
                       status: 'knowledgeNeedToGain',
                       text: 'Libraries',
+                      depthMeter: 0,
                       child: {
+                        id: '64f455866ee34efa988c97c117f24b69',
                         isVisible: false,
                         itemList: [
                           {
@@ -404,6 +459,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                             hrefTitle: 'NgRx - Reactive State for Angular',
                             href: 'https://ngrx.io/',
                             text: 'NgRx - Reactive State for Angular',
+                            depthMeter: 0,
                             gaEvent: 'angularLibrariesNgRx',
                           },
                         ],
@@ -415,19 +471,20 @@ const roadmapItemList: RoadmapItemInterface[] = [
               {
                 level: 3,
                 status: 'knowledgeAbsorbed',
-                hrefTitle: 'React',
+                hrefTitle: 'React (the basics)',
                 href: 'https://reactjs.org/',
-                text: 'React',
+                text: 'React (the basics)',
+                depthMeter: 0,
                 gaEvent: 'javaScriptFrameworksAndLibrariesReact',
               },
               {
                 level: 3,
                 status: 'knowledgeAbsorbed',
-                hrefTitle: 'Vue.js',
-                href: 'https://vuejs.org/',
-                text: 'Vue.js',
-                gaEvent: 'javaScriptFrameworksAndLibrariesVueJs',
+                text: 'Vue.js and Vuex',
+                depthMeter: 0,
+                gaEvent: 'javaScriptFrameworksAndLibrariesVueJsAndVueX',
                 child: {
+                  id: 'df9e973f7f04413a896e42171efbdc97',
                   isVisible: false,
                   itemList: [
                     {
@@ -436,6 +493,16 @@ const roadmapItemList: RoadmapItemInterface[] = [
                       hrefTitle: 'Vuex',
                       href: 'https://vuex.vuejs.org/',
                       text: 'Vuex',
+                      depthMeter: 0,
+                      gaEvent: 'javaScriptFrameworksAndLibrariesVuex',
+                    },
+                    {
+                      level: 4,
+                      status: 'knowledgeAbsorbed',
+                      hrefTitle: 'Vuex',
+                      href: 'https://vuex.vuejs.org/',
+                      text: 'Vuex',
+                      depthMeter: 0,
                       gaEvent: 'javaScriptFrameworksAndLibrariesVuex',
                     },
                   ],
@@ -447,6 +514,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Svelte',
                 href: 'https://svelte.dev/',
                 text: 'Svelte',
+                depthMeter: 0,
                 gaEvent: 'javaScriptFrameworksAndLibrariesSvelte',
               },
               {
@@ -455,6 +523,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'RxJS - Reactive Extensions Library for JavaScript',
                 href: 'https://rxjs.dev/',
                 text: 'RxJS - Reactive Extensions Library for JavaScript',
+                depthMeter: 0,
                 gaEvent: 'javaScriptFrameworksAndLibrariesRxJS',
               },
             ],
@@ -467,7 +536,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Version control systems',
+    depthMeter: 0,
     child: {
+      id: '102f129b552b41acbc999c7ccec8ffca',
       isVisible: false,
       itemList: [
         {
@@ -476,13 +547,16 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Git - Global Information Tracker',
           href: 'https://git-scm.com/',
           text: 'Git - Global Information Tracker',
+          depthMeter: 0,
           gaEvent: 'versionControlSystemsGit',
         },
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Code hosting platforms',
+          depthMeter: 0,
           child: {
+            id: '512e3acac5024258915cec0e4b96f5b4',
             isVisible: false,
             itemList: [
               {
@@ -491,6 +565,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'GitHub',
                 href: 'https://github.com/',
                 text: 'GitHub',
+                depthMeter: 0,
                 gaEvent: 'versionControlSystemsGitHub',
               },
               {
@@ -499,6 +574,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'GitLab',
                 href: 'https://about.gitlab.com/',
                 text: 'GitLab',
+                depthMeter: 0,
                 gaEvent: 'versionControlSystemsGitLab',
               },
               {
@@ -507,6 +583,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Bitbucket',
                 href: 'https://bitbucket.org/',
                 text: 'Bitbucket',
+                depthMeter: 0,
                 gaEvent: 'versionControlSystemsBitbucket',
               },
             ],
@@ -519,7 +596,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Package managers',
+    depthMeter: 0,
     child: {
+      id: '89fdcac6bb6d4b43a356753225206893',
       isVisible: false,
       itemList: [
         {
@@ -528,6 +607,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'yarn',
           href: 'https://yarnpkg.com/',
           text: 'yarn',
+          depthMeter: 0,
           gaEvent: 'packageManagersYarn',
         },
         {
@@ -536,6 +616,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'npm',
           href: 'https://www.npmjs.com/',
           text: 'npm',
+          depthMeter: 0,
           gaEvent: 'packageManagersNpm',
         },
       ],
@@ -545,7 +626,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Web security',
+    depthMeter: 0,
     child: {
+      id: '11eb7f1ff6384be78b587b244a2c567d',
       isVisible: false,
       itemList: [
         {
@@ -554,6 +637,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'HTTPS - Hypertext transfer protocol secure',
           href: 'https://www.cloudflare.com/en-gb/learning/ssl/why-is-http-not-secure/',
           text: 'HTTPS - Hypertext transfer protocol secure',
+          depthMeter: 0,
           gaEvent: 'webSecurityHTTPS',
         },
         {
@@ -562,6 +646,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'CORS - Cross-origin resource sharing',
           href: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS',
           text: 'CORS - Cross-origin resource sharing',
+          depthMeter: 0,
           gaEvent: 'webSecurityCORS',
         },
         // TODO: figure out
@@ -579,6 +664,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Top 10 OWASP security risks',
           href: 'https://owasp.org/www-project-top-ten/',
           text: 'Top 10 OWASP security risks',
+          depthMeter: 0,
           gaEvent: 'webSecurityTop10OWASPsecurityRisks',
         },
       ],
@@ -588,36 +674,43 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Web applications authentication and authorization',
+    depthMeter: 0,
     // TODO: childList: [] e.g. openId, keycloak
   },
   {
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Web applications testing',
+    depthMeter: 0,
     child: {
+      id: 'b20d1d00d5de4ce78f67c252b1399fbd',
       isVisible: false,
       itemList: [
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Functional tests',
+          depthMeter: 0,
           child: {
+            id: '76396adee1f949a3abf1e2ae7b83d91f',
             isVisible: false,
             itemList: [
               {
                 level: 3,
                 status: 'knowledgeAbsorbed',
-                hrefTitle: 'Unit test',
+                hrefTitle: 'Unit tests',
                 href: 'https://www.guru99.com/unit-testing-guide.html',
-                text: 'Unit test',
+                text: 'Unit tests',
+                depthMeter: 0,
                 gaEvent: 'webApplicationsTestingUnitTest',
               },
               {
                 level: 3,
                 status: 'knowledgeNeedToGain',
-                hrefTitle: 'Integration test',
+                hrefTitle: 'Integration tests',
                 href: 'https://www.guru99.com/integration-testing.html',
-                text: 'Integration test',
+                text: 'Integration tests',
+                depthMeter: 0,
                 gaEvent: 'webApplicationsTestingIntegrationTest',
               },
             ],
@@ -627,7 +720,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Frameworks',
+          depthMeter: 0,
           child: {
+            id: 'cf00b9b02bf0449e8fd8977741c29cdf',
             isVisible: false,
             itemList: [
               {
@@ -636,6 +731,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Jasmine',
                 href: 'https://jasmine.github.io/',
                 text: 'Jasmine',
+                depthMeter: 0,
                 gaEvent: 'webApplicationsTestingFrameworksJasmine',
               },
               {
@@ -644,6 +740,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
                 hrefTitle: 'Karma',
                 href: 'https://karma-runner.github.io/latest/index.html',
                 text: 'Karma',
+                depthMeter: 0,
                 gaEvent: 'webApplicationsTestingFrameworksKarma',
               },
             ],
@@ -656,7 +753,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Web applications versioning',
+    depthMeter: 0,
     child: {
+      id: '5816c0ce7f7d40d2995cea530e11e343',
       isVisible: false,
       itemList: [
         {
@@ -665,6 +764,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Semantic versioning',
           href: 'https://semver.org/',
           text: 'Semantic versioning',
+          depthMeter: 0,
           gaEvent: 'webApplicationsVersioningSemanticVersioning',
         },
       ],
@@ -674,7 +774,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'E-commerce platforms',
+    depthMeter: 0,
     child: {
+      id: '6c387bd75cde4966bc09aece9fe8ae22',
       isVisible: false,
       itemList: [
         {
@@ -683,6 +785,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Shopware',
           href: 'https://www.shopware.com/en/',
           text: 'Shopware',
+          depthMeter: 0,
           gaEvent: 'eCommerceShopware',
         },
         {
@@ -691,6 +794,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'commercetools',
           href: 'https://commercetools.com/',
           text: 'commercetools',
+          depthMeter: 0,
           gaEvent: 'eCommerceCommercetools',
         },
         {
@@ -699,6 +803,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Pimcore',
           href: 'https://pimcore.com/en',
           text: 'Pimcore',
+          depthMeter: 0,
           gaEvent: 'eCommercePimcore',
         },
       ],
@@ -708,7 +813,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Static site generators',
+    depthMeter: 0,
     child: {
+      id: 'b5982e1598bb41a6ab30755b0737bbe0',
       isVisible: false,
       itemList: [
         {
@@ -717,6 +824,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'NuxtJS',
           href: 'https://nuxtjs.org/',
           text: 'NuxtJS',
+          depthMeter: 0,
           gaEvent: 'staticSiteGeneratorsNuxtJS',
         },
         {
@@ -725,6 +833,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Jekyll',
           href: 'https://jekyllrb.com/',
           text: 'Jekyll',
+          depthMeter: 0,
           gaEvent: 'staticSiteGeneratorsJekyll',
         },
         {
@@ -733,6 +842,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'VuePress',
           href: 'https://vuepress.vuejs.org/',
           text: 'VuePress',
+          depthMeter: 0,
           gaEvent: 'staticSiteGeneratorsVuePress',
         },
         {
@@ -741,6 +851,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Hugo',
           href: 'https://gohugo.io/',
           text: 'Hugo',
+          depthMeter: 0,
           gaEvent: 'staticSiteGeneratorsHugo',
         },
         {
@@ -749,6 +860,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Eleventy',
           href: 'https://www.11ty.dev/',
           text: 'Eleventy',
+          depthMeter: 0,
           gaEvent: 'staticSiteGeneratorsEleventy',
         },
       ],
@@ -758,7 +870,9 @@ const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Virtualization',
+    depthMeter: 0,
     child: {
+      id: '46f156f2484e4ca093c250cb11d26c28',
       isVisible: false,
       itemList: [
         {
@@ -767,6 +881,7 @@ const roadmapItemList: RoadmapItemInterface[] = [
           hrefTitle: 'Docker',
           href: 'https://www.docker.com/',
           text: 'Docker',
+          depthMeter: 0,
           gaEvent: 'virtualizationDocker',
         },
       ],
@@ -774,19 +889,20 @@ const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
-    status: 'knowledgeNeedToGain',
+    status: 'knowledgeAbsorbed',
     text: 'And I keep learning',
+    depthMeter: 0,
     child: {
+      id: '5bb33e64920b4a49a6fdddef6240152a',
       isVisible: false,
       itemList: [
         {
           level: 2,
           status: 'knowledgeNeedToGain',
-          text: '...',
+          text: 'I wonder what is going to be next?',
+          depthMeter: 0,
         },
       ],
     },
   },
 ];
-
-export default roadmapItemList;

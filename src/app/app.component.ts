@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { GoogleAnalyticsService } from 'ngx-google-analytics';
-import { first, last, pluck, skip, take, takeLast, takeWhile, tap } from 'rxjs';
-import roadmapItemList from './roadmap/roadmap-item-list';
+import { RoadmapService } from './roadmap/roadmap.service';
 import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +11,12 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
 export class AppComponent implements OnInit {
   origin: string | null;
   title: string;
-  themeList: { name: string, background: string }[];
-  currentTheme: { name: string, background: string };
+  themeList: { name: string; background: string }[];
+  currentTheme: { name: string; background: string };
   audioNamePronunciation: HTMLAudioElement;
   roadmapItemList: RoadmapItemInterface[];
   codeSample = {
-    cli:
-`
+    cli: `
 npx ng generate component stats --style none
 
 .
@@ -30,8 +27,7 @@ npx ng generate component stats --style none
             ├── stats.component.ts
             └── stats.component.spec.ts
 `,
-    template:
-`
+    template: `
 <div *ngIf="numberOfCups > 0">
   <p>{{ numberOfCups }}</p>
   <p *ngIf="numberOfCups === 1">cup</p>
@@ -44,8 +40,7 @@ npx ng generate component stats --style none
   https://angular.io/api/common/I18nPluralPipe
 -->
 `,
-    component:
-`calculateCupsDrank() {
+    component: `calculateCupsDrank() {
   const currentLocalHour = new Date().getHours();
 
   switch(true) {
@@ -66,11 +61,11 @@ npx ng generate component stats --style none
       this.numberOfCups = 0;
   }
 }`,
-unitTest: `code for unit test goes here`,
+    unitTest: `code for unit test goes here`,
   };
 
   constructor(
-    private activatedRoute: ActivatedRoute,
+    protected roadmapService: RoadmapService,
     protected googleAnalyticsService: GoogleAnalyticsService,
   ) {
     this.origin = null;
@@ -80,39 +75,49 @@ unitTest: `code for unit test goes here`,
       { name: 'postOffice', background: 'bg-yellow-300' },
     ];
     this.currentTheme = this.themeList[0];
-    this.audioNamePronunciation = new Audio('assets/audio/name-pronunciation.mp3');
-    this.roadmapItemList = roadmapItemList;
+    this.audioNamePronunciation = new Audio(
+      'assets/audio/name-pronunciation.mp3',
+    );
+    this.roadmapItemList = [];
   }
 
   ngOnInit() {
+    this.roadmapService
+      .getItemList()
+      // .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(itemList => {
+        this.roadmapItemList = itemList;
+      });
+
     // if (location.hostname === 'localhost') {
     //   const queryParams = this.activatedRoute.snapshot.queryParamMap;
     //   const routeParams = this.activatedRoute.snapshot.params;
     //   console.log(queryParams, routeParams);
 
-      // const origin = this.route.snapshot.queryParamMap.get('origin');
-      // console.log(origin);
+    // const origin = this.route.snapshot.queryParamMap.get('origin');
+    // console.log(origin);
 
-      // let emitCount = 0;
+    // let emitCount = 0;
 
-      // this.route.queryParams
-      // .pipe(
-      //   takeWhile(val => val === undefined, true), // or maybe !Boolean(val)
-      //   takeLast(1),
-      // )
-      // .subscribe(params => {
-      //   const origin = params['origin'];
-      //   console.log('origin', origin);
+    // this.route.queryParams
+    // .pipe(
+    //   takeWhile(val => val === undefined, true), // or maybe !Boolean(val)
+    //   takeLast(1),
+    // )
+    // .subscribe(params => {
+    //   const origin = params['origin'];
+    //   console.log('origin', origin);
 
-      //   if (origin === 'my-iphone') {
-      //     console.log('GA origin');
-      //     this.googleAnalyticsService.pageView('/', 'Home, origin: my-iphone');
-      //   } else {
-      //     console.log('GA normal');
-      //     this.googleAnalyticsService.pageView('/', 'Home');
-      //   }
-      // });
+    //   if (origin === 'my-iphone') {
+    //     console.log('GA origin');
+    //     this.googleAnalyticsService.pageView('/', 'Home, origin: my-iphone');
+    //   } else {
+    //     console.log('GA normal');
+    //     this.googleAnalyticsService.pageView('/', 'Home');
+    //   }
+    // });
     // }
+    this.roadmapService.expandAll(this.roadmapItemList);
   }
 
   // ngAfterViewChecked() {
@@ -120,21 +125,31 @@ unitTest: `code for unit test goes here`,
   //   console.log(this.activatedRoute.snapshot.queryParamMap.get('origin'));
   // }
 
-  setTheme(theme: { name: string, background: string }) {
+  getTheme() {
+    return this.currentTheme;
+  }
+
+  setTheme(theme: { name: string; background: string }): void {
     this.currentTheme = theme;
   }
 
-  getTheme = () => (this.currentTheme);
-
-  playNamePronunciation = () => {
+  playNamePronunciation(): void {
     this.audioNamePronunciation.play();
-  };
+  }
 
-  convertFromCamelToKebabCase = (string: string) => {
-    return string.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
-  };
+  expandAll(): void {
+    this.roadmapService.expandAll(this.roadmapItemList);
+  }
 
-  capitalizeFirstLetter(string: string) {
+  collapseAll(): void {
+    this.roadmapService.collapseAll(this.roadmapItemList);
+  }
+
+  convertFromCamelToKebabCase(string: string): string {
+    return string.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+  }
+
+  capitalizeFirstLetter(string: string): string {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 }

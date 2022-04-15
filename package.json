@@ -1,6 +1,6 @@
 {
   "name": "zigavukcevic.dev",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --browsers ChromeHeadless",
     "testWithBrowser": "ng test  --browsers Chrome --watch=true",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "prettier": "prettier --write ."
   },
   "private": true,
   "dependencies": {
@@ -53,6 +54,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "postcss": "^8.4.5",
+    "prettier": "^2.6.2",
     "tailwindcss": "^3.0.7",
     "typescript": "~4.5.2"
   }

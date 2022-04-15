@@ -5,11 +5,12 @@
 
 <!-- Container -->
 <div
-  class="roadmap-item relative mb-1 level-{{ level }}"
+  class="roadmap-item relative mb-1 text-lg level-{{ level }}"
   [ngClass]="{
+    'bg-gray-600 text-white uppercase font-bold': level === 1,
     'bg-gray-200 text-gray-500': status === 'knowledgeAbsorbed',
     'bg-gray-50 text-gray-400': status === 'knowledgeNeedToGain',
-    'uppercase font-bold': level === 1
+    'bg-gray-500 text-white': status === 'knowledgeAbsorbed' && child && child.itemList.length > 0
   }"
 >
   <!-- Text -->
@@ -31,7 +32,8 @@
       [attr.gaEvent]="ga ? ga : null"
       [attr.gaCategory]="ga ? 'roadmap' : null"
     >
-      <ng-container *ngTemplateOutlet="content"></ng-container>
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+    <i class="las la-external-link-alt text-gray-400 inline-block"></i>
     </a>
   </ng-template>
   <!-- / Link -->
@@ -39,7 +41,7 @@
   <button
     *ngIf="child && child.itemList.length > 0"
     class="toggle"
-    (click)="toggleChildVisibility()"
+    (click)="toggleChildVisibility(child.id)"
   >
     <i class="las" [ngClass]="{
       'la-caret-up': child?.isVisible,
@@ -52,14 +54,14 @@
 
 <!-- Template for output of content -->
 <ng-template #content>
-  <small class="px-3 py-2 block">
+  <small class="pl-3 py-2 inline-block">
     <ng-content></ng-content>
   </small>
   <span
     class="depth-meter"
-    [ngStyle]="{ width: calculateDepth() }"
+    [ngStyle]="{ width: depthMeter + '%' }"
   >
-    123{{ child?.itemList?.length }}
+    {{ child?.itemList?.length }}
   </span>
 </ng-template>
 <!-- / Template for output of content -->
