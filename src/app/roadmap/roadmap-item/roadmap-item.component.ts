@@ -19,19 +19,16 @@ export class RoadmapItemComponent implements OnInit {
   @Input() version?: RoadmapItemInterface['version'];
   @Input() child?: RoadmapItemInterface['child'] | null;
 
-  itemList: any;
-  itemListCount: { all: number, visible: number };
+  itemList: RoadmapItemInterface[];
+  itemListCount: { all: number; visible: number };
 
-  constructor(
-    private roadmapService: RoadmapService,
-  ) {
+  constructor(private roadmapService: RoadmapService) {
     this.itemList = [];
     this.itemListCount = { all: 0, visible: 0 };
   }
 
   ngOnInit(): void {
     // this.roadmapService.toggleChildVisibility();
-
     // this.roadmapDepthMeterService.getItemListObs()
     //   // .pipe(takeUntil(this.unsubscribe$))
     //   .subscribe((itemList) => {
