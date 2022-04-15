@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeInterface } from './theme.interface';
 import { RoadmapService } from './roadmap/roadmap.service';
 import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
@@ -11,58 +12,58 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 export class AppComponent implements OnInit {
   origin: string | null;
   title: string;
-  themeList: { name: string; background: string }[];
-  currentTheme: { name: string; background: string };
+  themeList: ThemeInterface[];
+  currentTheme: ThemeInterface;
   audioNamePronunciation: HTMLAudioElement;
   roadmapItemList: RoadmapItemInterface[];
-  codeSample = {
-    cli: `
-npx ng generate component stats --style none
+  //   codeSample = {
+  //     cli: `
+  // npx ng generate component stats --style none
 
-.
-└── src
-    └── app
-        └── stats
-            ├── stats.component.html
-            ├── stats.component.ts
-            └── stats.component.spec.ts
-`,
-    template: `
-<div *ngIf="numberOfCups > 0">
-  <p>{{ numberOfCups }}</p>
-  <p *ngIf="numberOfCups === 1">cup</p>
-  <p *ngIf="numberOfCups > 1">cups</p>
-  <p>of coffee drank today</p>
-</div>
+  // .
+  // └── src
+  //     └── app
+  //         └── stats
+  //             ├── stats.component.html
+  //             ├── stats.component.ts
+  //             └── stats.component.spec.ts
+  // `,
+  //     template: `
+  // <div *ngIf="numberOfCups > 0">
+  //   <p>{{ numberOfCups }}</p>
+  //   <p *ngIf="numberOfCups === 1">cup</p>
+  //   <p *ngIf="numberOfCups > 1">cups</p>
+  //   <p>of coffee drank today</p>
+  // </div>
 
-<!--
-  TODO: check if Angular has anything for singular, plural
-  https://angular.io/api/common/I18nPluralPipe
--->
-`,
-    component: `calculateCupsDrank() {
-  const currentLocalHour = new Date().getHours();
+  // <!--
+  //   TODO: check if Angular has anything for singular, plural
+  //   https://angular.io/api/common/I18nPluralPipe
+  // -->
+  // `,
+  //     component: `calculateCupsDrank() {
+  //   const currentLocalHour = new Date().getHours();
 
-  switch(true) {
-    // From 8:00 to 10:59
-    case (currentLocalHour >= 8 && currentLocalHour <= 10): // TODO: any cleaner way to write this?
-      this.numberOfCups = 1;
-      break;
-    // From 11:00 to 16:59
-    case (currentLocalHour >= 11 && currentLocalHour <= 16):
-      this.numberOfCups = 2;
-      break;
-    // From 17:00 to 23:59
-    case (currentLocalHour >= 17 && currentLocalHour <= 23):
-      this.numberOfCups = 3;
-      break;
-    // Any other time (covers cases from 0:00 to 7:59 - usually sleeping at that time)
-    default:
-      this.numberOfCups = 0;
-  }
-}`,
-    unitTest: `code for unit test goes here`,
-  };
+  //   switch(true) {
+  //     // From 8:00 to 10:59
+  //     case (currentLocalHour >= 8 && currentLocalHour <= 10): // TODO: any cleaner way to write this?
+  //       this.numberOfCups = 1;
+  //       break;
+  //     // From 11:00 to 16:59
+  //     case (currentLocalHour >= 11 && currentLocalHour <= 16):
+  //       this.numberOfCups = 2;
+  //       break;
+  //     // From 17:00 to 23:59
+  //     case (currentLocalHour >= 17 && currentLocalHour <= 23):
+  //       this.numberOfCups = 3;
+  //       break;
+  //     // Any other time (covers cases from 0:00 to 7:59 - usually sleeping at that time)
+  //     default:
+  //       this.numberOfCups = 0;
+  //   }
+  // }`,
+  // unitTest: `code for unit test goes here`,
+  // };
 
   constructor(
     protected roadmapService: RoadmapService,
@@ -81,7 +82,7 @@ npx ng generate component stats --style none
     this.roadmapItemList = [];
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.roadmapService
       .getItemList()
       // .pipe(takeUntil(this.unsubscribe$))
@@ -125,7 +126,7 @@ npx ng generate component stats --style none
   //   console.log(this.activatedRoute.snapshot.queryParamMap.get('origin'));
   // }
 
-  getTheme() {
+  getTheme(): ThemeInterface {
     return this.currentTheme;
   }
 

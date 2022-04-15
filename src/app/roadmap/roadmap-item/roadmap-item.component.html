@@ -41,7 +41,7 @@
   <button
     *ngIf="child && child.itemList.length > 0"
     class="toggle"
-    (click)="toggleChildVisibility(child.id)"
+    (click)="toggleChildVisibility()"
   >
     <i class="las" [ngClass]="{
       'la-caret-up': child?.isVisible,

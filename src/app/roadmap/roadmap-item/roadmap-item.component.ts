@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { takeUntil } from 'rxjs';
 import { RoadmapService } from '../roadmap.service';
 import { RoadmapItemInterface } from '../roadmap-item.interface';
 
@@ -37,13 +36,12 @@ export class RoadmapItemComponent implements OnInit {
     //   });
   }
 
-  ngOnDestroy() {
-    // this.unsubscribe$.next(true);
-    // this.unsubscribe$.complete();
-  }
+  // ngOnDestroy(): void {
+  //  this.unsubscribe$.next(true);
+  //  this.unsubscribe$.complete();
+  // }
 
-  toggleChildVisibility(id: string) {
-    console.log(id);
+  toggleChildVisibility(): void {
     this.roadmapService.toggleChildVisibility();
     if (this.child) {
       this.child.isVisible = !this.child.isVisible;
