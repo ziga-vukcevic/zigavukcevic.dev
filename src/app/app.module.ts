@@ -4,8 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import {
+  NgxGoogleAnalyticsModule,
+  NgxGoogleAnalyticsRouterModule,
+} from 'ngx-google-analytics';
+// import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { StatListComponent } from './stat-list/stat-list.component';
 import { TabListComponent } from './tab-list/tab-list.component';
@@ -30,22 +33,22 @@ import { HighlightSkillComponent } from './highlight-skill/highlight-skill.compo
     AppRoutingModule,
     NgxGoogleAnalyticsModule.forRoot('G-Y934WGEX9C'),
     NgxGoogleAnalyticsRouterModule,
-    HighlightModule,
+    // HighlightModule,
   ],
   providers: [
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-        // lineNumbersLoader: () => import('highlightjs-line-numbers.js'),
-        languages: {
-          typescript: () => import('highlight.js/lib/languages/typescript'),
-          shell: () => import('highlight.js/lib/languages/shell'),
-          xml: () => import('highlight.js/lib/languages/xml'),
-        },
-        // themePath: 'assets/styles/solarized-dark.css',
-      },
-    },
+    // {
+    //   provide: HIGHLIGHT_OPTIONS,
+    //   useValue: {
+    //     coreLibraryLoader: () => import('highlight.js/lib/core'),
+    //     // lineNumbersLoader: () => import('highlightjs-line-numbers.js'),
+    //     languages: {
+    //       typescript: () => import('highlight.js/lib/languages/typescript'),
+    //       shell: () => import('highlight.js/lib/languages/shell'),
+    //       xml: () => import('highlight.js/lib/languages/xml'),
+    //     },
+    //     // themePath: 'assets/styles/solarized-dark.css',
+    //   },
+    // },
     RoadmapService,
   ],
   bootstrap: [AppComponent],

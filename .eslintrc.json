@@ -1,22 +1,17 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json"
-        ],
+        "project": ["tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -36,17 +31,19 @@
           }
         ],
         "@angular-eslint/no-empty-lifecycle-method": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": 2,
+        "comma-dangle": "off",
         "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
-        "semi": "error"
+        "semi": "off",
+        "@typescript-eslint/semi": "error",
+        "no-console": "error",
+        "@typescript-eslint/explicit-function-return-type": ["error"]
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     }
   ]

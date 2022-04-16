@@ -1,4 +1,9 @@
-import { AfterContentInit, Component, ContentChildren, QueryList } from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  QueryList,
+} from '@angular/core';
 import { TabComponent } from '../tab/tab.component';
 
 @Component({
@@ -18,7 +23,7 @@ export class TabListComponent implements AfterContentInit {
   }
 
   selectTab(tab: TabComponent): void {
-    this.tabList.forEach(tab => tab.isActive = false);
+    this.tabList.forEach(tab => (tab.isActive = false));
     tab.isActive = true;
   }
 }

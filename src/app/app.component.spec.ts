@@ -8,9 +8,7 @@ import { TabComponent } from './tab/tab.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-      ],
+      imports: [RouterTestingModule],
       declarations: [
         AppComponent,
         StatListComponent,
