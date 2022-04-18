@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   currentTheme: ThemeInterface;
   audioNamePronunciation: HTMLAudioElement;
   roadmapItemList: RoadmapItemInterface[];
+
   //   codeSample = {
   //     cli: `
   // npx ng generate component stats --style none

@@ -2,45 +2,30 @@
   display: block;
   position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 62px;
-    left: 22px;
-    bottom: 25px;
-    width: 3px;
-    background-color: green;
-  }
+  &.list-level-2 {
+    background-color: orange;
 
-  // TODO: Add class .last into loop
-
-  &.last::before {
-    background-color: white;
-  }
-
-  &.list-level-3::before {
-    top: 0;
-    left: 72px;
-  }
-
-  &.list-level-4::before {
-    top: 0;
-    left: 100px;
-  }
-
-  /*
-    NOTE: Component roadmap-item (only instance(s) in each last li element) can't
-    be selected within component itself so modifying styles are written in here.
-  */
-
-  ul li:last-child {
-    .roadmap-item:not(.level-1)::after {
-      height: 100%;
-      top: 30px;
-      bottom: 0;
+    .list-item-level-2 {
       background-color: yellow;
-      width: 10px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -10px;
+        left: 20px;
+        bottom: -10px;
+        width: 3px;
+        background-color: green;
+      }
+
+      &.list-item-level-2-last {
+        &::before {
+          height: 35px;
+          background-color: pink;
+        }
+      }
     }
   }
 }

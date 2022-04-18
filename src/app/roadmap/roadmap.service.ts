@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { roadmapItemList } from 'src/app/roadmap/roadmap-item-list';
+import { roadmapItemList } from 'src/app/roadmap/roadmap-item-list-debug';
 import { RoadmapItemInterface } from './roadmap-item.interface';
 
 @Injectable({

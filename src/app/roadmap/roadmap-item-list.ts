@@ -899,7 +899,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         {
           level: 2,
           status: 'knowledgeNeedToGain',
-          text: 'I wonder what is going to be next?',
+          text: 'What is going to be next?',
           depthMeter: 0,
         },
       ],
