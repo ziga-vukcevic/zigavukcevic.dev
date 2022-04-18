@@ -1,6 +1,4 @@
 :host ::ng-deep .roadmap-item-list {
-  display: block;
-
   li { position: relative; }
 
   &.list-level-2,
@@ -17,7 +15,7 @@
         display: block;
         top: -10px;
         bottom: -10px;
-        width: 3px;
+        width: 1px;
         background-color: black;
       }
 
@@ -26,74 +24,15 @@
       &.list-item-level-4-last,
       &.list-item-level-5-last {
         &::before {
-          height: 35px;
-          background-color: black;
+          height: 32px;
+          bottom: auto;
         }
       }
     }
   }
 
-  &.list-level-2 {
-    // background-color: orange;
-    .list-item-level-2 {
-      // background-color: yellow;
-      &::before {
-        // background-color: green;
-        left: 20px;
-      }
-      &.list-item-level-2-last {
-        &::before {
-          // background-color: pink;
-        }
-      }
-    }
-  }
-
-  &.list-level-3 {
-    // background-color: orange;
-    .list-item-level-3 {
-      // background-color: yellow;
-      &::before {
-        // background-color: green;
-        left: 70px;
-      }
-      &.list-item-level-3-last {
-        &::before {
-          // background-color: pink;
-        }
-      }
-    }
-  }
-
-  &.list-level-4 {
-    // background-color: orange;
-    .list-item-level-4 {
-      // background-color: yellow;
-      &::before {
-        // background-color: green;
-        left: 120px;
-      }
-      &.list-item-level-4-last {
-        &::before {
-          // background-color: pink;
-        }
-      }
-    }
-  }
-
-  &.list-level-5 {
-    // background-color: orange;
-    .list-item-level-5 {
-      // background-color: yellow;
-      &::before {
-        // background-color: green;
-        left: 170px;
-      }
-      &.list-item-level-5-last {
-        &::before {
-          // background-color: pink;
-        }
-      }
-    }
-  }
+  &.list-level-2 .list-item-level-2::before { left: 20px; }
+  &.list-level-3 .list-item-level-3::before { left: 60px; }
+  &.list-level-4 .list-item-level-4::before { left: 100px; }
+  &.list-level-5 .list-item-level-5::before { left: 140px; }
 }

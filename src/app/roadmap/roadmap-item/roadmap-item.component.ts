@@ -10,6 +10,7 @@ import { RoadmapItemInterface } from '../roadmap-item.interface';
 export class RoadmapItemComponent implements OnInit {
   @Input() level!: RoadmapItemInterface['level'];
   @Input() status!: RoadmapItemInterface['status'];
+  @Input() text!: RoadmapItemInterface['text'];
   @Input() depthMeter!: RoadmapItemInterface['depthMeter'];
   @Input() ga?: RoadmapItemInterface['ga'];
   @Input() gaEvent?: RoadmapItemInterface['gaEvent'];

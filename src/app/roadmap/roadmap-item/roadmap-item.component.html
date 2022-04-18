@@ -1,59 +1,61 @@
 <!-- TODO:
   - refactor, this is over-engineered for this simple case
-  - add <i class="las la-check-square inline-block"></i>
 -->
 
-<!-- Container -->
 <div
-  class="roadmap-item relative mb-1 text-lg level-{{ level }}"
+  class="roadmap-item mb-1 level-{{ level }} text-sm"
   [ngClass]="{
-    'bg-gray-600 text-white uppercase font-bold': level === 1,
+    'bg-gray-600 text-white': level === 1,
     'bg-gray-200 text-gray-500': status === 'knowledgeAbsorbed',
     'bg-gray-50 text-gray-400': status === 'knowledgeNeedToGain',
     'bg-gray-500 text-white': status === 'knowledgeAbsorbed' && child && child.itemList.length > 0
   }"
 >
   <!-- Text -->
-  <span *ngIf="!href; else elseBlock">
-    <ng-container *ngTemplateOutlet="content"></ng-container>
-  </span>
+  <span
+    class="p-3"
+    *ngIf="!href && !child"
+  >
+    {{ text }}
+</span>
   <!-- / Text -->
-  <!-- Link -->
-  <ng-template #elseBlock>
-    <a
-      class="
-        sky-neutral:hover:text-red-600
-        post-office:hover:text-orange-500
-        underline "
-      [href]="href"
-      [title]="hrefTitle"
-      rel="noopener noreferrer"
-      target="_blank"
-      [attr.gaEvent]="ga ? ga : null"
-      [attr.gaCategory]="ga ? 'roadmap' : null"
-    >
-    <ng-container *ngTemplateOutlet="content"></ng-container>
-    <i class="las la-external-link-alt text-gray-400 inline-block"></i>
-    </a>
-  </ng-template>
-  <!-- / Link -->
   <!-- Toggle button -->
   <button
-    *ngIf="child && child.itemList.length > 0"
-    class="toggle"
+    *ngIf="!href && child && child.itemList.length > 0;"
+    class="p-3"
     (click)="toggleChildVisibility()"
   >
+    <span>
+      {{ text }} <small *ngIf="version">(version {{ version }})</small>
+    </span>
     <i class="las" [ngClass]="{
       'la-caret-up': child?.isVisible,
       'la-caret-down': !child?.isVisible
     }"></i>
   </button>
   <!-- / Toggle button -->
+  <!-- Link -->
+  <a
+    class="
+      sky-neutral:hover:border-red-600
+      post-office:hover:text-orange-500
+      p-3 border-b-2 block
+    "
+    *ngIf="href"
+    [href]="href"
+    [title]="hrefTitle"
+    rel="noopener noreferrer"
+    target="_blank"
+    [attr.gaEvent]="ga ? ga : null"
+    [attr.gaCategory]="ga ? 'roadmap' : null"
+  >
+    {{ text }}<i class="las la-external-link-alt text-gray-400"></i>
+  </a>
+  <!-- / Link -->
 </div>
-<!-- / Container -->
 
 <!-- Template for output of content -->
-<ng-template #content>
+<!-- <ng-template #content>
   <small class="pl-3 py-2 inline-block">
     <ng-content></ng-content>
   </small>
@@ -63,5 +65,5 @@
   >
     {{ child?.itemList?.length }}
   </span>
-</ng-template>
+</ng-template> -->
 <!-- / Template for output of content -->
