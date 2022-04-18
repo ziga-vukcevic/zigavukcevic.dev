@@ -27,8 +27,8 @@
     >
       <li
         class="list-item-level-2"
-       [ngClass]="{ 'list-item-level-2-last': isLast }"
-       *ngFor="let item of item.child.itemList; let isLast = last"
+        [ngClass]="{ 'list-item-level-2-last': isLast }"
+        *ngFor="let item of item.child.itemList; let isLast = last"
        >
         <app-roadmap-item
           [level]="item.level"
@@ -47,7 +47,11 @@
           [ngClass]="{ 'list-level-3-last': isLast }"
           *ngIf="item.child && item.child.isVisible"
         >
-          <li *ngFor="let item of item.child.itemList; let isLast = last" [ngClass]="{ 'list-item-level-3-last': isLast }">
+          <li
+            class="list-item-level-3"
+            [ngClass]="{ 'list-item-level-3-last': isLast }"
+            *ngFor="let item of item.child.itemList; let isLast = last"
+          >
             <app-roadmap-item
               [level]="item.level"
               [status]="item.status"
@@ -65,7 +69,11 @@
               [ngClass]="{ 'list-level-4-last': isLast }"
               *ngIf="item.child && item.child.isVisible"
             >
-              <li *ngFor="let item of item.child.itemList; let isLast = last" [ngClass]="{ 'list-item-level-4-last': isLast }">
+              <li
+                class="list-item-level-4"
+                [ngClass]="{ 'list-item-level-4-last': isLast }"
+                *ngFor="let item of item.child.itemList; let isLast = last"
+              >
                 <app-roadmap-item
                   [level]="item.level"
                   [status]="item.status"
@@ -83,7 +91,11 @@
                   [ngClass]="{ 'list-level-5-last': isLast }"
                   *ngIf="item.child && item.child.isVisible"
                 >
-                  <li *ngFor="let item of item.child.itemList; let isLast = last" [ngClass]="{ 'list-item-level-5-last': isLast }">
+                  <li
+                    class="list-item-level-5"
+                    [ngClass]="{ 'list-item-level-5-last': isLast }"
+                    *ngFor="let item of item.child.itemList; let isLast = last"
+                  >
                     <app-roadmap-item
                       [level]="item.level"
                       [status]="item.status"
