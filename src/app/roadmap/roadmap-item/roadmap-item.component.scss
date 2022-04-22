@@ -64,4 +64,11 @@
     left: 0;
     color: red;
   }
+
+  &:hover {
+    .la-angle-up,
+    .la-angle-down {
+      @apply text-red-600;
+    }
+  }
 }
