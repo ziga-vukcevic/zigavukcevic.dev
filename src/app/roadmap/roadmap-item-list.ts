@@ -446,7 +446,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
-                      status: 'knowledgeNeedToGain',
+                      status: 'knowledgeAbsorbed',
                       text: 'Libraries',
                       depthMeter: 0,
                       child: {
@@ -490,11 +490,11 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     {
                       level: 4,
                       status: 'knowledgeAbsorbed',
-                      hrefTitle: 'Vuex',
+                      hrefTitle: 'Vue.js',
                       href: 'https://vuex.vuejs.org/',
-                      text: 'Vuex',
+                      text: 'Vue.js',
                       depthMeter: 0,
-                      gaEvent: 'javaScriptFrameworksAndLibrariesVuex',
+                      gaEvent: 'javaScriptFrameworksAndLibrariesVueJs',
                     },
                     {
                       level: 4,
@@ -894,7 +894,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
     depthMeter: 0,
     child: {
       id: '5bb33e64920b4a49a6fdddef6240152a',
-      isVisible: false,
+      isVisible: true,
       itemList: [
         {
           level: 2,

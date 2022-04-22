@@ -1,5 +1,6 @@
 <div class="container mx-auto px-4 theme-{{ convertFromCamelToKebabCase(currentTheme.name) }}">
   <!-- Theme switcher -->
+  <!--
   <div class="text-right pt-3 pr-3">
     <div class="flex flex-row justify-end">
       <small class="mr-2">Change theme</small>
@@ -11,6 +12,7 @@
       ></button>
     </div>
   </div>
+  -->
   <!-- / Theme switcher -->
   <!-- Intro -->
   <h1 class="mt-10">
@@ -49,7 +51,7 @@
       href="https://www.google.com/maps/place/Slovenia/@46.1437677,13.8719626,8z/data=!3m1!4b1!4m5!3m4!1s0x476524e75e968361:0xe740451e25e2d465!8m2!3d46.151241!4d14.995463"
       rel="noopener noreferrer"
       target="_blank"
-    >Slovenia<i class="las la-external-link-alt text-gray-400"></i></a>, currently working at international company named <a
+    >Slovenia<i class="las la-external-link-alt text-gray-400"></i></a>, currently working at an international company named <a
       class="
         sky-neutral:text-gray-500 sky-neutral:hover:border-red-600
         post-office:text-yellow-400 post-office:hover:border-orange-500
@@ -134,14 +136,16 @@
     text-black text-4xl mb-10 pt-3 pl-2
     ">My knowledge roadmap</h2>
   </div>
-  <div class="lg:flex lg:flex-row">
-    <div class="basis-1/3 lg:pr-20">
-      <p class="leading-loose">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error dolor rem vero facilis voluptatibus libero adipisci tempora omnis, est aut quisquam in perferendis porro ex inventore repellendus sunt beatae odit!</p>
+  <div class="md:flex md:flex-row">
+    <div class="md:basis-2/5 lg:basis-1/3 md:pr-20">
+      <p class="leading-loose">Through years I gained a lot of specific knowledge. I have assembled all the parts into roadmap.<br />I am keen <strong>to learn</strong> even more. This is what I am achieving from day to day.</p>
+      <!--
       <br />
       <button (click)="expandAll()">Expand all</button><br /><br />
       <button (click)="collapseAll()">Collapse all</button>
+      -->
     </div>
-    <div class="basis-2/5 mt-10 lg:mt-0">
+    <div class="md:basis-3/5 lg:basis-2/5 mt-10 md:mt-0">
       <app-roadmap-item-list [itemList]="roadmapItemList"></app-roadmap-item-list>
     </div>
   </div>

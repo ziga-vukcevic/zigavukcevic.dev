@@ -11,23 +11,23 @@
     content: '';
     position: absolute;
     display: block;
-    left: -20px;
+    left: -22px;
   }
 
   &:not(.level-1) {
     &::before {
       top: 50%;
-      height: 1px;
+      height: 2px;
       width: 15px;
-      background-color: black;
+      @apply bg-gray-300;
     }
 
     // Extra filling gap for 2-liners
     &::after {
       top: 0;
       bottom: 50%;
-      width: 1px;
-      background-color: black;
+      width: 2px;
+      @apply bg-gray-300;
     }
   }
 
@@ -45,6 +45,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .to-learn {
+    position: absolute;
+    padding: 0 5px 0 7px;
+    font-size: 10px;
+    top: -10px;
+    right: 7px;
   }
 
   .depth-meter {

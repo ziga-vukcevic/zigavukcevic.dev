@@ -119,7 +119,6 @@ export class AppComponent implements OnInit {
     //   }
     // });
     // }
-    this.roadmapService.expandAll(this.roadmapItemList);
   }
 
   // ngAfterViewChecked() {

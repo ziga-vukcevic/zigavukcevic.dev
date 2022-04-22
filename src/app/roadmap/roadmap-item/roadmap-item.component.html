@@ -3,14 +3,20 @@
 -->
 
 <div
-  class="roadmap-item mb-1 level-{{ level }} text-sm"
+  class="roadmap-item mb-1 level-{{ level }} text-sm bg-white border-2 text-gray-500"
   [ngClass]="{
-    'bg-gray-600 text-white': level === 1,
-    'bg-gray-200 text-gray-500': status === 'knowledgeAbsorbed',
-    'bg-gray-50 text-gray-400': status === 'knowledgeNeedToGain',
-    'bg-gray-500 text-white': status === 'knowledgeAbsorbed' && child && child.itemList.length > 0
+    'border-gray-100': status === 'knowledgeNeedToGain',
+    'border-gray-300': status === 'knowledgeAbsorbed'
   }"
 >
+  <!-- To learn -->
+  <div
+    class="to-learn uppercase text-sm text-center bg-white text-gray-400"
+    *ngIf="status === 'knowledgeNeedToGain'"
+  >
+    To learn
+</div>
+  <!-- / To learn -->
   <!-- Text -->
   <span
     class="p-3"
@@ -37,9 +43,9 @@
   <!-- Link -->
   <a
     class="
-      sky-neutral:hover:border-red-600
+      sky-neutral:hover:text-red-600
       post-office:hover:text-orange-500
-      p-3 border-b-2 block
+      p-3 block text-gray-500
     "
     *ngIf="href"
     [href]="href"

@@ -15,8 +15,8 @@
         display: block;
         top: -10px;
         bottom: -10px;
-        width: 1px;
-        background-color: black;
+        width: 2px;
+        @apply bg-gray-300;
       }
 
       &.list-item-level-2-last,
