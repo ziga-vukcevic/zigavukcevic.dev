@@ -11,12 +11,13 @@ export class RoadmapItemComponent implements OnInit {
   @Input() level!: RoadmapItemInterface['level'];
   @Input() status!: RoadmapItemInterface['status'];
   @Input() text!: RoadmapItemInterface['text'];
+  @Input() textVersion?: RoadmapItemInterface['textVersion'];
+  @Input() textNote?: RoadmapItemInterface['textNote'];
+  @Input() hrefTitle?: RoadmapItemInterface['hrefTitle'];
+  @Input() href?: RoadmapItemInterface['href'];
   @Input() depthMeter!: RoadmapItemInterface['depthMeter'];
   @Input() ga?: RoadmapItemInterface['ga'];
   @Input() gaEvent?: RoadmapItemInterface['gaEvent'];
-  @Input() hrefTitle?: RoadmapItemInterface['hrefTitle'];
-  @Input() href?: RoadmapItemInterface['href'];
-  @Input() version?: RoadmapItemInterface['version'];
   @Input() child?: RoadmapItemInterface['child'] | null;
 
   itemList: RoadmapItemInterface[];

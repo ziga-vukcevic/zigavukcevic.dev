@@ -23,7 +23,7 @@
     class="p-3"
     (click)="toggleChildVisibility()">
     <span>
-      {{ text }} <small *ngIf="version">(version {{ version }})</small>
+      {{ text }} <small *ngIf="textVersion">(version {{ textVersion }})</small>
     </span>
     <i
       class="las"
@@ -43,7 +43,7 @@
     target="_blank"
     [attr.gaEvent]="ga ? ga : null"
     [attr.gaCategory]="ga ? 'roadmap' : null">
-    {{ text }}<i class="las la-external-link-alt text-gray-400"></i>
+    {{ text }}<i class="las la-external-link-alt text-gray-400"></i> <small *ngIf="textNote">{{ textNote }}</small>
   </a>
   <!-- / Link -->
 </div>
