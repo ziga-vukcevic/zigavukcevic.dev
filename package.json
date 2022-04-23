@@ -27,7 +27,6 @@
     "ngx-google-analytics": "^13.0.1",
     "ngx-highlightjs": "^6.1.2",
     "rxjs": "~7.4.0",
-    "tailwindcss-multi-theme": "^1.0.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

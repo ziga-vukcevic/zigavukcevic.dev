@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
-import { ThemeInterface } from './theme.interface';
 import { RoadmapService } from './roadmap/roadmap.service';
 import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
 
@@ -10,8 +9,6 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  themeList: ThemeInterface[];
-  currentTheme: ThemeInterface;
   audioNamePronunciation: HTMLAudioElement;
   roadmapItemList: RoadmapItemInterface[];
 
@@ -36,11 +33,6 @@ export class AppComponent implements OnInit {
       consoleGreeting.styles.join(';'),
     );
 
-    this.themeList = [
-      { name: 'skyNeutral', background: 'bg-gray-300' },
-      { name: 'postOffice', background: 'bg-yellow-300' },
-    ];
-    this.currentTheme = this.themeList[0];
     this.audioNamePronunciation = new Audio(
       'assets/audio/name-pronunciation.mp3',
     );
@@ -51,14 +43,6 @@ export class AppComponent implements OnInit {
     this.roadmapService.getItemList().subscribe(itemList => {
       this.roadmapItemList = itemList;
     });
-  }
-
-  getTheme(): ThemeInterface {
-    return this.currentTheme;
-  }
-
-  setTheme(theme: ThemeInterface): void {
-    this.currentTheme = theme;
   }
 
   playNamePronunciation(): void {

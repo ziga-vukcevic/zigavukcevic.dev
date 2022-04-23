@@ -1,7 +1,4 @@
-<div
-  class="container mx-auto px-4 theme-{{
-    convertFromCamelToKebabCase(currentTheme.name)
-  }}">
+<div class="container mx-auto px-4">
   <!-- Intro -->
   <h1 class="mt-10">
     <span class="text-2xl leading-loose block text-gray-500">
@@ -10,7 +7,7 @@
     <span class="text-5xl leading-tight block text-black">
       Žiga
       <button
-        class="sky-neutral:text-gray-500 sky-neutral:bg-gray-100 sky-neutral:hover:text-red-600 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:text-orange-500 rounded-xl relative"
+        class="text-gray-500 bg-gray-100 hover:text-red-600 hover:border-red-600 rounded-xl relative"
         (click)="playNamePronunciation()"
         gaEvent="audioNamePronunciationPlayed"
         gaCategory="default">
@@ -18,10 +15,8 @@
       </button>
       I'm a
       <strong
-        class="sky-neutral:before:bg-gray-200 post-office:before:bg-yellow-300 before:block before:absolute before:-inset-1 before:-skew-y-3 relative inline-block">
-        <span class="sky-neutral:text-gray-500 post-office:text-black relative">
-          senior engineer
-        </span>
+        class="before:bg-gray-200 before:block before:absolute before:-inset-1 before:-skew-y-3 relative inline-block">
+        <span class="text-gray-500 relative"> senior engineer </span>
       </strong>
     </span>
     <span class="text-3xl leading-normal mb-8 block">
@@ -33,14 +28,14 @@
   <p class="text-xl mb-10">
     I am located in
     <a
-      class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:border-orange-500 border-b-4"
+      class="text-gray-500 hover:border-red-600 border-b-4"
       href="https://www.google.com/maps/place/Slovenia/@46.1437677,13.8719626,8z/data=!3m1!4b1!4m5!3m4!1s0x476524e75e968361:0xe740451e25e2d465!8m2!3d46.151241!4d14.995463"
       rel="noopener noreferrer"
       target="_blank"
       >Slovenia<i class="las la-external-link-alt text-gray-400"></i></a
     >, currently working at an international company named
     <a
-      class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:border-orange-500 border-b-4"
+      class="text-gray-500 hover:border-red-600 border-b-4"
       href="https://www.endava.com/"
       rel="noopener noreferrer"
       target="_blank"
@@ -52,26 +47,25 @@
   <app-stat-list></app-stat-list>
   <!-- / Statistics -->
   <!-- My main skills -->
-  <h2
-    class="sky-neutral:before:bg-gray-200 post-office:before:bg-yellow-300 text-black text-4xl mb-10 pt-3 pl-2">
+  <h2 class="before:bg-gray-200 text-black text-4xl mb-10 pt-3 pl-2">
     My main skills
   </h2>
   <ul class="list-disc ml-9 mb-16 lg:w-3/4">
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         understanding of
         <app-highlight-skill>developing for the web</app-highlight-skill> and
         <app-highlight-skill>a careful eye for design</app-highlight-skill>,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         the ability to
         <app-highlight-skill>translate design</app-highlight-skill> into
         semantic, accessible front-end code,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         understanding of
         <app-highlight-skill
@@ -79,20 +73,20 @@
         >,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         fully aware of
         <app-highlight-skill>mobile and responsive design</app-highlight-skill>
         and <app-highlight-skill>development practices</app-highlight-skill>,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         capable of
         <app-highlight-skill>designing in a browser</app-highlight-skill>,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         understanding of
         <app-highlight-skill
@@ -101,12 +95,12 @@
         with CMSs,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         knowledge of <app-highlight-skill>SEO</app-highlight-skill>,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         understanding and
         <app-highlight-skill
@@ -114,7 +108,7 @@
         >,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         the ability to work directly with UX/UI and designers to implement
         designs and
@@ -122,13 +116,13 @@
         if needed,
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         excellent
         <app-highlight-skill>communication skills</app-highlight-skill> and
       </span>
     </li>
-    <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+    <li class="text-gray-300 mb-2">
       <span class="text-black">
         the ability to dive in and
         <app-highlight-skill>learn new things</app-highlight-skill> to find
@@ -139,8 +133,7 @@
   <!-- / My main skills -->
   <!-- My knowledge roadmap -->
   <div>
-    <h2
-      class="sky-neutral:before:bg-gray-200 post-office:before:bg-yellow-300 text-black text-4xl mb-10 pt-3 pl-2">
+    <h2 class="before:bg-gray-200 text-black text-4xl mb-10 pt-3 pl-2">
       My knowledge roadmap
     </h2>
   </div>
@@ -166,15 +159,14 @@
   <div class="md:flex md:flex-row mt-16">
     <!-- Find me at -->
     <div class="basis-1/3">
-      <h2
-        class="sky-neutral:before:bg-gray-200 post-office:before:bg-yellow-300 text-black text-3xl mb-10 pt-3 pl-2">
+      <h2 class="before:bg-gray-200 text-black text-3xl mb-10 pt-3 pl-2">
         Find me at
       </h2>
 
       <ul class="list-disc ml-9 mb-16">
-        <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+        <li class="text-gray-300 mb-2">
           <a
-            class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:border-orange-500 border-b-4"
+            class="text-gray-500 hover:border-red-600 border-b-4"
             href="https://www.linkedin.com/in/ziga-vukcevic/"
             rel="noopener noreferrer"
             target="_blank"
@@ -182,9 +174,9 @@
               class="las la-external-link-alt text-gray-400"></i
           ></a>
         </li>
-        <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+        <li class="text-gray-300 mb-2">
           <a
-            class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:border-orange-500 border-b-4"
+            class="text-gray-500 hover:border-red-600 border-b-4"
             href="https://twitter.com/ZigaVukcevicDev"
             rel="noopener noreferrer"
             target="_blank"
@@ -192,9 +184,9 @@
               class="las la-external-link-alt text-gray-400"></i
           ></a>
         </li>
-        <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+        <li class="text-gray-300 mb-2">
           <a
-            class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:border-orange-500 border-b-4"
+            class="text-gray-500 hover:border-red-600 border-b-4"
             href="https://github.com/be-codified"
             rel="noopener noreferrer"
             target="_blank"
@@ -207,15 +199,14 @@
     <!-- / Find me at -->
     <!-- Conferences visited -->
     <div class="basis-2/3">
-      <h2
-        class="sky-neutral:before:bg-gray-200 post-office:before:bg-yellow-300 text-black text-3xl mb-10 pt-3 pl-2">
+      <h2 class="before:bg-gray-200 text-black text-3xl mb-10 pt-3 pl-2">
         Conferences visited
       </h2>
       <ul class="list-disc ml-9">
-        <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+        <li class="text-gray-300 mb-2">
           <span class="text-gray-500">
             <a
-              class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:border-orange-500 border-b-4"
+              class="text-gray-500 hover:border-red-600 border-b-4"
               href="https://www.reactlive.nl/"
               rel="noopener noreferrer"
               target="_blank"
@@ -231,10 +222,10 @@
             </p>
           </span>
         </li>
-        <li class="sky-neutral:text-gray-300 post-office:text-yellow-400 mb-2">
+        <li class="text-gray-300 mb-2">
           <span class="text-gray-500">
             <a
-              class="sky-neutral:text-gray-500 sky-neutral:hover:border-red-600 post-office:text-yellow-400 post-office:hover:border-orange-500 border-b-4"
+              class="text-gray-500 hover:border-red-600 border-b-4"
               href="https://2020.vuejsglobal.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -287,7 +278,7 @@
   <router-outlet></router-outlet>
 </div>
 
-  <!-- TODO
+<!-- TODO
   <app-tab-list>
     <app-tab title="CLI">
       <p>Intro text...</p>
