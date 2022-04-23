@@ -1,4 +1,4 @@
-import { RoadmapItemInterface } from './roadmap-item.interface';
+import { RoadmapItemInterface } from '../roadmap-item/roadmap-item.interface';
 
 export const roadmapItemList: RoadmapItemInterface[] = [
   {

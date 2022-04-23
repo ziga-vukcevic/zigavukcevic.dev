@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { RoadmapService } from './roadmap/roadmap.service';
-import { RoadmapItemInterface } from './roadmap/roadmap-item.interface';
+import { RoadmapItemInterface } from './roadmap/roadmap-item/roadmap-item.interface';
 
 @Component({
   selector: 'app-root',

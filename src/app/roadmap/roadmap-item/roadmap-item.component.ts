@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { RoadmapService } from '../roadmap.service';
-import { RoadmapItemInterface } from '../roadmap-item.interface';
+import { RoadmapItemInterface } from './roadmap-item.interface';
 
 @Component({
   selector: 'app-roadmap-item',

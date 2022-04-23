@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { roadmapItemList } from 'src/app/roadmap/roadmap-item-list';
-import { RoadmapItemInterface } from './roadmap-item.interface';
+import { roadmapItemList } from 'src/app/roadmap/roadmap-item-list/roadmap-item-list';
+import { RoadmapItemInterface } from './roadmap-item/roadmap-item.interface';
 
 @Injectable({
   providedIn: 'root',
