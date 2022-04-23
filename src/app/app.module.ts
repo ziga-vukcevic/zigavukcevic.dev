@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import {
   NgxGoogleAnalyticsModule,
   NgxGoogleAnalyticsRouterModule,
 } from 'ngx-google-analytics';
+// TODO:
 // import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-
 import { StatListComponent } from './stat-list/stat-list.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { TabComponent } from './tab/tab.component';
@@ -33,9 +31,11 @@ import { HighlightSkillComponent } from './highlight-skill/highlight-skill.compo
     AppRoutingModule,
     NgxGoogleAnalyticsModule.forRoot('G-Y934WGEX9C'),
     NgxGoogleAnalyticsRouterModule,
+    // TODO:
     // HighlightModule,
   ],
   providers: [
+    // TODO:
     // {
     //   provide: HIGHLIGHT_OPTIONS,
     //   useValue: {
