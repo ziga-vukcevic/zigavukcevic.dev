@@ -70,6 +70,20 @@ export class AppComponent implements OnInit {
     protected roadmapService: RoadmapService,
     protected googleAnalyticsService: GoogleAnalyticsService,
   ) {
+    const consoleGreeting = {
+      text: 'Hey! The time is now, lets do some inspection! 👍',
+      styles: [
+        'padding: 7px 9px 6px 2px',
+        'background-color: #DC2625',
+        'color: white',
+        'border: 5px solid yellow',
+        'font-size: 14px',
+        "font-family: monospace"
+      ]
+    }
+
+    console.info(`%c ${consoleGreeting.text}`, consoleGreeting.styles.join(';'));
+
     this.origin = null;
     this.title = 'zigavukcevic.dev';
     this.themeList = [
