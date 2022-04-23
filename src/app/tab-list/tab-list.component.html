@@ -1,5 +1,5 @@
 <ul class="flex">
-  <li *ngFor="let tab of tabList; let index = index;">
+  <li *ngFor="let tab of tabList; let index = index">
     <button
       class="px-4 py-2 text-sm bg-yellow-700 text-white active"
       [ngClass]="{
@@ -7,8 +7,7 @@
         'rounded-tr-lg': index === tabList.length - 1,
         'bg-yellow-900': tab.isActive
       }"
-      (click)="selectTab(tab)"
-    >
+      (click)="selectTab(tab)">
       {{ tab.title }}
     </button>
   </li>

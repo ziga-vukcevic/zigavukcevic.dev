@@ -3,8 +3,7 @@
   <li
     class="list-item-level-1"
     [ngClass]="{ 'list-item-level-1-last': isLast }"
-    *ngFor="let item of itemList; let isLast = last"
-  >
+    *ngFor="let item of itemList; let isLast = last">
     <app-roadmap-item
       [level]="item.level"
       [status]="item.status"
@@ -14,19 +13,16 @@
       [version]="item.version"
       [depthMeter]="item.depthMeter"
       [child]="item.child"
-      [ga]="item.gaEvent"
-    ></app-roadmap-item>
+      [ga]="item.gaEvent"></app-roadmap-item>
     <!-- Level 2 -->
     <ul
       class="roadmap-item-list list-level-2"
       [ngClass]="{ 'list-level-2-last': isLast }"
-      *ngIf="item.child && item.child.isVisible"
-    >
+      *ngIf="item.child && item.child.isVisible">
       <li
         class="list-item-level-2"
         [ngClass]="{ 'list-item-level-2-last': isLast }"
-        *ngFor="let item of item.child.itemList; let isLast = last"
-       >
+        *ngFor="let item of item.child.itemList; let isLast = last">
         <app-roadmap-item
           [level]="item.level"
           [status]="item.status"
@@ -36,19 +32,16 @@
           [version]="item.version"
           [depthMeter]="item.depthMeter"
           [child]="item.child"
-          [ga]="item.gaEvent"
-        ></app-roadmap-item>
+          [ga]="item.gaEvent"></app-roadmap-item>
         <!-- Level 3 -->
         <ul
           class="roadmap-item-list list-level-3"
           [ngClass]="{ 'list-level-3-last': isLast }"
-          *ngIf="item.child && item.child.isVisible"
-        >
+          *ngIf="item.child && item.child.isVisible">
           <li
             class="list-item-level-3"
             [ngClass]="{ 'list-item-level-3-last': isLast }"
-            *ngFor="let item of item.child.itemList; let isLast = last"
-          >
+            *ngFor="let item of item.child.itemList; let isLast = last">
             <app-roadmap-item
               [level]="item.level"
               [status]="item.status"
@@ -58,19 +51,16 @@
               [version]="item.version"
               [depthMeter]="item.depthMeter"
               [child]="item.child"
-              [ga]="item.gaEvent"
-            ></app-roadmap-item>
+              [ga]="item.gaEvent"></app-roadmap-item>
             <!-- Level 4 -->
             <ul
               class="roadmap-item-list list-level-4"
               [ngClass]="{ 'list-level-4-last': isLast }"
-              *ngIf="item.child && item.child.isVisible"
-            >
+              *ngIf="item.child && item.child.isVisible">
               <li
                 class="list-item-level-4"
                 [ngClass]="{ 'list-item-level-4-last': isLast }"
-                *ngFor="let item of item.child.itemList; let isLast = last"
-              >
+                *ngFor="let item of item.child.itemList; let isLast = last">
                 <app-roadmap-item
                   [level]="item.level"
                   [status]="item.status"
@@ -80,19 +70,16 @@
                   [version]="item.version"
                   [depthMeter]="item.depthMeter"
                   [child]="item.child"
-                  [ga]="item.gaEvent"
-                ></app-roadmap-item>
+                  [ga]="item.gaEvent"></app-roadmap-item>
                 <!-- Level 5 -->
                 <ul
                   class="roadmap-item-list list-level-5"
                   [ngClass]="{ 'list-level-5-last': isLast }"
-                  *ngIf="item.child && item.child.isVisible"
-                >
+                  *ngIf="item.child && item.child.isVisible">
                   <li
                     class="list-item-level-5"
                     [ngClass]="{ 'list-item-level-5-last': isLast }"
-                    *ngFor="let item of item.child.itemList; let isLast = last"
-                  >
+                    *ngFor="let item of item.child.itemList; let isLast = last">
                     <app-roadmap-item
                       [level]="item.level"
                       [status]="item.status"
@@ -102,8 +89,7 @@
                       [version]="item.version"
                       [depthMeter]="item.depthMeter"
                       [child]="item.child"
-                      [ga]="item.gaEvent"
-                    ></app-roadmap-item>
+                      [ga]="item.gaEvent"></app-roadmap-item>
                   </li>
                 </ul>
                 <!-- / Level 5 -->

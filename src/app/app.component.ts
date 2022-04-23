@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
       ],
     };
 
+    // eslint-disable-next-line no-console
     console.info(
       `%c ${consoleGreeting.text}`,
       consoleGreeting.styles.join(';'),
@@ -55,13 +56,5 @@ export class AppComponent implements OnInit {
 
   collapseAll(): void {
     this.roadmapService.collapseAll(this.roadmapItemList);
-  }
-
-  convertFromCamelToKebabCase(string: string): string {
-    return string.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-  }
-
-  capitalizeFirstLetter(string: string): string {
-    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 }

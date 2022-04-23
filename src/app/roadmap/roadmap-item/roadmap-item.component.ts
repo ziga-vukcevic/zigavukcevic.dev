@@ -27,20 +27,7 @@ export class RoadmapItemComponent implements OnInit {
     this.itemListCount = { all: 0, visible: 0 };
   }
 
-  ngOnInit(): void {
-    // this.roadmapService.toggleChildVisibility();
-    // this.roadmapDepthMeterService.getItemListObs()
-    //   // .pipe(takeUntil(this.unsubscribe$))
-    //   .subscribe((itemList) => {
-    //     this.itemList = itemList;
-    //     console.log(itemList);
-    //   });
-  }
-
-  // ngOnDestroy(): void {
-  //  this.unsubscribe$.next(true);
-  //  this.unsubscribe$.complete();
-  // }
+  ngOnInit(): void {}
 
   toggleChildVisibility(): void {
     this.roadmapService.toggleChildVisibility();

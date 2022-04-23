@@ -16,16 +16,18 @@ export class StatListComponent implements OnInit {
 
   ngOnInit(): void {
     const today: string = dayjs().format();
+    const currentLocalHour = dayjs().hour();
+
     this.periodWeb = this.calculatePeriod('2007-06-01', today);
     this.periodProgramming = this.calculatePeriod('2012-01-01', today);
     this.numberOfCups = 0;
+
     this.isUnitTestDescriptionVisible = {
       periodWeb: false,
       periodProgramming: false,
       numberOfCups: false,
     };
 
-    const currentLocalHour = dayjs().hour();
     this.calculateCupsDrank(currentLocalHour);
   }
 

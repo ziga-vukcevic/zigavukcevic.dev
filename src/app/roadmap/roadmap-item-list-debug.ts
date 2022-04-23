@@ -108,8 +108,8 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                       depthMeter: 0,
                       gaEvent: '',
                     },
-                  ]
-                }
+                  ],
+                },
               },
               {
                 level: 3,
@@ -189,9 +189,9 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                             text: 'Level 5 (variation 1, segment 1)',
                             depthMeter: 0,
                             gaEvent: '',
-                          }
-                        ]
-                      }
+                          },
+                        ],
+                      },
                     },
                     {
                       level: 4,
@@ -202,8 +202,8 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                       depthMeter: 0,
                       gaEvent: '',
                     },
-                  ]
-                }
+                  ],
+                },
               },
               {
                 level: 3,
@@ -242,12 +242,12 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                             text: 'Level 5',
                             depthMeter: 0,
                             gaEvent: '',
-                          }
-                        ]
-                      }
+                          },
+                        ],
+                      },
                     },
-                  ]
-                }
+                  ],
+                },
               },
             ],
           },

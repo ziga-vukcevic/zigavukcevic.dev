@@ -1,59 +1,48 @@
-<!-- TODO:
-  - refactor, this is over-engineered for this simple case
--->
-
+<!-- TODO: refactor, this is over-engineered for this simple case -->
 <div
   class="roadmap-item mb-1 level-{{ level }} text-sm bg-white border-2 text-gray-500"
   [ngClass]="{
     'border-gray-100': status === 'knowledgeNeedToGain',
     'border-gray-300': status === 'knowledgeAbsorbed'
-  }"
->
+  }">
   <!-- To learn -->
   <div
     class="to-learn uppercase text-sm text-center bg-white text-gray-400"
-    *ngIf="status === 'knowledgeNeedToGain'"
-  >
+    *ngIf="status === 'knowledgeNeedToGain'">
     To learn
-</div>
+  </div>
   <!-- / To learn -->
   <!-- Text -->
-  <span
-    class="p-3"
-    *ngIf="!href && !child"
-  >
+  <span class="p-3" *ngIf="!href && !child">
     {{ text }}
-</span>
+  </span>
   <!-- / Text -->
   <!-- Toggle button -->
   <button
-    *ngIf="!href && child && child.itemList.length > 0;"
+    *ngIf="!href && child && child.itemList.length > 0"
     class="p-3"
-    (click)="toggleChildVisibility()"
-  >
+    (click)="toggleChildVisibility()">
     <span>
       {{ text }} <small *ngIf="version">(version {{ version }})</small>
     </span>
-    <i class="las" [ngClass]="{
-      'la-angle-up': child?.isVisible,
-      'la-angle-down': !child?.isVisible
-    }"></i>
+    <i
+      class="las"
+      [ngClass]="{
+        'la-angle-up': child?.isVisible,
+        'la-angle-down': !child?.isVisible
+      }"></i>
   </button>
   <!-- / Toggle button -->
   <!-- Link -->
   <a
-    class="
-      hover:text-red-600
-      p-3 block
-    "
+    class="hover:text-red-600 p-3 block"
     *ngIf="href"
     [href]="href"
     [title]="hrefTitle"
     rel="noopener noreferrer"
     target="_blank"
     [attr.gaEvent]="ga ? ga : null"
-    [attr.gaCategory]="ga ? 'roadmap' : null"
-  >
+    [attr.gaCategory]="ga ? 'roadmap' : null">
     {{ text }}<i class="las la-external-link-alt text-gray-400"></i>
   </a>
   <!-- / Link -->

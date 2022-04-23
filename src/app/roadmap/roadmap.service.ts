@@ -16,8 +16,6 @@ export class RoadmapService {
   }
 
   getItemList(): Observable<RoadmapItemInterface[]> {
-    // console.log(this.countAllItems(this.itemListBehaviorSubject.value));
-    // console.log(this.countVisibleItems(this.itemListBehaviorSubject.value));
     return this.itemListBehaviorSubject.asObservable();
   }
 
@@ -50,11 +48,9 @@ export class RoadmapService {
   }
 
   private countAllItems(itemList: any): number {
-    // console.log('countAllItems');
     itemList.forEach((item: any) => {
       // Counts
       this.itemListCount.all = this.itemListCount.all + 1;
-
       // Recursively go deeper
       item.child && this.countAllItems(item.child.itemList);
     });
@@ -63,8 +59,6 @@ export class RoadmapService {
   }
 
   private countVisibleItems(itemList: any): number {
-    // console.log('countVisibleItems');
-
     itemList.forEach((item: any) => {
       if (item.child && item.child.itemList && item.child.isVisible) {
         item.child.itemList.forEach((item: any) => {

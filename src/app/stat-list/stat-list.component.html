@@ -2,46 +2,41 @@
   <!-- Period web -->
   <div class="w-72 mr-5">
     <!-- Box -->
-    <div class="
-      mb-5 p-4 pr-8 rounded shadow-lg relative
-    ">
+    <div class="mb-5 p-4 pr-8 rounded shadow-lg relative">
       <p class="font-semibold text-xl text-gray-800 js-unit-test-period-web">
         {{ periodWeb }}
       </p>
-      <p class="
-      text-gray-500
-        uppercase font-bold text-xs
-      ">
+      <p class="text-gray-500 uppercase font-bold text-xs">
         years in the web industry
       </p>
       <button
         class="absolute right-2 bottom-1"
         (click)="
           isUnitTestDescriptionVisible.periodWeb
-          ? hideAllUnitTestDescription()
-          : showUnitTestDescription('periodWeb')
+            ? hideAllUnitTestDescription()
+            : showUnitTestDescription('periodWeb')
         "
-        gaEvent="unitTestDescriptionPeriodWebShown" gaCategory="default"
-      >
+        gaEvent="unitTestDescriptionPeriodWebShown"
+        gaCategory="default">
         <i
-          class="
-          text-gray-400 hover:text-red-600
-
-            las
-          "
+          class="text-gray-400 hover:text-red-600 las"
           [ngClass]="{
             'la-code': !isUnitTestDescriptionVisible.periodWeb,
             'la-times': isUnitTestDescriptionVisible.periodWeb
-          }"
-        ></i>
+          }"></i>
       </button>
     </div>
     <!-- / Box -->
     <!-- Unit test description -->
-    <div class="mt-5 mb-4 lg:mb-0 ml-5 text-sm" [hidden]="!isUnitTestDescriptionVisible.periodWeb">
+    <div
+      class="mt-5 mb-4 lg:mb-0 ml-5 text-sm"
+      [hidden]="!isUnitTestDescriptionVisible.periodWeb">
       <p class="mb-3">Passed unit test</p>
       <ul class="list-disc ml-6">
-        <li>should contain 25+ years in the web industry if today's date would be 1 July 2032</li>
+        <li>
+          should contain 25+ years in the web industry if today's date would be
+          1 July 2032
+        </li>
       </ul>
     </div>
     <!-- / Unit test description -->
@@ -50,47 +45,42 @@
   <!-- Period programming -->
   <div class="w-72 mr-5">
     <!-- Box -->
-    <div class="
-
-      mb-5 p-4 pr-8 rounded shadow-lg relative
-    ">
-      <p class="font-semibold text-xl text-gray-800 js-unit-test-period-programming">
+    <div class="mb-5 p-4 pr-8 rounded shadow-lg relative">
+      <p
+        class="font-semibold text-xl text-gray-800 js-unit-test-period-programming">
         {{ periodProgramming }}
       </p>
-      <p class="
-        text-gray-500
-        uppercase font-bold text-xs
-      ">
+      <p class="text-gray-500 uppercase font-bold text-xs">
         years of active programming
       </p>
       <button
         class="absolute right-2 bottom-1"
         (click)="
           isUnitTestDescriptionVisible.periodProgramming
-          ? hideAllUnitTestDescription()
-          : showUnitTestDescription('periodProgramming')
+            ? hideAllUnitTestDescription()
+            : showUnitTestDescription('periodProgramming')
         "
-        gaEvent="unitTestDescriptionPeriodProgrammingShown" gaCategory="default"
-      >
+        gaEvent="unitTestDescriptionPeriodProgrammingShown"
+        gaCategory="default">
         <i
-          class="
-          text-gray-400 hover:text-red-600
-
-            las
-          "
+          class="text-gray-400 hover:text-red-600 las"
           [ngClass]="{
             'la-code': !isUnitTestDescriptionVisible.periodProgramming,
             'la-times': isUnitTestDescriptionVisible.periodProgramming
-          }"
-        ></i>
+          }"></i>
       </button>
     </div>
     <!-- / Box -->
     <!-- Unit test description -->
-    <div class="mt-5 mb-4 lg:mb-0 ml-5 text-sm" [hidden]="!isUnitTestDescriptionVisible.periodProgramming">
+    <div
+      class="mt-5 mb-4 lg:mb-0 ml-5 text-sm"
+      [hidden]="!isUnitTestDescriptionVisible.periodProgramming">
       <p class="mb-3">Passed unit test</p>
       <ul class="list-disc ml-6">
-        <li>should contain 20+ years of active programming if today's date would be 1 July 2032</li>
+        <li>
+          should contain 20+ years of active programming if today's date would
+          be 1 July 2032
+        </li>
       </ul>
     </div>
     <!-- / Unit test description -->
@@ -99,15 +89,16 @@
   <!-- Number of cups -->
   <div class="w-72 mr-5">
     <!-- Box -->
-    <div class="
-
-      mb-5 p-4 pr-8 rounded shadow-lg relative js-unit-test-container
-    " [hidden]="!numberOfCups">
-      <p class="font-semibold text-xl text-gray-800 js-unit-test-number-of-cups">{{ numberOfCups }}</p>
-      <p class="
-      text-gray-500
-        uppercase font-bold text-xs
-      " [ngPlural]="numberOfCups">
+    <div
+      class="mb-5 p-4 pr-8 rounded shadow-lg relative js-unit-test-container"
+      [hidden]="!numberOfCups">
+      <p
+        class="font-semibold text-xl text-gray-800 js-unit-test-number-of-cups">
+        {{ numberOfCups }}
+      </p>
+      <p
+        class="text-gray-500 uppercase font-bold text-xs"
+        [ngPlural]="numberOfCups">
         <ng-template ngPluralCase="=1">cup</ng-template>
         <ng-template ngPluralCase="other">cups</ng-template>
         of coffee drank today
@@ -116,33 +107,39 @@
         class="absolute right-2 bottom-1"
         (click)="
           isUnitTestDescriptionVisible.numberOfCups
-          ? hideAllUnitTestDescription()
-          : showUnitTestDescription('numberOfCups')
+            ? hideAllUnitTestDescription()
+            : showUnitTestDescription('numberOfCups')
         "
-        gaEvent="unitTestDescriptionNumberOfCupsShown" gaCategory="default"
-      >
+        gaEvent="unitTestDescriptionNumberOfCupsShown"
+        gaCategory="default">
         <i
-          class="
-          text-gray-400 hover:text-red-600
-
-            las
-          "
+          class="text-gray-400 hover:text-red-600 las"
           [ngClass]="{
             'la-code': !isUnitTestDescriptionVisible.numberOfCups,
             'la-times': isUnitTestDescriptionVisible.numberOfCups
-          }"
-        ></i>
+          }"></i>
       </button>
     </div>
     <!-- / Box -->
     <!-- Unit test description -->
-    <div class="mt-5 mb-4 lg:mb-0 ml-5 text-sm" [hidden]="!isUnitTestDescriptionVisible.numberOfCups">
+    <div
+      class="mt-5 mb-4 lg:mb-0 ml-5 text-sm"
+      [hidden]="!isUnitTestDescriptionVisible.numberOfCups">
       <p class="mb-3">List of passed unit tests</p>
       <ul class="list-disc ml-6">
         <li>should be hidden if current local hour is in range from 0 to 7</li>
-        <li>should contain 1 cup of coffee if current local hour is in range from 8 to 10</li>
-        <li>should contain 2 cups of coffee if current local hour is in range from 11 to 15</li>
-        <li>should contain 3 cups of coffee if current local hour is in range from 16 to 23</li>
+        <li>
+          should contain 1 cup of coffee if current local hour is in range from
+          8 to 10
+        </li>
+        <li>
+          should contain 2 cups of coffee if current local hour is in range from
+          11 to 15
+        </li>
+        <li>
+          should contain 3 cups of coffee if current local hour is in range from
+          16 to 23
+        </li>
       </ul>
     </div>
     <!-- / Unit test description -->
