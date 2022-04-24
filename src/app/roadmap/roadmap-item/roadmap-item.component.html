@@ -1,26 +1,24 @@
 <!-- TODO: refactor, this is over-engineered for this simple case -->
-<div
-  class="roadmap-item mb-1 level-{{ level }} text-sm bg-white border-2 text-gray-500"
-  [ngClass]="{
-    'border-gray-100': status === 'knowledgeNeedToGain',
-    'border-gray-300': status === 'knowledgeAbsorbed'
-  }">
-  <!-- To learn -->
-  <div
-    class="to-learn uppercase text-sm text-center bg-white text-gray-400"
-    *ngIf="status === 'knowledgeNeedToGain'">
-    To learn
-  </div>
-  <!-- / To learn -->
+<div class="roadmap-item mb-1 level-{{ level }} text-sm bg-white">
   <!-- Text -->
-  <span class="p-3" *ngIf="!href && !child">
+  <span
+    class="border-2 rounded-md text-gray-500 w-full p-3 block"
+    [ngClass]="{
+      'border-gray-100': status === 'knowledgeNeedToGain',
+      'border-gray-300': status === 'knowledgeAbsorbed'
+    }"
+    *ngIf="!href && !child">
     {{ text }}
   </span>
   <!-- / Text -->
-  <!-- Toggle button -->
+  <!-- Button -->
   <button
+    class="border-2 rounded-md text-gray-500 w-full hover:bg-red-600 hover:border-red-600 hover:text-white p-3"
+    [ngClass]="{
+      'border-gray-100': status === 'knowledgeNeedToGain',
+      'border-gray-300': status === 'knowledgeAbsorbed'
+    }"
     *ngIf="!href && child && child.itemList.length > 0"
-    class="p-3"
     (click)="toggleChildVisibility()">
     <span>
       {{ text }} <small *ngIf="textVersion">(version {{ textVersion }})</small>
@@ -32,10 +30,14 @@
         'la-angle-down': !child?.isVisible
       }"></i>
   </button>
-  <!-- / Toggle button -->
+  <!-- / Button -->
   <!-- Link -->
   <a
-    class="hover:text-red-600 p-3 block"
+    class="border-2 rounded-md text-gray-500 w-full hover:text-red-600 hover:border-red-600 p-3 block"
+    [ngClass]="{
+      'border-gray-100': status === 'knowledgeNeedToGain',
+      'border-gray-300': status === 'knowledgeAbsorbed'
+    }"
     *ngIf="href"
     [href]="href"
     [title]="hrefTitle"
@@ -43,9 +45,17 @@
     target="_blank"
     [attr.gaEvent]="ga ? ga : null"
     [attr.gaCategory]="ga ? 'roadmap' : null">
-    {{ text }}<i class="las la-external-link-alt text-gray-400"></i> <small *ngIf="textNote">{{ textNote }}</small>
+    {{ text }}<i class="las la-external-link-alt text-gray-400"></i>
+    <small *ngIf="textNote">{{ textNote }}</small>
   </a>
   <!-- / Link -->
+  <!-- To learn -->
+  <div
+    class="to-learn uppercase text-sm text-center bg-white text-gray-400"
+    *ngIf="status === 'knowledgeNeedToGain'">
+    To learn
+  </div>
+  <!-- / To learn -->
 </div>
 
 <!-- Template for output of content -->

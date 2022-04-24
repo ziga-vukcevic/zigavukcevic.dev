@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  border-radius: 8px;
   line-height: 1.5;
   margin-bottom: 10px;
 
@@ -11,7 +10,7 @@
     content: '';
     position: absolute;
     display: block;
-    left: -22px;
+    left: -20px;
   }
 
   &:not(.level-1) {
@@ -44,11 +43,6 @@
     margin-left: 160px;
   }
 
-  a,
-  button {
-    width: 100%;
-  }
-
   button {
     display: flex;
     justify-content: space-between;
@@ -59,7 +53,7 @@
     position: absolute;
     padding: 0 5px 0 7px;
     font-size: 10px;
-    top: -10px;
+    top: -8px;
     right: 7px;
   }
 
@@ -76,7 +70,7 @@
   &:hover {
     .la-angle-up,
     .la-angle-down {
-      @apply text-red-600;
+      @apply text-white;
     }
   }
 }
