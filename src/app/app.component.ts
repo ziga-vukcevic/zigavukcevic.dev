@@ -11,6 +11,7 @@ import { RoadmapItemInterface } from './roadmap/roadmap-item/roadmap-item.interf
 export class AppComponent implements OnInit {
   audioNamePronunciation: HTMLAudioElement;
   roadmapItemList: RoadmapItemInterface[];
+  isRoadmapExpanded: boolean;
 
   constructor(
     protected roadmapService: RoadmapService,
@@ -38,6 +39,7 @@ export class AppComponent implements OnInit {
       'assets/audio/name-pronunciation.mp3',
     );
     this.roadmapItemList = [];
+    this.isRoadmapExpanded = false;
   }
 
   ngOnInit(): void {
@@ -52,9 +54,11 @@ export class AppComponent implements OnInit {
 
   expandAll(): void {
     this.roadmapService.expandAll(this.roadmapItemList);
+    this.isRoadmapExpanded = true;
   }
 
   collapseAll(): void {
     this.roadmapService.collapseAll(this.roadmapItemList);
+    this.isRoadmapExpanded = false;
   }
 }
