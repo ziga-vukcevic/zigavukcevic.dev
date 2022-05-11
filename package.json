@@ -9,7 +9,10 @@
     "test": "ng test --browsers ChromeHeadless",
     "testWithBrowser": "ng test  --browsers Chrome --watch=true",
     "lint": "ng lint",
-    "lintFix": "ng lint --fix"
+    "lintFix": "ng lint --fix",
+    "compodoc:build": "npx compodoc -p tsconfig.doc.json",
+    "compodoc:build-and-serve": "npx compodoc -p tsconfig.doc.json -s",
+    "compodoc:serve": "npx compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +42,7 @@
     "@angular-eslint/template-parser": "13.0.1",
     "@angular/cli": "^13.1.2",
     "@angular/compiler-cli": "~13.1.0",
+    "@compodoc/compodoc": "^1.1.19",
     "@tailwindcss/typography": "^0.5.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
