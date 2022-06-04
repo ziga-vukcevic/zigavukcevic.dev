@@ -7,6 +7,7 @@ export interface RoadmapItemInterface {
   hrefTitle?: string | null;
   href?: string | null;
   depthMeter: number;
+  isVisible: boolean;
   ga?: any;
   gaEvent?: string;
   child?: {

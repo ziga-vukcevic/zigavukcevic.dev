@@ -5,7 +5,8 @@ export const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Level 1',
-    depthMeter: 52,
+    depthMeter: 0,
+    isVisible: true,
     child: {
       id: '3a526d02e84c480f9716a037e380ade4',
       isVisible: true,
@@ -17,6 +18,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
           href: 'https://wwww.google.com',
           text: 'Level 2 (variation 1, segment 1)',
           depthMeter: 0,
+          isVisible: true,
           gaEvent: '',
         },
       ],
@@ -26,20 +28,22 @@ export const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Level 1',
-    depthMeter: 52,
+    depthMeter: 0,
+    isVisible: true,
     child: {
       id: '3a526d02e84c480f9716a037e380ade4',
-      isVisible: true,
+      isVisible: false,
       itemList: [
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Level 2 (variation 2, segment 1)',
           depthMeter: 0,
+          isVisible: false,
           gaEvent: '',
           child: {
             id: '3a526d02e84c480f9716a037e380ade4',
-            isVisible: true,
+            isVisible: false,
             itemList: [
               {
                 level: 3,
@@ -48,6 +52,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                 href: 'https://wwww.google.com',
                 text: 'Level 3 (variation 1, segment 1)',
                 depthMeter: 0,
+                isVisible: false,
                 gaEvent: '',
               },
             ],
@@ -58,6 +63,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
           status: 'knowledgeAbsorbed',
           text: 'Level 2 (variation 2, segment 2)',
           depthMeter: 0,
+          isVisible: false,
           gaEvent: '',
         },
       ],
@@ -67,16 +73,18 @@ export const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Level 1',
-    depthMeter: 52,
+    depthMeter: 0,
+    isVisible: true,
     child: {
       id: '3a526d02e84c480f9716a037e380ade4',
-      isVisible: true,
+      isVisible: false,
       itemList: [
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Level 2 (variation 3, segment 1)',
           depthMeter: 0,
+          isVisible: false,
           gaEvent: '',
         },
         {
@@ -84,20 +92,22 @@ export const roadmapItemList: RoadmapItemInterface[] = [
           status: 'knowledgeAbsorbed',
           text: 'Level 2 (variation 3, segment 2)',
           depthMeter: 0,
+          isVisible: false,
           gaEvent: '',
           child: {
             id: '3a526d02e84c480f9716a037e380ade4',
-            isVisible: true,
+            isVisible: false,
             itemList: [
               {
                 level: 3,
                 status: 'knowledgeAbsorbed',
                 text: 'Level 3 (variation 2, segment 1)',
                 depthMeter: 0,
+                isVisible: false,
                 gaEvent: '',
                 child: {
                   id: '3a526d02e84c480f9716a037e380ade4',
-                  isVisible: true,
+                  isVisible: false,
                   itemList: [
                     {
                       level: 4,
@@ -106,6 +116,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                       href: 'https://wwww.google.com',
                       text: 'Level 4 (variation 1, segment 1)',
                       depthMeter: 0,
+                      isVisible: false,
                       gaEvent: '',
                     },
                   ],
@@ -118,6 +129,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                 href: 'https://wwww.google.com',
                 text: 'Level 3 (variation 2, segment 2)',
                 depthMeter: 0,
+                isVisible: false,
                 gaEvent: '',
               },
             ],
@@ -130,16 +142,18 @@ export const roadmapItemList: RoadmapItemInterface[] = [
     level: 1,
     status: 'knowledgeAbsorbed',
     text: 'Level 1',
-    depthMeter: 52,
+    depthMeter: 0,
+    isVisible: true,
     child: {
       id: '3a526d02e84c480f9716a037e380ade4',
-      isVisible: true,
+      isVisible: false,
       itemList: [
         {
           level: 2,
           status: 'knowledgeAbsorbed',
           text: 'Level 2',
           depthMeter: 0,
+          isVisible: false,
           gaEvent: '',
         },
         {
@@ -147,10 +161,11 @@ export const roadmapItemList: RoadmapItemInterface[] = [
           status: 'knowledgeAbsorbed',
           text: 'Level 2',
           depthMeter: 0,
+          isVisible: false,
           gaEvent: '',
           child: {
             id: '3a526d02e84c480f9716a037e380ade4',
-            isVisible: true,
+            isVisible: false,
             itemList: [
               {
                 level: 3,
@@ -159,6 +174,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                 href: 'https://wwww.google.com',
                 text: 'Level 3 (variation 3, segment 1)',
                 depthMeter: 0,
+                isVisible: false,
                 gaEvent: '',
               },
               {
@@ -166,20 +182,22 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                 status: 'knowledgeAbsorbed',
                 text: 'Level 3 (variation 3, segment 2)',
                 depthMeter: 0,
+                isVisible: false,
                 gaEvent: '',
                 child: {
                   id: '3a526d02e84c480f9716a037e380ade4',
-                  isVisible: true,
+                  isVisible: false,
                   itemList: [
                     {
                       level: 4,
                       status: 'knowledgeAbsorbed',
                       text: 'Level 4 (variation 2, segment 1)',
                       depthMeter: 0,
+                      isVisible: false,
                       gaEvent: '',
                       child: {
                         id: '3a526d02e84c480f9716a037e380ade4',
-                        isVisible: true,
+                        isVisible: false,
                         itemList: [
                           {
                             level: 5,
@@ -188,6 +206,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                             href: 'https://wwww.google.com',
                             text: 'Level 5 (variation 1, segment 1)',
                             depthMeter: 0,
+                            isVisible: false,
                             gaEvent: '',
                           },
                         ],
@@ -200,6 +219,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                       href: 'https://wwww.google.com',
                       text: 'Level 4 (variation 2, segment 2)',
                       depthMeter: 0,
+                      isVisible: false,
                       gaEvent: '',
                     },
                   ],
@@ -210,10 +230,11 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                 status: 'knowledgeAbsorbed',
                 text: 'Level 3',
                 depthMeter: 0,
+                isVisible: false,
                 gaEvent: '',
                 child: {
                   id: '3a526d02e84c480f9716a037e380ade4',
-                  isVisible: true,
+                  isVisible: false,
                   itemList: [
                     {
                       level: 4,
@@ -222,6 +243,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                       href: 'https://wwww.google.com',
                       text: 'Level 4 (variation 3, segment 1)',
                       depthMeter: 0,
+                      isVisible: false,
                       gaEvent: '',
                     },
                     {
@@ -229,10 +251,11 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                       status: 'knowledgeAbsorbed',
                       text: 'Level 4 (variation 3, segment 2)',
                       depthMeter: 0,
+                      isVisible: false,
                       gaEvent: '',
                       child: {
                         id: '3a526d02e84c480f9716a037e380ade4',
-                        isVisible: true,
+                        isVisible: false,
                         itemList: [
                           {
                             level: 5,
@@ -241,6 +264,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                             href: 'https://wwww.google.com',
                             text: 'Level 5',
                             depthMeter: 0,
+                            isVisible: false,
                             gaEvent: '',
                           },
                         ],

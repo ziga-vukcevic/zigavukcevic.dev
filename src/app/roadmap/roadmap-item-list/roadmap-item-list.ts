@@ -3,6 +3,7 @@ import { RoadmapItemInterface } from '../roadmap-item/roadmap-item.interface';
 export const roadmapItemList: RoadmapItemInterface[] = [
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'HTML',
     textVersion: 5,
@@ -13,6 +14,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Semantic markup',
           hrefTitle: 'Semantic markup',
@@ -22,6 +24,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Responsive images',
           hrefTitle: 'Responsive images',
@@ -31,6 +34,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Conventions and best practices',
           hrefTitle: 'Conventions and best practices',
@@ -40,6 +44,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'SEO - Search engine optimization',
           hrefTitle: 'SEO - Search engine optimization',
@@ -49,6 +54,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Accessibility',
           hrefTitle: 'Accessibility',
@@ -61,6 +67,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'CSS',
     textVersion: 3,
@@ -71,6 +78,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Box model',
           hrefTitle: 'Box model',
@@ -80,6 +88,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Specificity',
           hrefTitle: 'Specificity',
@@ -89,6 +98,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Responsive web design based on media queries',
           hrefTitle: 'Responsive web design based on media queries',
@@ -98,6 +108,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Layouts',
           depthMeter: 52,
@@ -108,6 +119,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Flexbox',
                 hrefTitle: 'Flexbox',
@@ -117,6 +129,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeNeedToGain',
                 text: 'Grid',
                 hrefTitle: 'Grid',
@@ -129,6 +142,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Transitions and animations',
           hrefTitle: 'Transitions and animations',
@@ -138,6 +152,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Methodologies',
           depthMeter: 52,
@@ -147,6 +162,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'BEM - Block, element and modifier',
                 hrefTitle: 'BEM - Block, element and modifier',
@@ -159,6 +175,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Preprocessors',
           depthMeter: 52,
@@ -168,6 +185,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Sass - Syntactically awesome style sheets',
                 hrefTitle: 'Sass - Syntactically awesome style sheets',
@@ -180,6 +198,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Frameworks',
           depthMeter: 52,
@@ -189,6 +208,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Based on CSS first',
                 depthMeter: 52,
@@ -198,6 +218,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                   itemList: [
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Foundation',
                       hrefTitle: 'Foundation',
@@ -207,6 +228,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Bootstrap',
                       hrefTitle: 'Bootstrap',
@@ -216,6 +238,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Tailwind',
                       hrefTitle: 'Tailwind',
@@ -228,6 +251,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'JavaScript based',
                 depthMeter: 52,
@@ -237,6 +261,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                   itemList: [
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Chakra UI',
                       hrefTitle: 'Chakra UI',
@@ -255,6 +280,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'JavaScript',
     textVersion: 'ES6+',
@@ -265,6 +291,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'DOM - document object model - manipulation',
           hrefTitle: 'DOM - document object model - manipulation',
@@ -274,6 +301,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Modules',
           hrefTitle: 'Modules',
@@ -283,6 +311,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Frameworks and libraries',
           depthMeter: 0,
@@ -292,6 +321,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Angular',
                 depthMeter: 0,
@@ -302,6 +332,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                   itemList: [
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Modules',
                       hrefTitle: 'Modules',
@@ -311,6 +342,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Components',
                       hrefTitle: 'Components',
@@ -320,6 +352,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Templates',
                       hrefTitle: 'Templates',
@@ -329,6 +362,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Directives',
                       hrefTitle: 'Directives',
@@ -338,6 +372,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Services',
                       hrefTitle: 'Services',
@@ -347,6 +382,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Dependency injection',
                       hrefTitle: 'Dependency injection',
@@ -356,6 +392,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Routing',
                       hrefTitle: 'Routing',
@@ -365,6 +402,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Reactive forms',
                       hrefTitle: 'Reactive forms',
@@ -374,6 +412,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'HTTP client',
                       hrefTitle: 'HTTP client',
@@ -383,6 +422,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Testing',
                       hrefTitle: 'Testing',
@@ -392,6 +432,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Internationalization',
                       hrefTitle: 'Internationalization',
@@ -401,6 +442,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeNeedToGain',
                       text: 'Service workers and PWA',
                       hrefTitle: 'Service workers and PWA',
@@ -410,6 +452,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeNeedToGain',
                       text: 'Web workers',
                       hrefTitle: 'Web workers',
@@ -419,6 +462,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeNeedToGain',
                       text: 'SSR - Server-side rendering',
                       hrefTitle: 'SSR - Server-side rendering',
@@ -428,6 +472,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeNeedToGain',
                       text: 'Prerendering',
                       hrefTitle: 'Prerendering',
@@ -437,6 +482,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'CLI - Command-line interface',
                       hrefTitle: 'CLI - Command-line interface',
@@ -446,6 +492,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Libraries',
                       depthMeter: 0,
@@ -455,6 +502,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                         itemList: [
                           {
                             level: 5,
+                            isVisible: true,
                             status: 'knowledgeNeedToGain',
                             text: 'NgRx - Reactive State for Angular',
                             hrefTitle: 'NgRx - Reactive State for Angular',
@@ -470,6 +518,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'React',
                 hrefTitle: 'React (the basics)',
@@ -480,6 +529,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Vue.js and Vuex',
                 depthMeter: 0,
@@ -490,6 +540,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                   itemList: [
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Vue.js',
                       hrefTitle: 'Vue.js',
@@ -500,6 +551,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                     },
                     {
                       level: 4,
+                      isVisible: true,
                       status: 'knowledgeAbsorbed',
                       text: 'Vuex',
                       hrefTitle: 'Vuex',
@@ -512,6 +564,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeNeedToGain',
                 text: 'Svelte',
                 hrefTitle: 'Svelte',
@@ -521,6 +574,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'RxJS - Reactive Extensions Library for JavaScript',
                 hrefTitle: 'RxJS - Reactive Extensions Library for JavaScript',
@@ -536,6 +590,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Version control systems',
     depthMeter: 0,
@@ -545,6 +600,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Git - Global Information Tracker',
           hrefTitle: 'Git - Global Information Tracker',
@@ -554,6 +610,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Code hosting platforms',
           depthMeter: 0,
@@ -563,6 +620,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'GitHub',
                 hrefTitle: 'GitHub',
@@ -572,6 +630,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'GitLab',
                 hrefTitle: 'GitLab',
@@ -581,6 +640,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Bitbucket',
                 hrefTitle: 'Bitbucket',
@@ -596,6 +656,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Package managers',
     depthMeter: 0,
@@ -605,6 +666,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'yarn',
           hrefTitle: 'yarn',
@@ -614,6 +676,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'npm',
           hrefTitle: 'npm',
@@ -626,6 +689,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Web security',
     depthMeter: 0,
@@ -635,6 +699,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'HTTPS - Hypertext transfer protocol secure',
           hrefTitle: 'HTTPS - Hypertext transfer protocol secure',
@@ -644,6 +709,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'CORS - Cross-origin resource sharing',
           hrefTitle: 'CORS - Cross-origin resource sharing',
@@ -662,6 +728,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         // },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Top 10 OWASP security risks',
           hrefTitle: 'Top 10 OWASP security risks',
@@ -674,6 +741,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Web applications authentication and authorization',
     depthMeter: 0,
@@ -681,6 +749,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Web applications testing',
     depthMeter: 0,
@@ -690,6 +759,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Functional tests',
           depthMeter: 0,
@@ -699,6 +769,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Unit tests',
                 hrefTitle: 'Unit tests',
@@ -708,6 +779,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeNeedToGain',
                 text: 'Integration tests',
                 hrefTitle: 'Integration tests',
@@ -720,6 +792,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Frameworks',
           depthMeter: 0,
@@ -729,6 +802,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
             itemList: [
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Jasmine',
                 hrefTitle: 'Jasmine',
@@ -738,6 +812,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
               },
               {
                 level: 3,
+                isVisible: true,
                 status: 'knowledgeAbsorbed',
                 text: 'Karma',
                 hrefTitle: 'Karma',
@@ -753,6 +828,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Web applications versioning',
     depthMeter: 0,
@@ -762,6 +838,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Semantic versioning',
           hrefTitle: 'Semantic versioning',
@@ -774,6 +851,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'E-commerce platforms',
     depthMeter: 0,
@@ -783,6 +861,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Shopware',
           hrefTitle: 'Shopware',
@@ -792,6 +871,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeNeedToGain',
           text: 'commercetools',
           hrefTitle: 'commercetools',
@@ -801,6 +881,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeNeedToGain',
           text: 'Pimcore',
           hrefTitle: 'Pimcore',
@@ -813,6 +894,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Static site generators',
     depthMeter: 0,
@@ -822,6 +904,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'NuxtJS',
           hrefTitle: 'NuxtJS',
@@ -831,6 +914,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Jekyll',
           hrefTitle: 'Jekyll',
@@ -840,6 +924,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'VuePress',
           hrefTitle: 'VuePress',
@@ -849,6 +934,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeNeedToGain',
           text: 'Hugo',
           hrefTitle: 'Hugo',
@@ -858,6 +944,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
         },
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeNeedToGain',
           text: 'Eleventy',
           hrefTitle: 'Eleventy',
@@ -870,6 +957,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'Virtualization',
     depthMeter: 0,
@@ -879,6 +967,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeAbsorbed',
           text: 'Docker',
           hrefTitle: 'Docker',
@@ -891,6 +980,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
   },
   {
     level: 1,
+    isVisible: true,
     status: 'knowledgeAbsorbed',
     text: 'And I keep learning',
     depthMeter: 0,
@@ -900,6 +990,7 @@ export const roadmapItemList: RoadmapItemInterface[] = [
       itemList: [
         {
           level: 2,
+          isVisible: true,
           status: 'knowledgeNeedToGain',
           text: 'What is going to be next?',
           depthMeter: 0,
