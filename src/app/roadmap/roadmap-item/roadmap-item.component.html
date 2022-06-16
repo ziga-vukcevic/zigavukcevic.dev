@@ -1,5 +1,4 @@
-<!-- TODO: refactor, this is over-engineered for this simple case -->
-<div class="roadmap-item mb-1 level-{{ level }} text-sm bg-white">
+<div class="roadmap-item mb-1 level-{{ level }} text-sm">
   <!-- Text -->
   <span
     class="border-2 rounded-md text-gray-500 w-full p-3 block"
@@ -13,13 +12,13 @@
   <!-- / Text -->
   <!-- Button -->
   <button
-    class="border-2 rounded-md text-gray-500 w-full hover:bg-red-600 hover:border-red-600 hover:text-white p-3"
+    class="border-2 rounded-md text-gray-500 text-left w-full hover:bg-red-600 hover:border-red-600 hover:text-white p-3"
     [ngClass]="{
       'border-gray-100': status === 'knowledgeNeedToGain',
       'border-gray-300': status === 'knowledgeAbsorbed'
     }"
     *ngIf="!href && child && child.itemList.length > 0"
-    (click)="toggleChildVisibility()">
+    (click)="updateVisibility(child)">
     <span>
       {{ text }} <small *ngIf="textVersion">(version {{ textVersion }})</small>
     </span>
@@ -51,23 +50,17 @@
   <!-- / Link -->
   <!-- To learn -->
   <div
-    class="to-learn uppercase text-sm text-center bg-white text-gray-400"
+    class="to-learn uppercase text-sm bg-white text-gray-400"
     *ngIf="status === 'knowledgeNeedToGain'">
     To learn
   </div>
   <!-- / To learn -->
-</div>
-
-<!-- Template for output of content -->
-<!-- <ng-template #content>
-  <small class="pl-3 py-2 inline-block">
-    <ng-content></ng-content>
-  </small>
+  <!-- Depth meter -->
   <span
-    class="depth-meter"
+    class="depth-meter rounded-md"
     [ngStyle]="{ width: depthMeter + '%' }"
   >
-    {{ child?.itemList?.length }}
+    {{ depthMeter }}
   </span>
-</ng-template> -->
-<!-- / Template for output of content -->
+  <!-- / Depth meter -->
+</div>

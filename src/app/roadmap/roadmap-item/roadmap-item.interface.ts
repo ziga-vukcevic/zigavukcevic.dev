@@ -1,5 +1,6 @@
 export interface RoadmapItemInterface {
   level: number;
+  isVisible: boolean;
   status: 'knowledgeAbsorbed' | 'knowledgeNeedToGain';
   text: string;
   textVersion?: string | number;
@@ -7,11 +8,9 @@ export interface RoadmapItemInterface {
   hrefTitle?: string | null;
   href?: string | null;
   depthMeter: number;
-  isVisible: boolean;
   ga?: any;
   gaEvent?: string;
   child?: {
-    id: string;
     isVisible: boolean;
     itemList: RoadmapItemInterface[];
   } | null;

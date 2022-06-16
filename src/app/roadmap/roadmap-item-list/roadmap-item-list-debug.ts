@@ -208,6 +208,22 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                             depthMeter: 0,
                             isVisible: false,
                             gaEvent: '',
+                            child: {
+                              id: '3a526d02e84c480f9716a037e380ade4',
+                              isVisible: false,
+                              itemList: [
+                                {
+                                  level: 6,
+                                  status: 'knowledgeAbsorbed',
+                                  hrefTitle: 'Level 6',
+                                  href: 'https://wwww.google.com',
+                                  text: 'Level 6',
+                                  depthMeter: 0,
+                                  isVisible: false,
+                                  gaEvent: '',
+                                },
+                              ],
+                            },
                           },
                         ],
                       },

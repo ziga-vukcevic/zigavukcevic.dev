@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleAnalyticsService } from 'ngx-google-analytics';
+// import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import{ GoogleAnalyticsService } from '../app/google-analytics/google-analytics.service';
 import { RoadmapService } from './roadmap/roadmap.service';
 import { RoadmapItemInterface } from './roadmap/roadmap-item/roadmap-item.interface';
 
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     protected roadmapService: RoadmapService,
-    protected googleAnalyticsService: GoogleAnalyticsService,
+    protected googleAnalyticsService: GoogleAnalyticsService
+    // protected googleAnalyticsService: GoogleAnalyticsService,
   ) {
     const consoleGreeting = {
       text: 'Hey! The time is now, lets do some inspection! 👍',
@@ -46,6 +48,10 @@ export class AppComponent implements OnInit {
     this.roadmapService.getItemList().subscribe(itemList => {
       this.roadmapItemList = itemList;
     });
+  }
+
+  sendAddToCartEvent() {
+    this.googleAnalyticsService.eventEmitter("add_to_cart", "shop", "cart", "click", 1);
   }
 
   playNamePronunciation(): void {

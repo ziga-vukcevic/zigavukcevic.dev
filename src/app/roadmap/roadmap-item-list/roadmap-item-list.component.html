@@ -100,6 +100,30 @@
                       [isVisible]="item.isVisible"
                       [child]="item.child"
                       [ga]="item.gaEvent"></app-roadmap-item>
+                    <!-- Level 6 -->
+                    <ul
+                      class="roadmap-item-list list-level-6"
+                      [ngClass]="{ 'list-level-6-last': isLast }"
+                      *ngIf="item.child && item.child.isVisible">
+                      <li
+                        class="list-item-level-6"
+                        [ngClass]="{ 'list-item-level-6-last': isLast }"
+                        *ngFor="let item of item.child.itemList; let isLast = last">
+                        <app-roadmap-item
+                          [level]="item.level"
+                          [status]="item.status"
+                          [text]="item.text"
+                          [textVersion]="item.textVersion"
+                          [textNote]="item.textNote"
+                          [hrefTitle]="item.hrefTitle"
+                          [href]="item.href"
+                          [depthMeter]="item.depthMeter"
+                          [isVisible]="item.isVisible"
+                          [child]="item.child"
+                          [ga]="item.gaEvent"></app-roadmap-item>
+                      </li>
+                    </ul>
+                    <!-- / Level 6 -->
                   </li>
                 </ul>
                 <!-- / Level 5 -->

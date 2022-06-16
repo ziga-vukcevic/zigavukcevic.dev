@@ -23,10 +23,6 @@ export class RoadmapService {
     this.itemListBehaviorSubject.next(itemList);
   }
 
-  toggleChildVisibility(): void {
-    // console.log('toggleChildVisibility');
-  }
-
   expandAll(itemList: any): void {
     itemList.forEach((item: any) => {
       if (item.child) {
@@ -47,6 +43,60 @@ export class RoadmapService {
     });
   }
 
+  updateVisibility(child: any) {
+    child.isVisible = !child.isVisible;
+    console.log('updated visibility','child', child.isVisible);
+
+    child.itemList.forEach((item: any) => {
+      item.isVisible = child.isVisible;
+      console.log('updated visibility', item.text, item.isVisible);
+    });
+
+    // console.log('behavour', this.itemListBehaviorSubject.value);
+    this.setDepthMeter(this.itemListBehaviorSubject.value);
+  }
+
+  setDepthMeter(itemList: any): void {
+    // console.log(itemList);
+
+    itemList.forEach((item: any) => {
+      // console.log(item);
+
+      if (item.child) {
+        if (item.child.isVisible) {
+          // Counts
+          this.itemListCount = { all: 0, visible: 0 };
+          const countVisibleItems = this.countVisibleItems(item.child.itemList);
+          const countAllItems = this.countAllItems(item.child.itemList);
+
+          item.depthMeter = Math.round(countVisibleItems / countAllItems * 100);
+
+          console.log(
+            '--- setDepthMeter',
+            item.text,
+            'countVisibleItems', countVisibleItems,
+            'countAllItems', countAllItems,
+            'depthMeter', Math.round(countVisibleItems / countAllItems * 100)
+          );
+
+          // Recursively go deeper
+          item.child && this.setDepthMeter(item.child.itemList);
+        }
+      } else {
+        item.depthMeter = item.isVisible ? 100 : 0;
+      }
+    });
+
+
+    // const itemListCountVisible = this.countVisibleItems(itemList);
+    // const itemListCountAll = this.countAllItems(itemList);
+
+    // console.log('itemListCountVisible', itemListCountVisible);
+    // console.log('itemListCountAll', itemListCountAll);
+
+    // return Math.round(itemListCountVisible / itemListCountAll * 100);
+  }
+
   private countAllItems(itemList: any): number {
     itemList.forEach((item: any) => {
       // Counts
@@ -60,6 +110,10 @@ export class RoadmapService {
 
   private countVisibleItems(itemList: any): number {
     itemList.forEach((item: any) => {
+      if (item.isVisible) {
+        this.itemListCount.visible = this.itemListCount.visible + 1;
+      }
+
       if (item.child && item.child.itemList && item.child.isVisible) {
         item.child.itemList.forEach((item: any) => {
           // Counts

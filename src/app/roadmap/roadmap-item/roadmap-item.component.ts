@@ -16,6 +16,7 @@ export class RoadmapItemComponent implements OnInit {
   @Input() hrefTitle?: RoadmapItemInterface['hrefTitle'];
   @Input() href?: RoadmapItemInterface['href'];
   @Input() depthMeter!: RoadmapItemInterface['depthMeter'];
+  @Input() isVisible!: RoadmapItemInterface['isVisible'];
   @Input() ga?: RoadmapItemInterface['ga'];
   @Input() gaEvent?: RoadmapItemInterface['gaEvent'];
   @Input() child?: RoadmapItemInterface['child'] | null;
@@ -30,10 +31,8 @@ export class RoadmapItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  toggleChildVisibility(): void {
-    this.roadmapService.toggleChildVisibility();
-    if (this.child) {
-      this.child.isVisible = !this.child.isVisible;
-    }
+  updateVisibility(child: any): void {
+    console.log('-------------------------------------------')
+    this.roadmapService.updateVisibility(child);
   }
 }

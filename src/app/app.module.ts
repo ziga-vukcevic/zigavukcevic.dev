@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {
-  NgxGoogleAnalyticsModule,
-  NgxGoogleAnalyticsRouterModule,
-} from 'ngx-google-analytics';
+// import {
+//   NgxGoogleAnalyticsModule,
+//   NgxGoogleAnalyticsRouterModule,
+// } from 'ngx-google-analytics';
+
+import { GoogleAnalyticsService } from './/google-analytics/google-analytics.service';
+
 // TODO:
 // import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { StatListComponent } from './stat-list/stat-list.component';
@@ -29,12 +32,13 @@ import { HighlightSkillComponent } from './highlight-skill/highlight-skill.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxGoogleAnalyticsModule.forRoot('G-Y934WGEX9C'),
-    NgxGoogleAnalyticsRouterModule,
+    // NgxGoogleAnalyticsModule.forRoot('G-Y934WGEX9C'),
+    // NgxGoogleAnalyticsRouterModule,
     // TODO:
     // HighlightModule,
   ],
   providers: [
+    GoogleAnalyticsService,
     // TODO:
     // {
     //   provide: HIGHLIGHT_OPTIONS,
