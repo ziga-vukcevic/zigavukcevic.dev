@@ -32,7 +32,6 @@ export class RoadmapItemComponent implements OnInit {
   ngOnInit(): void {}
 
   updateVisibility(child: any): void {
-    console.log('-------------------------------------------')
     this.roadmapService.updateVisibility(child);
   }
 }

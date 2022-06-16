@@ -43,25 +43,18 @@ export class RoadmapService {
     });
   }
 
-  updateVisibility(child: any) {
+  updateVisibility(child: any): void {
     child.isVisible = !child.isVisible;
-    console.log('updated visibility','child', child.isVisible);
 
     child.itemList.forEach((item: any) => {
       item.isVisible = child.isVisible;
-      console.log('updated visibility', item.text, item.isVisible);
     });
 
-    // console.log('behavour', this.itemListBehaviorSubject.value);
     this.setDepthMeter(this.itemListBehaviorSubject.value);
   }
 
   setDepthMeter(itemList: any): void {
-    // console.log(itemList);
-
     itemList.forEach((item: any) => {
-      // console.log(item);
-
       if (item.child) {
         if (item.child.isVisible) {
           // Counts
@@ -69,14 +62,20 @@ export class RoadmapService {
           const countVisibleItems = this.countVisibleItems(item.child.itemList);
           const countAllItems = this.countAllItems(item.child.itemList);
 
-          item.depthMeter = Math.round(countVisibleItems / countAllItems * 100);
+          item.depthMeter = Math.round(
+            (countVisibleItems / countAllItems) * 100,
+          );
 
+          // eslint-disable-next-line no-console
           console.log(
             '--- setDepthMeter',
             item.text,
-            'countVisibleItems', countVisibleItems,
-            'countAllItems', countAllItems,
-            'depthMeter', Math.round(countVisibleItems / countAllItems * 100)
+            'countVisibleItems',
+            countVisibleItems,
+            'countAllItems',
+            countAllItems,
+            'depthMeter',
+            Math.round((countVisibleItems / countAllItems) * 100),
           );
 
           // Recursively go deeper
@@ -87,12 +86,8 @@ export class RoadmapService {
       }
     });
 
-
     // const itemListCountVisible = this.countVisibleItems(itemList);
     // const itemListCountAll = this.countAllItems(itemList);
-
-    // console.log('itemListCountVisible', itemListCountVisible);
-    // console.log('itemListCountAll', itemListCountAll);
 
     // return Math.round(itemListCountVisible / itemListCountAll * 100);
   }

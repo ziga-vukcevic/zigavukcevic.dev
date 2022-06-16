@@ -10,9 +10,7 @@ import { RoadmapService } from '../roadmap.service';
 export class RoadmapItemListComponent implements OnInit {
   @Input() itemList!: RoadmapItemInterface[];
 
-  constructor(
-    private roadmapService: RoadmapService,
-  ) {}
+  constructor(private roadmapService: RoadmapService) {}
 
   ngOnInit(): void {
     this.roadmapService.setDepthMeter(this.itemList);

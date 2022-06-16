@@ -1549,8 +1549,8 @@ export const roadmapItemList: RoadmapItemInterface[] = [
                 depthMeter: 0,
                 gaEvent: 'webApplicationsAuthorizationOauth',
               },
-            ]
-          }
+            ],
+          },
         },
         {
           level: 2,
