@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Setup node
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: 12
 
@@ -26,7 +26,7 @@ jobs:
     name: Deploy to Netlify
 
     steps:
-      uses: jsmrcaga/action-netlify-deploy@v1.1.0
-      with:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
-        NETLIFY_DEPLOY_TO_PROD: true
+      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
+          NETLIFY_DEPLOY_TO_PROD: true
