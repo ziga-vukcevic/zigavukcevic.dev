@@ -4,6 +4,7 @@ on:
     branches: [ main ]
 jobs:
   prebuild:
+    name: Prebuild
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,7 +20,7 @@ jobs:
           yarn lint
           # yarn test (temporary commented out)
   deploy:
-    name: 'Deploy to Netlify'
+    name: Deploy to Netlify
     steps:
       uses: jsmrcaga/action-netlify-deploy@v1.1.0
       with:
