@@ -22,11 +22,18 @@ jobs:
           yarn install
           yarn lint
           # yarn test (temporary commented out)
-  deploy:
-    name: Deploy to Netlify
 
-    steps:
-      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+      - name: Deploy to Netlify
+        uses: jsmrcaga/action-netlify-deploy@v1.1.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
           NETLIFY_DEPLOY_TO_PROD: true
+
+  # deploy:
+  #   name: Deploy to Netlify
+
+  #   steps:
+  #     - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+  #       with:
+  #         NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
+  #         NETLIFY_DEPLOY_TO_PROD: true
