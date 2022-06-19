@@ -11,10 +11,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-  #     - name: Setup node
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
 
   #     - name: Install yarn & dependencies, run linter and tests
   #       run: |
